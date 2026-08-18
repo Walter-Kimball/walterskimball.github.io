@@ -6,10 +6,10 @@
   <title>Walter Kimball | Profile</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Profile Specific Grid Layouts */
+    /* Profile Specific Styling */
     .profile-hero {
       display: grid;
-      grid-template-columns: 320px 1fr;
+      grid-template-columns: 300px 1fr;
       gap: 2.5rem;
       align-items: center;
       padding: 3rem 0;
@@ -18,7 +18,7 @@
 
     .profile-img-frame {
       width: 100%;
-      height: 380px;
+      height: 360px;
       border-radius: 12px;
       border: 2px solid #38bdf8;
       box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
@@ -43,29 +43,107 @@
       padding: 1rem;
     }
 
-    .story-section {
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 2.5rem;
+    /* Section Styling */
+    .profile-section {
       padding: 3rem 0;
-      align-items: start;
+      border-bottom: 1px solid var(--border-color, #2a2f3a);
     }
 
-    .story-text p {
-      color: #94a3b8;
-      line-height: 1.7;
-      margin-bottom: 1.25rem;
-      font-size: 0.98rem;
-    }
-
-    .story-text h2 {
+    .profile-section h2 {
       font-size: 2.2rem;
       color: #ffffff;
       margin-bottom: 1.5rem;
     }
 
+    .story-text p {
+      color: #94a3b8;
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+
+    /* Cards Layout for Education & Experience */
+    .timeline-card {
+      background: #121824;
+      border: 1px solid #2a2f3a;
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    .timeline-card:hover {
+      border-color: #38bdf8;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .timeline-header h3 {
+      font-size: 1.25rem;
+      color: #ffffff;
+    }
+
+    .timeline-date {
+      color: #38bdf8;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .timeline-role {
+      color: #cbd5e1;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-desc {
+      color: #94a3b8;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      background: #121824;
+      border: 1px solid #2a2f3a;
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+
+    .skill-card h3 {
+      color: #38bdf8;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      border: 1px solid #334155;
+    }
+
     @media (max-width: 850px) {
-      .profile-hero, .story-section {
+      .profile-hero {
         grid-template-columns: 1fr;
       }
       .profile-img-frame {
@@ -89,11 +167,12 @@
     </div>
   </nav>
 
-  <!-- Top Hero / Bio Header -->
-  <section class="container">
-    <div class="profile-hero">
+  <div class="container">
+
+    <!-- Top Hero / Bio Header -->
+    <section class="profile-hero">
       
-      <!-- Top Left Picture Frame -->
+      <!-- Headshot Frame -->
       <div class="profile-img-frame">
         <img src="profile1.jpg" alt="Walter Kimball" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
         <div class="img-placeholder-text" style="display:none;">
@@ -101,7 +180,7 @@
         </div>
       </div>
 
-      <!-- Top Right Header & Short Bio -->
+      <!-- Header & Short Bio -->
       <div class="profile-header-text">
         <h1 style="font-size: 2.8rem; margin-bottom: 1rem; color: #ffffff;">Hi, I'm Walter Kimball</h1>
         <p style="font-size: 1.05rem; line-height: 1.7; color: #cbd5e1;">
@@ -109,28 +188,12 @@
         </p>
       </div>
 
-    </div>
-  </section>
+    </section>
 
-  <!-- My Story Section -->
-  <section class="container">
-    <div class="story-section">
-      
-      <!-- Second Picture Frame (Left Side) -->
-      <div style="position: sticky; top: 2rem;">
-        <div class="profile-img-frame" style="height: 420px;">
-          <img src="profile2.jpg" alt="Walter Kimball Engineering & Outdoors" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-          <div class="img-placeholder-text" style="display:none;">
-            <strong>Secondary Photo</strong><br><small>(profile2.jpg)</small><br><br>
-            <em>Great spot for a Baja SAE photo, hands-on workshop shot, or outdoor photo.</em>
-          </div>
-        </div>
-      </div>
-
-      <!-- Main Story Content (Right Side) -->
+    <!-- My Story Section -->
+    <section class="profile-section">
+      <h2>My Story</h2>
       <div class="story-text">
-        <h2>My Story</h2>
-
         <p>
           Growing up in the low-income, rural foothills of Maine, opportunities for careers beyond the trades were limited. Throughout much of my childhood, I was drawn to building in all forms—whether through woodworking and carpentry or by dismantling old radios and clocks I found at our town dump. At a young age, my grandmother introduced me to engineering, a field that has long been a staple in her family. I learned about my great-great-grandfather’s contributions to the New York City skyline, from the Empire State Building to the Times Building, as well as the tools and designs he used. Throughout my early life, I relied heavily on intuition for the design and construction of my creations, but discovering engineering allowed me to apply math and science to my projects to refine that intuition.
         </p>
@@ -151,9 +214,133 @@
           I am fascinated by all things mechanical, especially trains, planes, boats, and cars. I have invested countless hours into my "Facebook Marketplace finds" and take specific pride in my C4 Corvette and Chevy square-body pickup. I have applied much of what I’ve learned in engineering to these vehicles, from frame improvements to driving performance. I also enjoy researching different areas of science, such as energy, physics, and even botany; I love learning new things regardless of their immediate utility, and this curiosity drives me to expand my skill set every day. Furthermore, I enjoy the arts through craftsmanship in woodworking and music. One of my favorite hobbies is drawing, which even allowed me to illustrate a children's book I wrote in high school titled <em>Alphie the Amphicar</em>. Above all, I love spending time with my friends and sharing my interests and adventures with them at every chance I get.
         </p>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Education Section -->
+    <section class="profile-section">
+      <h2>Education</h2>
+
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3>NYU Tandon School of Engineering</h3>
+          <span class="timeline-date">Fall 2026 – Present</span>
+        </div>
+        <div class="timeline-role">M.S. in Mechanical Engineering (Robotics & Mechatronics Concentration)</div>
+        <div class="timeline-desc">
+          Enrolled via NYU's accelerated 4+1 dual-degree pathway focusing on advanced dynamic control systems, robotic hardware design, and mechatronic systems integration.
+        </div>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3>NYU Tandon School of Engineering</h3>
+          <span class="timeline-date">Class of 2027</span>
+        </div>
+        <div class="timeline-role">B.S. in Mechanical Engineering | Minor in Aerospace Engineering</div>
+        <div class="timeline-desc">
+          Rigorous coursework covering thermodynamics, fluid dynamics, stress analysis, mechanical system design, and automotive engineering principles.
+        </div>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3>Oxford Hills Comprehensive High School & Tech School</h3>
+          <span class="timeline-date">Class of 2023</span>
+        </div>
+        <div class="timeline-role">High School Diploma & Technical Engineering Certification</div>
+        <div class="timeline-desc">
+          Completed foundational technical engineering curriculum, hands-on fabrication, and applied STEM coursework.
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="profile-section">
+      <h2>Experience & Leadership</h2>
+
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3>NYU Motorsports (Baja SAE)</h3>
+          <span class="timeline-date">Fall 2026 – Present</span>
+        </div>
+        <div class="timeline-role">Head Baja Design Director</div>
+        <div class="timeline-desc">
+          Directing overall engineering architecture and design direction for the BV-1 vehicle. Managing cross-functional subteams across chassis, suspension, powertrain, and electronics to ensure competitive SAE compliance and build execution.
+        </div>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3>NYU Motorsports (Baja SAE)</h3>
+          <span class="timeline-date">Fall 2025 – Present</span>
+        </div>
+        <div class="timeline-role">Drivetrain Lead</div>
+        <div class="timeline-desc">
+          Leading design, FEA structural validation, and custom manufacturing of the 4WD powertrain, gearbox, engine mounts, transmission, and custom drive components.
+        </div>
+      </div>
+
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3>NYU Tandon School of Engineering</h3>
+          <span class="timeline-date">Spring 2026</span>
+        </div>
+        <div class="timeline-role">Automotive Engineering Teaching Assistant (Prof. Havercamp)</div>
+        <div class="timeline-desc">
+          Mentoring students through vehicle engineering calculations including suspension spring rate selection, transmission gearing ratios, packaging constraints, and system trade-offs.
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="profile-section" style="border-bottom: none;">
+      <h2>Technical Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>CAD & Simulation</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">SolidWorks</span>
+            <span class="skill-tag">FEA Stress Analysis</span>
+            <span class="skill-tag">Motion Simulation</span>
+            <span class="skill-tag">CAD Modeling</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Mechatronics & Software</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">ROS2</span>
+            <span class="skill-tag">KiCAD (PCB)</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Embedded C</span>
+            <span class="skill-tag">MATLAB</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Fabrication & Testing</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Manual Machining</span>
+            <span class="skill-tag">Welding</span>
+            <span class="skill-tag">Rapid Prototyping</span>
+            <span class="skill-tag">DFM (Design for Mfg)</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Automotive Systems</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">4WD Powertrains</span>
+            <span class="skill-tag">Gearbox Design</span>
+            <span class="skill-tag">Vehicle Packaging</span>
+            <span class="skill-tag">SAE Standards</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
 
   <!-- Footer -->
   <footer>
