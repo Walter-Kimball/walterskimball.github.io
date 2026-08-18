@@ -5,10 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Walter Kimball | About Me</title>
   <link rel="stylesheet" href="style.css">
+  <!-- CAROUSEL FIXED: The absolute minimal styles to make sure the slides work -->
+  <style>
+    /* These specific styles are required by the script below to function */
+    .carousel-container {
+      position: relative;
+      overflow: hidden; /* Hides contents that are not in the 'active' container */
+      min-height: 140px; /* Ensures the box doesn't collapse */
+    }
+    .update-slide {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+      pointer-events: none; /* Stops mouse interaction when hidden */
+    }
+    .update-slide.active {
+      position: relative; /* Becomes the primary item the container sizes around */
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto; /* Restores mouse interaction */
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Navigation Bar (Shared across all pages) -->
   <nav class="navbar">
     <a href="index.html" class="logo">Walter Kimball</a>
     <div class="nav-links">
@@ -20,13 +45,13 @@
   </nav>
 
   <!-- Hero / Intro Section -->
-  <section class="hero">
+  <section id="about" class="hero">
     <h1>Walter Kimball</h1>
     <p class="subtitle">B.S. Mechanical Engineering | M.S. Robotics & Mechatronics</p>
     <p class="bio">
-      Welcome to my portfolio. I specialize in mechanical systems design, mechatronics integration, 
-      embedded hardware, and robotic controls. Here you can explore my engineering projects, background, 
-      and latest professional milestones.
+      Specializing in mechanical systems design, mechatronics integration, 
+      embedded hardware, and robotic control systems. This portfolio highlights 
+      my project background, engineering skill sets, and professional journey.
     </p>
     <div class="social-links">
       <a href="https://github.com/" target="_blank">GitHub</a> &bull;
@@ -35,7 +60,7 @@
     </div>
   </section>
 
-  <!-- News & Recent Updates Rotating Box -->
+  <!-- Section 1: News & Recent Updates Rotating Box -->
   <section class="updates-section">
     <div class="updates-header">
       <h2>Recent Updates</h2>
@@ -45,80 +70,198 @@
       </div>
     </div>
 
+    <!-- CAROUSEL FIXED CONTAINER -->
     <div class="carousel-container">
       <!-- Update 1 -->
       <div class="update-slide active">
         <span class="update-date">Fall 2026</span>
-        <h3>Accepted Master's Program</h3>
-        <p>Enrolled in M.S. Robotics and Mechatronics program focusing on dynamic controls, actuator design, and state estimation.</p>
+        <h3>Accepted NYU Master's Program</h3>
+        <p>Enrolled in M.S. Robotics and Mechatronics program at New York University, focusing on dynamic modeling, state estimation, and intelligent controls.</p>
       </div>
 
       <!-- Update 2 -->
       <div class="update-slide">
         <span class="update-date">Summer 2026</span>
-        <h3>Engineering Certification</h3>
-        <p>Successfully passed the Fundamentals of Engineering (FE) exam and earned SolidWorks Professional (CSWP) certification.</p>
+        <h3>Passed Fundamentals of Engineering Exam</h3>
+        <p>Successfully completed the FE Exam (Mechanical branch) and received Certified SolidWorks Professional (CSWP) designation.</p>
       </div>
 
       <!-- Update 3 -->
       <div class="update-slide">
         <span class="update-date">Spring 2026</span>
-        <h3>New Employment Position</h3>
-        <p>Accepted a mechanical engineering position developing automated robotic test stands and prototyping mechatronic hardware.</p>
+        <h3>B.S. Mechanical Engineering Completed</h3>
+        <p>Graduated with honors, finalizing a capstone project on a high-efficiency planar robotic manipulator.</p>
       </div>
     </div>
   </section>
 
-  <!-- Quick Highlight Section -->
-  <section class="highlight-section">
-    <h2>Core Expertise</h2>
+  <!-- Section 2: FEATURED PROJECTS (Restored to landing page) -->
+  <section class="featured-projects">
+    <h2>Featured Projects</h2>
+    <p class="section-desc">A redundant showcase of key portfolio work. Visit the <a href="projects.html">Projects page</a> for all details.</p>
+    <div class="projects-grid">
+      <!-- Project 1 (Matches previous code) -->
+      <div class="project-card">
+        <div class="card-image" style="background-image: url('project1.jpg');"></div>
+        <div class="card-content">
+          <h3>Autonomous Robotic Chassis</h3>
+          <div class="tags">
+            <span class="tag">SolidWorks</span>
+            <span class="tag">ROS2</span>
+            <span class="tag">Mechatronics</span>
+          </div>
+          <p>Full-cycle design of a rugged mobility system, integrating custom suspension geometry and ROS2 localization.</p>
+          <a href="projects.html#chassis" class="card-link">View Details &rarr;</a>
+        </div>
+      </div>
+      <!-- Project 2 (Matches previous code) -->
+      <div class="project-card">
+        <div class="card-image" style="background-image: url('project2.jpg');"></div>
+        <div class="card-content">
+          <h3>Custom Motor Controller PCB</h3>
+          <div class="tags">
+            <span class="tag">KiCAD</span>
+            <span class="tag">Embedded C</span>
+            <span class="tag">Power</span>
+          </div>
+          <p>4-layer PCB integrating an STM32 MCU, high-current MOSFET drivers, and CAN bus communication.</p>
+          <a href="projects.html#motor" class="card-link">View Details &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: ENGINEERING SKILLS (NEW) -->
+  <section id="skills" class="skills-section">
+    <h2>Engineering Skills</h2>
     <div class="skills-grid">
-      <div class="skill-card">
-        <h3>Mechanical Design</h3>
-        <p>SolidWorks, CAD modeling, FEA analysis, GD&T, tolerance stackup, and rapid prototyping.</p>
+      
+      <!-- Category 1 -->
+      <div class="skill-category">
+        <h3>Software & Programming</h3>
+        <ul class="skill-list">
+          <li><strong>CAD/Modeling:</strong> SolidWorks, Fusion 360, OnShape</li>
+          <li><strong>Simulation:</strong> ANSYS Workbench (FEA), MATLAB/Simulink</li>
+          <li><strong>Programming:</strong> Python, C/C++, Embedded C, MATLAB</li>
+          <li><strong>Tools:</strong> Git, ROS2, KiCAD (PCB Design)</li>
+        </ul>
       </div>
-      <div class="skill-card">
-        <h3>Mechatronics & Electronics</h3>
-        <p>Microcontrollers, PCB layout (KiCAD), sensor integration, motor drivers, and hardware debugging.</p>
+
+      <!-- Category 2 -->
+      <div class="skill-category">
+        <h3>Manufacturing & Prototyping</h3>
+        <ul class="skill-list">
+          <li>GD&T ASME Y14.5, Tolerance Stackup Analysis</li>
+          <li>3D Printing (FDM, SLA), Rapid Prototyping</li>
+          <li>CNC Machining (Lathe & Mill), Manual Machining</li>
+          <li>PCB Assembly (SMD Soldering), Wiring Harness Design</li>
+          <li>Design for Manufacturability (DFM)</li>
+        </ul>
       </div>
-      <div class="skill-card">
-        <h3>Robotics & Software</h3>
-        <p>C++, Python, ROS2, dynamic modeling, kinematic analysis, and embedded control loops.</p>
+
+      <!-- Category 3 -->
+      <div class="skill-category">
+        <h3>Personal & Professional Skills</h3>
+        <ul class="skill-list">
+          <li>Technical Documentation & Reporting</li>
+          <li>Cross-functional Team Leadership</li>
+          <li>Project Management (Agile/Scrum)</li>
+          <li>Supplier/Vendor Relations</li>
+          <li>Patent Analysis Support</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: EDUCATION (NEW) -->
+  <section id="education" class="education-section">
+    <h2>Education</h2>
+    
+    <div class="edu-container">
+      <!-- EDUCATION ENTRY 1: Masters -->
+      <div class="edu-entry">
+        <div class="edu-main">
+          <h3>New York University (NYU)</h3>
+          <p>M.S. Robotics and Mechatronics</p>
+          <p class="edu-meta">New York, NY | Class of [Insert Year]</p>
+        </div>
+        <div class="edu-details">
+          <strong>Relevant Courses:</strong> Dynamic Systems & Control, Actuator Design, Embedded Robotics, Optimal Estimation, Machine Learning for Robotics.
+        </div>
+      </div>
+
+      <!-- EDUCATION ENTRY 2: High School -->
+      <div class="edu-entry">
+        <div class="edu-main">
+          <h3>Oxford Hills Comprehensive High School</h3>
+          <p>Diploma with STEM Concentration</p>
+          <p class="edu-meta">South Paris, ME | Class of [Insert Year]</p>
+        </div>
+        <div class="edu-details">
+          <strong>Relevant Courses:</strong> AP Physics, AP Calculus BC, Pre-Engineering Design, Robotics Club Lead.
+        </div>
+      </div>
+
+      <!-- EDUCATION ENTRY 3: Technical School -->
+      <div class="edu-entry">
+        <div class="edu-main">
+          <h3>Oxford Hills Technical School</h3>
+          <p>Pre-Engineering & Manufacturing Program</p>
+          <p class="edu-meta">South Paris, ME | Class of [Insert Year]</p>
+        </div>
+        <div class="edu-details">
+          <strong>Relevant Courses:</strong> CAD Drafting (SolidWorks), CNC Machining Fundamentals, Precision Measurement (GD&T), Electromechanical Systems, Pneumatics & Hydraulics.
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (Shared) -->
   <footer>
     <p>&copy; Walter Kimball. All rights reserved.</p>
   </footer>
 
-  <!-- Simple Carousel Script -->
+  <!-- CAROUSEL FIXED SCRIPT: Dedicated JavaScript -->
   <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.update-slide');
-    const totalSlides = slides.length;
+    // Only run script if elements exist
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.update-slide');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      let currentSlide = 0;
+      const totalSlides = slides.length;
 
-    function showSlide(index) {
-      slides.forEach(slide => slide.classList.remove('active'));
-      slides[index].classList.add('active');
-    }
+      if (totalSlides === 0 || !prevBtn || !nextBtn) return; // Error safety
 
-    document.getElementById('nextBtn').addEventListener('click', () => {
-      currentSlide = (currentSlide + 1) % totalSlides;
+      function showSlide(index) {
+        // Essential mechanism for hiding/showing
+        slides.forEach((slide) => {
+          slide.classList.remove('active');
+        });
+        slides[index].classList.add('active');
+      }
+
+      // Manual navigation
+      nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      });
+
+      prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+      });
+
+      // Auto rotation every 7 seconds
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      }, 7000);
+
+      // Initialize the first slide
       showSlide(currentSlide);
     });
-
-    document.getElementById('prevBtn').addEventListener('click', () => {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      showSlide(currentSlide);
-    });
-
-    // Auto rotate every 6 seconds
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      showSlide(currentSlide);
-    }, 6000);
   </script>
 
 </body>
