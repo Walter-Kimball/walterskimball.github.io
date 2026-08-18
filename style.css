@@ -1,6 +1,6 @@
 /* Master Stylesheet: Clean Minimal Engineering Theme */
 :root {
-  --bg-color: #0a0e17; /* Sightly darker for better contrast */
+  --bg-color: #0a0e17;
   --card-bg: #1e293b;
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
@@ -23,7 +23,7 @@ body {
   padding: 0 1.5rem;
   max-width: 1000px;
   margin: 0 auto;
-  overflow-x: hidden; /* Safety for carousel transition */
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -33,9 +33,9 @@ body {
   align-items: center;
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--border-color);
-  position: sticky; /* Keeps navbar visible when scrolling down long page */
+  position: sticky;
   top: 0;
-  background-color: rgba(10, 14, 23, 0.9); /* Opaque for scrolling */
+  background-color: rgba(10, 14, 23, 0.95);
   z-index: 100;
 }
 
@@ -69,11 +69,11 @@ body {
 /* Universal Section Styling */
 .hero, .updates-section, .featured-projects, .skills-section, .education-section, .projects-page-header, .contact-section {
   padding: 3rem 0;
-  border-bottom: 1px solid var(--border-color); /* Separates sections on long page */
+  border-bottom: 1px solid var(--border-color);
 }
 
 h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -99,16 +99,30 @@ h2 {
   text-decoration: none;
 }
 
-/* Hero Section */
+/* Hero Section Side-by-Side Layout */
 .hero {
-  border-bottom: none; /* Hero doesn't need its own line */
+  border-bottom: none;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.hero-text {
+  flex: 1;
 }
 
 .bio {
   color: var(--text-secondary);
-  max-width: 700px;
   font-size: 1.05rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  margin-top: 1.5rem;
 }
 
 .social-links a {
@@ -121,7 +135,48 @@ h2 {
   color: var(--accent);
 }
 
-/* Updates / News Carousel Box (Hiding styles are in index.html) */
+/* Headshot Styling & Placeholder */
+.hero-image-container {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+}
+
+.headshot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid var(--border-color);
+}
+
+.headshot-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 2px dashed var(--accent);
+  background-color: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-image-container {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* Updates / News Carousel Box */
 .updates-section {
   margin: 1rem 0 2rem 0;
   background-color: var(--card-bg);
@@ -182,10 +237,10 @@ h2 {
   font-size: 0.95rem;
 }
 
-/* Projects Grid (Used on both index and projects pages) */
+/* Projects Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -203,10 +258,10 @@ h2 {
 }
 
 .card-image {
-  height: 220px;
+  height: 200px;
   background-size: cover;
   background-position: center;
-  background-color: #1a2333; /* Dark placeholder color */
+  background-color: #1a2333;
 }
 
 .card-content {
@@ -249,7 +304,7 @@ h2 {
 /* Skills Section */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 
@@ -274,7 +329,7 @@ h2 {
 }
 
 .skill-list li::before {
-  content: "»"; /* Subdued professional list marker */
+  content: "»";
   position: absolute;
   left: 0;
   color: var(--border-color);
@@ -284,7 +339,7 @@ h2 {
 .edu-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .edu-entry {
@@ -293,7 +348,7 @@ h2 {
   gap: 2rem;
   align-items: flex-start;
   padding: 1.5rem;
-  background-color: rgba(30, 41, 59, 0.4); /* Subtle transparent background */
+  background-color: rgba(30, 41, 59, 0.4);
   border-radius: 10px;
 }
 
@@ -316,7 +371,7 @@ h2 {
 
 @media (max-width: 768px) {
   .edu-entry {
-    grid-template-columns: 1fr; /* Stack vertically on mobile */
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 }
@@ -348,7 +403,7 @@ h2 {
   text-decoration: underline;
 }
 
-/* Footer (Shared) */
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem 0;
