@@ -9,24 +9,30 @@
 <body>
 
   <!-- Navigation Bar -->
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="profile.html">Profile</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-    <a href="resume.pdf" target="_blank" class="btn-resume">Resume</a>
-</div>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Walter Kimball</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.pdf" target="_blank" class="btn-resume">Resume</a>
+    </div>
+  </nav>
 
+  <!-- Projects Page Header -->
   <section class="projects-page-header">
     <h1>Engineering Projects</h1>
-    <p class="subtitle">A selection of hardware, robotics, and mechatronics design work.</p>
+    <p class="section-desc">
+      A comprehensive archive of engineering projects covering mechatronics, mechanical design, dynamic simulation, and embedded hardware.
+    </p>
   </section>
 
-  <!-- Projects Section -->
-  <section class="projects-section">
+  <!-- Projects Grid -->
+  <section class="featured-projects" style="border-bottom: none;">
     <div class="projects-grid">
 
-      <!-- Project 1 -->
+      <!-- Project Card 1 -->
       <div class="project-card">
         <div class="card-image" style="background-image: url('project1.jpg');"></div>
         <div class="card-content">
@@ -37,11 +43,11 @@
             <span class="tag">Mechatronics</span>
             <span class="tag">C++</span>
           </div>
-          <p>Designed a custom drive assembly, suspension geometry, and motor gearing for precise trajectory tracking over rough terrain.</p>
+          <p>Full-cycle design of a rugged mobility system, integrating custom suspension geometry and ROS2 localization.</p>
         </div>
       </div>
 
-      <!-- Project 2 -->
+      <!-- Project Card 2 -->
       <div class="project-card">
         <div class="card-image" style="background-image: url('project2.jpg');"></div>
         <div class="card-content">
@@ -49,13 +55,13 @@
           <div class="tags">
             <span class="tag">KiCAD</span>
             <span class="tag">Embedded C</span>
-            <span class="tag">Power Electronics</span>
+            <span class="tag">Power</span>
           </div>
-          <p>Developed a 4-layer PCB integrating an STM32 MCU, high-current MOSFET drivers, and CAN bus communication for robotic actuators.</p>
+          <p>4-layer PCB integrating an STM32 MCU, high-current MOSFET drivers, and CAN bus communication for actuators.</p>
         </div>
       </div>
 
-      <!-- Project 3 -->
+      <!-- Project Card 3 -->
       <div class="project-card">
         <div class="card-image" style="background-image: url('project3.jpg');"></div>
         <div class="card-content">
