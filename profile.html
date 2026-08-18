@@ -158,7 +158,7 @@
       border: 1px solid #2a2f3a;
       border-radius: 12px;
       padding: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     .exp-header {
@@ -197,9 +197,18 @@
       display: block;
     }
 
+    /* Standard Layout: Text Left, Gallery Right */
     .exp-body {
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    /* Reversed Layout: Gallery Left, Text Right */
+    .exp-body-reverse {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
       gap: 2rem;
       align-items: start;
     }
@@ -253,7 +262,8 @@
       .profile-img-frame {
         height: 320px;
       }
-      .exp-body {
+      .exp-body,
+      .exp-body-reverse {
         grid-template-columns: 1fr;
       }
       .exp-meta {
@@ -474,11 +484,11 @@
       </div>
     </section>
 
-    <!-- Experience Section (Revamped Layout) -->
+    <!-- Experience Section -->
     <section class="profile-section" style="border-bottom: none;">
       <h2>Experience & Leadership</h2>
 
-      <!-- NYU Motorsports Entry -->
+      <!-- Entry 1: NYU Motorsports (Text Left, Gallery Right) -->
       <div class="experience-entry">
         
         <div class="exp-header">
@@ -494,7 +504,7 @@
 
         <div class="exp-body">
           
-          <!-- Left Column: Detailed Story Text -->
+          <!-- Left Column: Story Text -->
           <div class="exp-text">
             <p>
               NYU Motorsports is a Vertically Integrated Project (VIP) at NYU where students design, build, and race competitive vehicles for Baja SAE and FSAE Electric competitions. Over my time with the team, I have advanced from a freshman design engineer on the drivetrain subteam to becoming both the <strong>Drivetrain Lead</strong> and the <strong>Head Design Director</strong> for the entire Baja division. Reaching these positions demanded dedicated commitment and technical growth, allowing me to both design a high-performance off-road racer and lead an engineering team productively.
@@ -517,7 +527,7 @@
             </p>
           </div>
 
-          <!-- Right Column: Photo Gallery Placeholders -->
+          <!-- Right Column: Gallery -->
           <div class="exp-gallery">
             <div class="exp-img-box">
               <img src="baja-car1.jpg" alt="NYU Baja SAE Vehicle" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
@@ -534,6 +544,68 @@
                 <small>(Place `baja-cad1.jpg` in folder)</small>
               </div>
             </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Entry 2: Howell Laboratories (Gallery Left, Text Right -> Reversed Layout) -->
+      <div class="experience-entry">
+        
+        <div class="exp-header">
+          <div class="exp-title">
+            <h3>Howell Laboratories, Inc.</h3>
+            <div class="exp-role">Mechanical Engineering Intern</div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">Summer Internship</span>
+            <span>Bridgton, Maine</span>
+          </div>
+        </div>
+
+        <div class="exp-body-reverse">
+          
+          <!-- Left Column: Gallery -->
+          <div class="exp-gallery">
+            <div class="exp-img-box">
+              <img src="howell-chlorinator.jpg" alt="7600 Seawater Chlorinator Drawing" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+              <div class="exp-img-placeholder" style="display:none;">
+                <strong>7600 Chlorinator CAD / Drawing</strong><br>
+                <small>(Place `howell-chlorinator.jpg` in folder)</small>
+              </div>
+            </div>
+
+            <div class="exp-img-box">
+              <img src="howell-panel.jpg" alt="4870 Air Control Panel Model" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+              <div class="exp-img-placeholder" style="display:none;">
+                <strong>4870 Control Panel CAD Model</strong><br>
+                <small>(Place `howell-panel.jpg` in folder)</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Story Text -->
+          <div class="exp-text">
+            <p>
+              During my full-time summer internship at Howell Laboratories—a defense contractor providing water treatment and environmental systems for the U.S. Navy and municipal facilities—I gained extensive experience in an entirely in-house manufacturing environment. Working alongside senior engineers, I contributed directly to live production redesigns and cleared critical engineering backlogs.
+            </p>
+
+            <p>
+              My primary project was supporting the redesign of the <strong>7600 Seawater Chlorinator</strong> to replace obsolete legacy components. I created over 50 detailed manufacturing drawings complete with technical specifications, callouts, and assembly notes while incorporating feedback from the shop floor. I logged these completed assets into the <strong>Epicor ERP system</strong> for workflow management. Together with my fellow intern, our drafting contributions saved the company an estimated month of project schedule, demonstrating a demand that led Howell Labs to establish a permanent full-time drafting position.
+            </p>
+
+            <p>
+              I also addressed a major backlog of Engineering Change Requests (ECRs). This work ranged from executing drawing updates to conducting physical warehouse audits to assign smart part numbers to new inventory. Resolving these ECRs prevented critical component confusion on future Navy production runs. Working directly with machine operators and assemblers gave me first-hand insight into manufacturing constraints and digital product data management through <strong>Autodesk Vault</strong>.
+            </p>
+
+            <p>
+              Additionally, I led the complete 3D modeling of the legacy <strong>4870 Air Control Panel</strong> in Autodesk Inventor. Working from decades-old scanned hand drawings and capturing undocumented assembly practices used by shop technicians, I built a fully constrained CAD model and generated modern assembly drawings. This comprehensive modeling project sharpened my Inventor capabilities and exposed me to specialized techniques like brazing and powder coating, equipping the sales and engineering teams with digital assets for customer proposals and vibration/shock testing.
+            </p>
+
+            <p>
+              Working at Howell Labs early in my degree provided invaluable insight into defense contracting, floor operations, and cross-departmental communication between design, production, and clients. Mentorship from my supervisor, Joel Parent, on military-grade shock and vibration testing standards directly informs how I approach design validation and engineering management at NYU Motorsports.
+            </p>
           </div>
 
         </div>
