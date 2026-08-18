@@ -70,7 +70,7 @@
       max-width: 900px;
     }
 
-    /* Cards Layout for Education & Experience */
+    /* Cards Layout for Education */
     .timeline-card {
       background: #121824;
       border: 1px solid #2a2f3a;
@@ -152,12 +152,112 @@
       border: 1px solid #334155;
     }
 
-    @media (max-width: 850px) {
+    /* Experience Revamped Layout */
+    .experience-entry {
+      background: #121824;
+      border: 1px solid #2a2f3a;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid #2a2f3a;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .exp-title h3 {
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .exp-title .exp-role {
+      color: #38bdf8;
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-top: 0.25rem;
+    }
+
+    .exp-meta {
+      text-align: right;
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    .exp-meta .exp-date {
+      color: #38bdf8;
+      font-weight: 600;
+      display: block;
+    }
+
+    .exp-body {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .exp-text {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: #cbd5e1;
+    }
+
+    .exp-text p {
+      margin-bottom: 1.1rem;
+    }
+
+    .exp-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .exp-img-box {
+      width: 100%;
+      border-radius: 8px;
+      border: 1.5px solid #38bdf8;
+      overflow: hidden;
+      background: #0b0f17;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .exp-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .exp-img-placeholder {
+      padding: 3rem 1rem;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.85rem;
+      border: 1px dashed #334155;
+      border-radius: 8px;
+      background: #0f172a;
+    }
+
+    @media (max-width: 900px) {
       .profile-hero {
         grid-template-columns: 1fr;
       }
       .profile-img-frame {
         height: 320px;
+      }
+      .exp-body {
+        grid-template-columns: 1fr;
+      }
+      .exp-meta {
+        text-align: left;
       }
     }
   </style>
@@ -275,7 +375,7 @@
       </div>
     </section>
 
-    <!-- Skills Section (Moved right after Education) -->
+    <!-- Skills Section -->
     <section class="profile-section">
       <h2>Skills & Capabilities</h2>
 
@@ -374,42 +474,72 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience Section (Revamped Layout) -->
     <section class="profile-section" style="border-bottom: none;">
       <h2>Experience & Leadership</h2>
 
-      <div class="timeline-card">
-        <div class="timeline-header">
-          <h3>NYU Motorsports (Baja SAE)</h3>
-          <span class="timeline-date">Fall 2026 – Present</span>
+      <!-- NYU Motorsports Entry -->
+      <div class="experience-entry">
+        
+        <div class="exp-header">
+          <div class="exp-title">
+            <h3>NYU Motorsports</h3>
+            <div class="exp-role">Baja SAE Head Design Director & Drivetrain Lead</div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">2023 – Present</span>
+            <span>Brooklyn, New York</span>
+          </div>
         </div>
-        <div class="timeline-role">Head Baja Design Director</div>
-        <div class="timeline-desc">
-          Directing overall engineering architecture and design direction for the BV-1 vehicle. Managing cross-functional subteams across chassis, suspension, powertrain, and electronics to ensure competitive SAE compliance and build execution.
+
+        <div class="exp-body">
+          
+          <!-- Left Column: Detailed Story Text -->
+          <div class="exp-text">
+            <p>
+              NYU Motorsports is a Vertically Integrated Project (VIP) at NYU where students design, build, and race competitive vehicles for Baja SAE and FSAE Electric competitions. Over my time with the team, I have advanced from a freshman design engineer on the drivetrain subteam to becoming both the <strong>Drivetrain Lead</strong> and the <strong>Head Design Director</strong> for the entire Baja division. Reaching these positions demanded dedicated commitment and technical growth, allowing me to both design a high-performance off-road racer and lead an engineering team productively.
+            </p>
+
+            <p>
+              In my early years on the drivetrain subteam under leads Jamie Tian and Mubeen Zainul, I focused on designing rotary shrouds and structural mounts under strict Baja material and safety regulations. This served as my primary introduction to FEA simulation in SolidWorks and Ansys. During this time, I developed critical components—including a guard CVT case and a custom engine mount to minimize engine vibration—while assisting other subteams with frame modifications, suspension, and steering mounting fixtures.
+            </p>
+
+            <p>
+              Under the mentorship of Mubeen Zainul, I learned advanced mechanical design procedures for custom gearboxes, manual lathe operation, and welding. Upon Mubeen’s graduation, I was appointed Drivetrain Lead. In this role, I delegate design tasks, mentor junior members, and oversee powertrain development. Under my leadership, we are overhauling the gearbox and implementing an electronic CVT (eCVT)—marking the team’s first fully custom gearbox design. This initiative required acquiring new toolsets, such as using <strong>KISSsoft</strong> for gear design and operating an engine dyno for power output testing.
+            </p>
+
+            <p>
+              Following Mubeen’s graduation, I was also elected co-Design Director alongside Kamil Gozalov. Operating on a two-year alternating build cycle with FSAE Electric, I act as project manager for the entire 2027–2028 Baja vehicle lifecycle. This position requires cross-subteam technical oversight—from brakes to suspension—to guide leads, manage design review timelines, and collaborate with business and manufacturing teams. For the '27–'28 car, we are reworking the chassis to optimize packaging for our new drivetrain and address legacy chassis constraints.
+            </p>
+
+            <p>
+              Working at NYU Motorsports has allowed me to directly apply classroom automotive engineering theory to physical vehicles. My ultimate goal before graduating is to lead NYU Motorsports to a top-20 finish at a Baja SAE competition—achieving the team’s highest placement to date.
+            </p>
+          </div>
+
+          <!-- Right Column: Photo Gallery Placeholders -->
+          <div class="exp-gallery">
+            <div class="exp-img-box">
+              <img src="baja-car1.jpg" alt="NYU Baja SAE Vehicle" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+              <div class="exp-img-placeholder" style="display:none;">
+                <strong>Baja SAE Car Photo</strong><br>
+                <small>(Place `baja-car1.jpg` in folder)</small>
+              </div>
+            </div>
+
+            <div class="exp-img-box">
+              <img src="baja-cad1.jpg" alt="Baja Drivetrain CAD Model" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+              <div class="exp-img-placeholder" style="display:none;">
+                <strong>Drivetrain CAD Model Photo</strong><br>
+                <small>(Place `baja-cad1.jpg` in folder)</small>
+              </div>
+            </div>
+          </div>
+
         </div>
+
       </div>
 
-      <div class="timeline-card">
-        <div class="timeline-header">
-          <h3>NYU Motorsports (Baja SAE)</h3>
-          <span class="timeline-date">Fall 2025 – Present</span>
-        </div>
-        <div class="timeline-role">Drivetrain Lead</div>
-        <div class="timeline-desc">
-          Leading design, FEA structural validation, and custom manufacturing of the 4WD powertrain, gearbox, engine mounts, transmission, and custom drive components.
-        </div>
-      </div>
-
-      <div class="timeline-card">
-        <div class="timeline-header">
-          <h3>NYU Tandon School of Engineering</h3>
-          <span class="timeline-date">Spring 2026</span>
-        </div>
-        <div class="timeline-role">Automotive Engineering Teaching Assistant (Prof. Havercamp)</div>
-        <div class="timeline-desc">
-          Mentoring students through vehicle engineering calculations including suspension spring rate selection, transmission gearing ratios, packaging constraints, and system trade-offs.
-        </div>
-      </div>
     </section>
 
   </div>
