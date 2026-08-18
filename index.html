@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Walter Kimball | About Me</title>
+  <title>Walter Kimball | Home</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Carousel Essential Mechanics */
     .carousel-container {
       position: relative;
       overflow: hidden;
@@ -36,18 +35,17 @@
   <nav class="navbar">
     <a href="index.html" class="logo">Walter Kimball</a>
     <div class="nav-links">
-      <a href="index.html" class="active">About</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="profile.html">Profile</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="resume.pdf" target="_blank" class="btn-resume">Resume</a>
     </div>
   </nav>
 
-  <!-- Hero / Intro Section with Side-by-Side Headshot Layout -->
+  <!-- Hero / Intro Section -->
   <section id="about" class="hero">
     <div class="hero-container">
-      
-      <!-- Left Column: Heading & Text -->
       <div class="hero-text">
         <h1>Walter Kimball</h1>
         <p class="subtitle">B.S. Mechanical Engineering | M.S. Robotics & Mechatronics</p>
@@ -64,19 +62,17 @@
         </div>
       </div>
 
-      <!-- Right Column: Headshot Placeholder -->
+      <!-- Headshot Frame -->
       <div class="hero-image-container">
-        <!-- Replace 'headshot.jpg' in your repository when ready -->
         <img src="headshot.jpg" alt="Walter Kimball Headshot" class="headshot-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         <div class="headshot-placeholder">
           <span>Headshot Placeholder<br><small>(headshot.jpg)</small></span>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- 1. News & Recent Updates Rotating Box -->
+  <!-- News & Recent Updates Carousel -->
   <section class="updates-section">
     <div class="updates-header">
       <h2>Recent Updates</h2>
@@ -87,21 +83,16 @@
     </div>
 
     <div class="carousel-container">
-      <!-- Update 1 -->
       <div class="update-slide active">
         <span class="update-date">Fall 2026</span>
         <h3>Accepted NYU Master's Program</h3>
         <p>Enrolled in M.S. Robotics and Mechatronics program at New York University, focusing on dynamic modeling, state estimation, and intelligent controls.</p>
       </div>
-
-      <!-- Update 2 -->
       <div class="update-slide">
         <span class="update-date">Summer 2026</span>
         <h3>Passed Fundamentals of Engineering Exam</h3>
         <p>Successfully completed the FE Exam (Mechanical branch) and received Certified SolidWorks Professional (CSWP) designation.</p>
       </div>
-
-      <!-- Update 3 -->
       <div class="update-slide">
         <span class="update-date">Spring 2026</span>
         <h3>B.S. Mechanical Engineering Completed</h3>
@@ -110,16 +101,14 @@
     </div>
   </section>
 
-  <!-- 2. FEATURED PROJECTS -->
+  <!-- FEATURED PROJECTS -->
   <section class="featured-projects">
     <h2>Featured Projects</h2>
     <p class="section-desc">
-      A highlight of key hardware and mechatronic design projects. 
-      Explore all projects on the full <a href="projects.html">Projects page</a>.
+      A selection of key hardware and mechatronic design projects. 
+      Explore all work on the full <a href="projects.html">Projects page</a>.
     </p>
     <div class="projects-grid">
-
-      <!-- Project Card 1 -->
       <div class="project-card">
         <div class="card-image" style="background-image: url('project1.jpg');"></div>
         <div class="card-content">
@@ -128,14 +117,12 @@
             <span class="tag">SolidWorks</span>
             <span class="tag">ROS2</span>
             <span class="tag">Mechatronics</span>
-            <span class="tag">C++</span>
           </div>
           <p>Full-cycle design of a rugged mobility system, integrating custom suspension geometry and ROS2 localization.</p>
           <a href="projects.html" class="card-link">View Full Details &rarr;</a>
         </div>
       </div>
 
-      <!-- Project Card 2 -->
       <div class="project-card">
         <div class="card-image" style="background-image: url('project2.jpg');"></div>
         <div class="card-content">
@@ -150,7 +137,6 @@
         </div>
       </div>
 
-      <!-- Project Card 3 -->
       <div class="project-card">
         <div class="card-image" style="background-image: url('project3.jpg');"></div>
         <div class="card-content">
@@ -162,93 +148,6 @@
           </div>
           <p>Engineered a compact lead-screw actuator test fixture featuring optical encoder positioning and stress analysis verification.</p>
           <a href="projects.html" class="card-link">View Full Details &rarr;</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 3. ENGINEERING SKILLS -->
-  <section id="skills" class="skills-section">
-    <h2>Engineering Skills</h2>
-    <div class="skills-grid">
-      
-      <!-- Category 1 -->
-      <div class="skill-category">
-        <h3>Software & Programming</h3>
-        <ul class="skill-list">
-          <li><strong>CAD/Modeling:</strong> SolidWorks, Fusion 360, OnShape</li>
-          <li><strong>Simulation:</strong> ANSYS Workbench (FEA), MATLAB/Simulink</li>
-          <li><strong>Programming:</strong> Python, C/C++, Embedded C, MATLAB</li>
-          <li><strong>Tools:</strong> Git, ROS2, KiCAD (PCB Design)</li>
-        </ul>
-      </div>
-
-      <!-- Category 2 -->
-      <div class="skill-category">
-        <h3>Manufacturing & Prototyping</h3>
-        <ul class="skill-list">
-          <li>GD&T ASME Y14.5, Tolerance Stackup Analysis</li>
-          <li>3D Printing (FDM, SLA), Rapid Prototyping</li>
-          <li>CNC Machining (Lathe & Mill), Manual Machining</li>
-          <li>PCB Assembly (SMD Soldering), Wiring Harness Design</li>
-          <li>Design for Manufacturability (DFM)</li>
-        </ul>
-      </div>
-
-      <!-- Category 3 -->
-      <div class="skill-category">
-        <h3>Personal & Professional Skills</h3>
-        <ul class="skill-list">
-          <li>Technical Documentation & Reporting</li>
-          <li>Cross-functional Team Leadership</li>
-          <li>Project Management (Agile/Scrum)</li>
-          <li>Supplier/Vendor Relations</li>
-          <li>Patent Analysis Support</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 4. EDUCATION -->
-  <section id="education" class="education-section">
-    <h2>Education</h2>
-    
-    <div class="edu-container">
-      <!-- Degree 1 -->
-      <div class="edu-entry">
-        <div class="edu-main">
-          <h3>New York University (NYU Tandon)</h3>
-          <p>B.S. Mechanical Engineering / M.S. Robotics & Mechatronics</p>
-          <p class="edu-meta">Brooklyn, NY</p>
-        </div>
-        <div class="edu-details">
-          <strong>Relevant Courses:</strong> Dynamic Systems & Control, Actuator Design, Embedded Robotics, Optimal Estimation, Machine Learning for Robotics.
-        </div>
-      </div>
-
-      <!-- High School -->
-      <div class="edu-entry">
-        <div class="edu-main">
-          <h3>Oxford Hills Comprehensive High School</h3>
-          <p>Diploma with STEM Concentration</p>
-          <p class="edu-meta">South Paris, ME</p>
-        </div>
-        <div class="edu-details">
-          <strong>Relevant Courses:</strong> AP Physics, AP Calculus BC, Pre-Engineering Design, Robotics Club Lead.
-        </div>
-      </div>
-
-      <!-- Tech School -->
-      <div class="edu-entry">
-        <div class="edu-main">
-          <h3>Oxford Hills Technical School</h3>
-          <p>Pre-Engineering & Manufacturing Program</p>
-          <p class="edu-meta">South Paris, ME</p>
-        </div>
-        <div class="edu-details">
-          <strong>Relevant Courses:</strong> CAD Drafting (SolidWorks), CNC Machining Fundamentals, Precision Measurement (GD&T), Electromechanical Systems, Pneumatics & Hydraulics.
         </div>
       </div>
     </div>
