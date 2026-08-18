@@ -67,7 +67,7 @@ body {
 }
 
 /* Universal Section Styling */
-.hero, .updates-section, .featured-projects, .skills-section, .education-section, .projects-page-header, .contact-section {
+.hero, .updates-section, .featured-projects, .profile-header-section, .experience-section, .skills-section, .education-section, .projects-page-header, .contact-section {
   padding: 3rem 0;
   border-bottom: 1px solid var(--border-color);
 }
@@ -99,7 +99,7 @@ h2 {
   text-decoration: none;
 }
 
-/* Hero Section Side-by-Side Layout */
+/* Hero Section */
 .hero {
   border-bottom: none;
 }
@@ -173,6 +173,100 @@ h2 {
   .hero-image-container {
     width: 180px;
     height: 180px;
+  }
+}
+
+/* Extended Profile Bio */
+.extended-bio p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+/* EXPERIENCE SECTION (Screenshot Matching Layout) */
+.exp-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.exp-title h3 {
+  font-size: 1.6rem;
+  color: var(--text-primary);
+}
+
+.exp-role {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.exp-meta {
+  text-align: right;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.exp-date {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.exp-text p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+.exp-media-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.exp-img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid var(--accent);
+  object-fit: cover;
+  background-color: var(--bg-color);
+  transition: transform 0.2s ease;
+}
+
+.exp-img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 850px) {
+  .exp-grid {
+    grid-template-columns: 1fr;
+  }
+  .exp-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .exp-meta {
+    text-align: left;
   }
 }
 
