@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walter Kimball | Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Walter Kimball</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.pdf" target="_blank" class="btn-resume">Resume</a>
+    </div>
+  </nav>
+
+  <!-- Expanded About Me Section -->
+  <section class="profile-header-section">
+    <h1>Profile & Bio</h1>
+    <p class="subtitle">Mechanical Engineer | Systems & Mechatronics Specialist</p>
+    <div class="extended-bio">
+      <p>
+        I am an engineer driven by the end-to-end realization of complex mechanical and electromechanical systems. Splitting my time between Maine and New York has given me a versatile perspective—balancing hands-on physical manufacturing, shop fabrication, and rapid prototyping with rigorous academic analysis, dynamic system modeling, and computer-aided design at NYU Tandon.
+      </p>
+      <p>
+        My technical passion lies at the intersection of structural mechanical design, dynamic controls, embedded electronics, and motorsport engineering. Through collegiate engineering teams like NYU Motorsports, research ventures, and industry internships, I thrive in fast-paced environments where real-world constraints demand reliable, lightweight, and high-performance solutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION (Formated like your screenshot) -->
+  <section class="experience-section">
+    <h2>Experience</h2>
+
+    <!-- Experience Entry 1: NYU Motorsports -->
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">
+          <h3>NYU Motorsports</h3>
+          <p class="exp-role">Design Director / Drivetrain Lead</p>
+        </div>
+        <div class="exp-meta">
+          <p class="exp-location">Brooklyn, New York</p>
+          <p class="exp-date">2023 – Present</p>
+        </div>
+      </div>
+
+      <div class="exp-grid">
+        <!-- Left Column: Detailed Narrative -->
+        <div class="exp-text">
+          <p>
+            NYU Motorsports is a VIP (Vertically Integrated Project) offered at NYU for students to actively work on a race team who compete in both Baja SAE and FSAE Electric and all the things that come with it. In NYU Motorsports, I have climbed the ladder from being a freshman design engineer on the drivetrain subteam for the Baja division to becoming the Design Director for the entire Baja division, in addition to earning the role of Design Lead for the aforementioned drivetrain subteam. This required an extreme amount of time and dedication to the team, as well as gaining proficiency in a variety of skills and practices—not only to design a sound Baja SAE racer but also to lead a team of engineers efficiently and productively.
+          </p>
+          <p>
+            In my early years as a design engineer on the Baja drivetrain subteam, I worked under two design leads: Jamie Tian and Mubeen Zainul. I was assigned tasks such as designing shrouds for rotary parts and mounts for various drivetrain components. These designs had to comply with Baja regulations for materials and design while remaining strong enough to provide the necessary safety and rigidity. As a new engineer, this was my primary introduction to the world of simulation in both SolidWorks and Ansys. I created many different parts during this time, including a CVT case as a powertrain guard and an engine mount designed to secure the engine to the frame while minimizing vibration. I also assisted other subteams as needed, making frame alterations and helping the suspension and steering teams with their mounts and fixtures.
+          </p>
+          <p>
+            Mubeen was my mentor and one of the most influential members of NYU Motorsports; I learned a great deal from him. I was taught design procedures for components like gearbox cases and learned how to use machinery such as a lathe and welding equipment. When Mubeen graduated, the team appointed me as the new Drivetrain Lead.
+          </p>
+        </div>
+
+        <!-- Right Column: Vertical Image Gallery Stack -->
+        <div class="exp-media-stack">
+          <img src="motorsports_frame.jpg" alt="NYU Motorsports Baja Frame" class="exp-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Baja+Vehicle+Frame';">
+          <img src="motorsports_cad.jpg" alt="NYU Motorsports Drivetrain CAD" class="exp-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Powertrain+CAD+Guard';">
+          <img src="motorsports_shop.jpg" alt="NYU Motorsports Shop Work" class="exp-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Shop+%26+Welding+Work';">
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience Entry 2: Internship Placeholder -->
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">
+          <h3>Mechanical Engineering Internship</h3>
+          <p class="exp-role">Engineering Intern</p>
+        </div>
+        <div class="exp-meta">
+          <p class="exp-location">Location Here</p>
+          <p class="exp-date">Summer 2025</p>
+        </div>
+      </div>
+
+      <div class="exp-grid">
+        <div class="exp-text">
+          <p>
+            Collaborated with senior engineers on mechanical assembly designs, rapid prototyping, and tolerance stackup analyses. Conducted structural testing and finite element analysis (FEA) to validate component performance against design specifications.
+          </p>
+          <p>
+            Assisted in creating engineering drawings compliant with ASME Y14.5 standards and worked closely with machine shop technicians to iterate on prototype hardware.
+          </p>
+        </div>
+
+        <div class="exp-media-stack">
+          <img src="internship1.jpg" alt="Internship Work" class="exp-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Internship+Project+Photo';">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINEERING SKILLS (Moved here) -->
+  <section id="skills" class="skills-section">
+    <h2>Engineering Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Software & Programming</h3>
+        <ul class="skill-list">
+          <li><strong>CAD/Modeling:</strong> SolidWorks, Fusion 360, OnShape</li>
+          <li><strong>Simulation:</strong> ANSYS Workbench (FEA), MATLAB/Simulink</li>
+          <li><strong>Programming:</strong> Python, C/C++, Embedded C, MATLAB</li>
+          <li><strong>Tools:</strong> Git, ROS2, KiCAD (PCB Design)</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>Manufacturing & Prototyping</h3>
+        <ul class="skill-list">
+          <li>GD&T ASME Y14.5, Tolerance Stackup Analysis</li>
+          <li>3D Printing (FDM, SLA), Rapid Prototyping</li>
+          <li>CNC Machining (Lathe & Mill), Manual Machining</li>
+          <li>PCB Assembly (SMD Soldering), Wiring Harness Design</li>
+          <li>Design for Manufacturability (DFM)</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>Personal & Professional Skills</h3>
+        <ul class="skill-list">
+          <li>Technical Documentation & Reporting</li>
+          <li>Cross-functional Team Leadership</li>
+          <li>Project Management (Agile/Scrum)</li>
+          <li>Supplier/Vendor Relations</li>
+          <li>Patent Analysis Support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION (Moved here) -->
+  <section id="education" class="education-section">
+    <h2>Education</h2>
+    <div class="edu-container">
+      <div class="edu-entry">
+        <div class="edu-main">
+          <h3>New York University (NYU Tandon)</h3>
+          <p>B.S. Mechanical Engineering / M.S. Robotics & Mechatronics</p>
+          <p class="edu-meta">Brooklyn, NY</p>
+        </div>
+        <div class="edu-details">
+          <strong>Relevant Courses:</strong> Dynamic Systems & Control, Actuator Design, Embedded Robotics, Optimal Estimation, Machine Learning for Robotics.
+        </div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-main">
+          <h3>Oxford Hills Comprehensive High School</h3>
+          <p>Diploma with STEM Concentration</p>
+          <p class="edu-meta">South Paris, ME</p>
+        </div>
+        <div class="edu-details">
+          <strong>Relevant Courses:</strong> AP Physics, AP Calculus BC, Pre-Engineering Design, Robotics Club Lead.
+        </div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-main">
+          <h3>Oxford Hills Technical School</h3>
+          <p>Pre-Engineering & Manufacturing Program</p>
+          <p class="edu-meta">South Paris, ME</p>
+        </div>
+        <div class="edu-details">
+          <strong>Relevant Courses:</strong> CAD Drafting (SolidWorks), CNC Machining Fundamentals, Precision Measurement (GD&T), Electromechanical Systems, Pneumatics & Hydraulics.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Walter Kimball. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
