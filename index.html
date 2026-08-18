@@ -3,80 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Walter Kimball | Engineering Portfolio</title>
+  <title>Walter Kimball | About Me</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <nav class="navbar">
-    <a href="#" class="logo">Walter Kimball</a>
+    <a href="index.html" class="logo">Walter Kimball</a>
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
       <a href="resume.pdf" target="_blank" class="btn-resume">Resume</a>
     </div>
   </nav>
 
-  <!-- Hero / Bio Section -->
-  <section id="about" class="hero">
-    <h1>Hi, I'm Walter 👋</h1>
-    <p class="subtitle">Mechanical & Systems Engineer</p>
+  <!-- Hero / Intro Section -->
+  <section class="hero">
+    <h1>Walter Kimball</h1>
+    <p class="subtitle">B.S. Mechanical Engineering | M.S. Robotics & Mechatronics</p>
     <p class="bio">
-      I build hardware, design mechanical systems, and prototype embedded electronics. 
-      Currently studying engineering and working on robotics, CAD modeling, and custom PCB design.
+      Welcome to my portfolio. I specialize in mechanical systems design, mechatronics integration, 
+      embedded hardware, and robotic controls. Here you can explore my engineering projects, background, 
+      and latest professional milestones.
     </p>
     <div class="social-links">
-      <a href="https://github.com/" target="_blank">GitHub</a> •
-      <a href="https://linkedin.com/" target="_blank">LinkedIn</a> •
-      <a href="mailto:walter@example.com">Email</a>
+      <a href="https://github.com/" target="_blank">GitHub</a> &bull;
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a> &bull;
+      <a href="contact.html">Get in Touch</a>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <h2>Featured Projects</h2>
-    <div class="projects-grid">
+  <!-- News & Recent Updates Rotating Box -->
+  <section class="updates-section">
+    <div class="updates-header">
+      <h2>Recent Updates</h2>
+      <div class="carousel-controls">
+        <button id="prevBtn" class="carousel-btn">&lt;</button>
+        <button id="nextBtn" class="carousel-btn">&gt;</button>
+      </div>
+    </div>
 
-      <!-- Project Card 1 -->
-      <div class="project-card">
-        <div class="card-image" style="background-image: url('project1.jpg');"></div>
-        <div class="card-content">
-          <h3>Autonomous Rover Prototype</h3>
-          <div class="tags">
-            <span class="tag">SolidWorks</span>
-            <span class="tag">ROS2</span>
-            <span class="tag">C++</span>
-            <span class="tag">3D Printing</span>
-          </div>
-          <p>Designed and built a 4-wheel drive rover with suspension chassis, custom gearboxes, and lidar navigation.</p>
-          <a href="#" class="card-link">View Project Details &rarr;</a>
-        </div>
+    <div class="carousel-container">
+      <!-- Update 1 -->
+      <div class="update-slide active">
+        <span class="update-date">Fall 2026</span>
+        <h3>Accepted Master's Program</h3>
+        <p>Enrolled in M.S. Robotics and Mechatronics program focusing on dynamic controls, actuator design, and state estimation.</p>
       </div>
 
-      <!-- Project Card 2 -->
-      <div class="project-card">
-        <div class="card-image" style="background-image: url('project2.jpg');"></div>
-        <div class="card-content">
-          <h3>Custom Microcontroller PCB</h3>
-          <div class="tags">
-            <span class="tag">KiCAD</span>
-            <span class="tag">Embedded C</span>
-            <span class="tag">PCB Design</span>
-          </div>
-          <p>4-layer custom PCB equipped with an STM32 MCU, power regulation, and motor driver interfaces.</p>
-          <a href="#" class="card-link">View Project Details &rarr;</a>
-        </div>
+      <!-- Update 2 -->
+      <div class="update-slide">
+        <span class="update-date">Summer 2026</span>
+        <h3>Engineering Certification</h3>
+        <p>Successfully passed the Fundamentals of Engineering (FE) exam and earned SolidWorks Professional (CSWP) certification.</p>
       </div>
 
+      <!-- Update 3 -->
+      <div class="update-slide">
+        <span class="update-date">Spring 2026</span>
+        <h3>New Employment Position</h3>
+        <p>Accepted a mechanical engineering position developing automated robotic test stands and prototyping mechatronic hardware.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Highlight Section -->
+  <section class="highlight-section">
+    <h2>Core Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Mechanical Design</h3>
+        <p>SolidWorks, CAD modeling, FEA analysis, GD&T, tolerance stackup, and rapid prototyping.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Mechatronics & Electronics</h3>
+        <p>Microcontrollers, PCB layout (KiCAD), sensor integration, motor drivers, and hardware debugging.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Robotics & Software</h3>
+        <p>C++, Python, ROS2, dynamic modeling, kinematic analysis, and embedded control loops.</p>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; Walter Kimball. Built with HTML/CSS.</p>
+    <p>&copy; Walter Kimball. All rights reserved.</p>
   </footer>
+
+  <!-- Simple Carousel Script -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.update-slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    });
+
+    // Auto rotate every 6 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }, 6000);
+  </script>
 
 </body>
 </html>
