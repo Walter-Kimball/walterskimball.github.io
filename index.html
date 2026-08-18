@@ -6,6 +6,7 @@
   <title>Walter Kimball | Home</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Carousel Essential Mechanics */
     .carousel-container {
       position: relative;
       overflow: hidden;
@@ -35,7 +36,7 @@
   <nav class="navbar">
     <a href="index.html" class="logo">Walter Kimball</a>
     <div class="nav-links">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="profile.html">Profile</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
@@ -47,6 +48,8 @@
   <!-- Hero / Intro Section -->
   <section id="about" class="hero">
     <div class="hero-container">
+      
+      <!-- Left Column: Heading & Text -->
       <div class="hero-text">
         <h1>Walter Kimball</h1>
         <p class="subtitle">B.S. Mechanical Engineering | M.S. Robotics & Mechatronics</p>
@@ -63,13 +66,14 @@
         </div>
       </div>
 
-      <!-- Headshot Frame -->
+      <!-- Right Column: Headshot Placeholder Frame -->
       <div class="hero-image-container">
         <img src="headshot.jpg" alt="Walter Kimball Headshot" class="headshot-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         <div class="headshot-placeholder">
           <span>Headshot Placeholder<br><small>(headshot.jpg)</small></span>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -84,20 +88,32 @@
     </div>
 
     <div class="carousel-container">
+      <!-- Update 1 -->
       <div class="update-slide active">
         <span class="update-date">Fall 2026</span>
-        <h3>Accepted NYU Master's Program</h3>
-        <p>Enrolled in M.S. Robotics and Mechatronics program at New York University, focusing on dynamic modeling, state estimation, and intelligent controls.</p>
+        <h3>Accepted NYU Master's Program (4+1)</h3>
+        <p>Admitted into NYU Tandon’s accelerated 4+1 Mechanical Engineering program, concentrating on Mechatronics and Robotics to explore advanced dynamic controls, system integration, and automated systems.</p>
       </div>
+
+      <!-- Update 2 -->
       <div class="update-slide">
-        <span class="update-date">Summer 2026</span>
-        <h3>Passed Fundamentals of Engineering Exam</h3>
-        <p>Successfully completed the FE Exam (Mechanical branch) and received Certified SolidWorks Professional (CSWP) designation.</p>
+        <span class="update-date">Fall 2026</span>
+        <h3>NYU Motorsports Head Baja Design Director</h3>
+        <p>Stepping into the sole Design Director role for the Baja SAE team following a year as co-director. Leading cross-functional engineering subteams through the complete design, analysis, and build of the new BV-1 vehicle.</p>
       </div>
+
+      <!-- Update 3 -->
+      <div class="update-slide">
+        <span class="update-date">Fall 2025</span>
+        <h3>NYU Motorsports Baja Drivetrain Lead</h3>
+        <p>Appointed Drivetrain Lead, directing the development, structural modeling, and optimization of the custom 4WD powertrain, transmission, gearbox, and engine integration for NYU's next-gen Baja platform.</p>
+      </div>
+
+      <!-- Update 4 -->
       <div class="update-slide">
         <span class="update-date">Spring 2026</span>
-        <h3>B.S. Mechanical Engineering Completed</h3>
-        <p>Graduated with honors, finalizing a capstone project on a high-efficiency planar robotic manipulator.</p>
+        <h3>NYU Automotive Engineering TA</h3>
+        <p>Stepping into a Teaching Assistant role under Prof. Havercamp for NYU’s Automotive Engineering course after completing the class in Spring 2025. Guiding students through fundamental vehicle design calculations—focusing on transmission gearing, suspension spring stiffness, component packaging, and meeting target performance requirements.</p>
       </div>
     </div>
   </section>
@@ -110,6 +126,8 @@
       Explore all work on the full <a href="projects.html">Projects page</a>.
     </p>
     <div class="projects-grid">
+
+      <!-- Project Card 1 -->
       <div class="project-card">
         <div class="card-image" style="background-image: url('project1.jpg');"></div>
         <div class="card-content">
@@ -124,6 +142,7 @@
         </div>
       </div>
 
+      <!-- Project Card 2 -->
       <div class="project-card">
         <div class="card-image" style="background-image: url('project2.jpg');"></div>
         <div class="card-content">
@@ -138,6 +157,7 @@
         </div>
       </div>
 
+      <!-- Project Card 3 -->
       <div class="project-card">
         <div class="card-image" style="background-image: url('project3.jpg');"></div>
         <div class="card-content">
@@ -151,6 +171,7 @@
           <a href="projects.html" class="card-link">View Full Details &rarr;</a>
         </div>
       </div>
+
     </div>
   </section>
 
