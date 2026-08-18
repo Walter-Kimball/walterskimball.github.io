@@ -5,6 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Walter Kimball | Profile</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Profile Specific Grid Layouts */
+    .profile-hero {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border-color, #2a2f3a);
+    }
+
+    .profile-img-frame {
+      width: 100%;
+      height: 380px;
+      border-radius: 12px;
+      border: 2px solid #38bdf8;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+      overflow: hidden;
+      background-color: #121824;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .profile-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .img-placeholder-text {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .story-section {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2.5rem;
+      padding: 3rem 0;
+      align-items: start;
+    }
+
+    .story-text p {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      font-size: 0.98rem;
+    }
+
+    .story-text h2 {
+      font-size: 2.2rem;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 850px) {
+      .profile-hero, .story-section {
+        grid-template-columns: 1fr;
+      }
+      .profile-img-frame {
+        height: 320px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -13,7 +81,7 @@
     <a href="index.html" class="logo">Walter Kimball</a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="profile.html">Profile</a>
+      <a href="profile.html" class="active">Profile</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="resume.pdf" target="_blank" class="btn-resume">Resume</a>
@@ -21,164 +89,69 @@
     </div>
   </nav>
 
-  <!-- Expanded About Me Section -->
-  <section class="profile-header-section">
-    <h1>Profile & Bio</h1>
-    <p class="subtitle">Mechanical Engineer | Systems & Mechatronics Specialist</p>
-    <div class="extended-bio">
-      <p>
-        I am an engineer driven by the end-to-end realization of complex mechanical and electromechanical systems. Splitting my time between Maine and New York has given me a versatile perspective—balancing hands-on physical manufacturing, shop fabrication, and rapid prototyping with rigorous academic analysis, dynamic system modeling, and computer-aided design at NYU Tandon.
-      </p>
-      <p>
-        My technical passion lies at the intersection of structural mechanical design, dynamic controls, embedded electronics, and motorsport engineering. Through collegiate engineering teams like NYU Motorsports, research ventures, and industry internships, I thrive in fast-paced environments where real-world constraints demand reliable, lightweight, and high-performance solutions.
-      </p>
+  <!-- Top Hero / Bio Header -->
+  <section class="container">
+    <div class="profile-hero">
+      
+      <!-- Top Left Picture Frame -->
+      <div class="profile-img-frame">
+        <img src="profile1.jpg" alt="Walter Kimball" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <div class="img-placeholder-text" style="display:none;">
+          <strong>Main Headshot</strong><br><small>(profile1.jpg)</small>
+        </div>
+      </div>
+
+      <!-- Top Right Header & Short Bio -->
+      <div class="profile-header-text">
+        <h1 style="font-size: 2.8rem; margin-bottom: 1rem; color: #ffffff;">Hi, I'm Walter Kimball</h1>
+        <p style="font-size: 1.05rem; line-height: 1.7; color: #cbd5e1;">
+          I am a Maine native and Class of 2023 graduate of Oxford Hills Comprehensive High School and Tech School. Currently, I am completing my B.S. in Mechanical Engineering with an Aerospace minor at the NYU Tandon School of Engineering (Class of 2027), while concurrently pursuing NYU’s accelerated 4+1 Master's program in Robotics & Mechatronics.
+        </p>
+      </div>
+
     </div>
   </section>
 
-  <!-- EXPERIENCE SECTION (Formated like your screenshot) -->
-  <section class="experience-section">
-    <h2>Experience</h2>
-
-    <!-- Experience Entry 1: NYU Motorsports -->
-    <div class="exp-card">
-      <div class="exp-header">
-        <div class="exp-title">
-          <h3>NYU Motorsports</h3>
-          <p class="exp-role">Design Director / Drivetrain Lead</p>
-        </div>
-        <div class="exp-meta">
-          <p class="exp-location">Brooklyn, New York</p>
-          <p class="exp-date">2023 – Present</p>
+  <!-- My Story Section -->
+  <section class="container">
+    <div class="story-section">
+      
+      <!-- Second Picture Frame (Left Side) -->
+      <div style="position: sticky; top: 2rem;">
+        <div class="profile-img-frame" style="height: 420px;">
+          <img src="profile2.jpg" alt="Walter Kimball Engineering & Outdoors" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <div class="img-placeholder-text" style="display:none;">
+            <strong>Secondary Photo</strong><br><small>(profile2.jpg)</small><br><br>
+            <em>Great spot for a Baja SAE photo, hands-on workshop shot, or outdoor photo.</em>
+          </div>
         </div>
       </div>
 
-      <div class="exp-grid">
-        <!-- Left Column: Detailed Narrative -->
-        <div class="exp-text">
-          <p>
-            NYU Motorsports is a VIP (Vertically Integrated Project) offered at NYU for students to actively work on a race team who compete in both Baja SAE and FSAE Electric and all the things that come with it. In NYU Motorsports, I have climbed the ladder from being a freshman design engineer on the drivetrain subteam for the Baja division to becoming the Design Director for the entire Baja division, in addition to earning the role of Design Lead for the aforementioned drivetrain subteam. This required an extreme amount of time and dedication to the team, as well as gaining proficiency in a variety of skills and practices—not only to design a sound Baja SAE racer but also to lead a team of engineers efficiently and productively.
-          </p>
-          <p>
-            In my early years as a design engineer on the Baja drivetrain subteam, I worked under two design leads: Jamie Tian and Mubeen Zainul. I was assigned tasks such as designing shrouds for rotary parts and mounts for various drivetrain components. These designs had to comply with Baja regulations for materials and design while remaining strong enough to provide the necessary safety and rigidity. As a new engineer, this was my primary introduction to the world of simulation in both SolidWorks and Ansys. I created many different parts during this time, including a CVT case as a powertrain guard and an engine mount designed to secure the engine to the frame while minimizing vibration. I also assisted other subteams as needed, making frame alterations and helping the suspension and steering teams with their mounts and fixtures.
-          </p>
-          <p>
-            Mubeen was my mentor and one of the most influential members of NYU Motorsports; I learned a great deal from him. I was taught design procedures for components like gearbox cases and learned how to use machinery such as a lathe and welding equipment. When Mubeen graduated, the team appointed me as the new Drivetrain Lead.
-          </p>
-        </div>
+      <!-- Main Story Content (Right Side) -->
+      <div class="story-text">
+        <h2>My Story</h2>
 
-        <!-- Right Column: Vertical Image Gallery Stack -->
-        <div class="exp-media-stack">
-          <img src="motorsports_frame.jpg" alt="NYU Motorsports Baja Frame" class="exp-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Baja+Vehicle+Frame';">
-          <img src="motorsports_cad.jpg" alt="NYU Motorsports Drivetrain CAD" class="exp-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Powertrain+CAD+Guard';">
-          <img src="motorsports_shop.jpg" alt="NYU Motorsports Shop Work" class="exp-img" onerror="this.src='https://via.placeholder.com/400x300/1e293b/38bdf8?text=Shop+%26+Welding+Work';">
-        </div>
-      </div>
-    </div>
+        <p>
+          Growing up in the low-income, rural foothills of Maine, opportunities for careers beyond the trades were limited. Throughout much of my childhood, I was drawn to building in all forms—whether through woodworking and carpentry or by dismantling old radios and clocks I found at our town dump. At a young age, my grandmother introduced me to engineering, a field that has long been a staple in her family. I learned about my great-great-grandfather’s contributions to the New York City skyline, from the Empire State Building to the Times Building, as well as the tools and designs he used. Throughout my early life, I relied heavily on intuition for the design and construction of my creations, but discovering engineering allowed me to apply math and science to my projects to refine that intuition.
+        </p>
 
-    <!-- Experience Entry 2: Internship Placeholder -->
-    <div class="exp-card">
-      <div class="exp-header">
-        <div class="exp-title">
-          <h3>Mechanical Engineering Internship</h3>
-          <p class="exp-role">Engineering Intern</p>
-        </div>
-        <div class="exp-meta">
-          <p class="exp-location">Location Here</p>
-          <p class="exp-date">Summer 2025</p>
-        </div>
+        <p>
+          Once I reached middle and high school, I expanded my knowledge with the help of teachers and clubs, where I explored the world of design and calculated manufacturing. During my second year of high school, I joined my school’s technical program and took my first formal engineering courses. While enrolled, I learned professional engineering practices and explored various sub-disciplines, allowing me to focus my interests through projects such as an aquaponics system and complex engineering calculations. I also applied my skills outside the classroom by designing parts for my car and my family’s business, which solidified my interest in the field. It was during this time that I chose mechanical engineering as my intended area of study, as it aligned with both my natural strengths and my interests in automotive and aerospace engineering.
+        </p>
+
+        <p>
+          After joining NYU’s Tandon School of Engineering, my skills continued to develop as I fully committed my education to mechanical engineering. This was also where I began my journey with NYU Motorsports and gained professional experience in automotive engineering. I initially worked on the drivetrain sub-team for the Baja SAE division, focusing on the design and manufacturing of mounts, shrouds, and couplers, primarily using static finite element analysis. I now serve as the Drivetrain Lead as well as the Design Lead for the Baja SAE team. In these roles, I oversee the complete design direction of the drivetrain for our Baja car and guide the team in a project management capacity to ensure we meet deadlines and pass inspections in accordance with SAE standards.
+        </p>
+
+        <p>
+          My personal interests range through many different facets, from art and science to simply being outdoors. I love exploring new places that are off the beaten path, whether I am finding "mom and pop" shops in different cities or hiking through the wilderness. Growing up with no internet and living many miles from the nearest town, the outdoors was my world to conquer. Today, I enjoy hiking, rock climbing, boating, and off-roading. While I have not had the chance to travel extensively yet, I jump at every opportunity to see new places.
+        </p>
+
+        <p>
+          I am fascinated by all things mechanical, especially trains, planes, boats, and cars. I have invested countless hours into my "Facebook Marketplace finds" and take specific pride in my C4 Corvette and Chevy square-body pickup. I have applied much of what I’ve learned in engineering to these vehicles, from frame improvements to driving performance. I also enjoy researching different areas of science, such as energy, physics, and even botany; I love learning new things regardless of their immediate utility, and this curiosity drives me to expand my skill set every day. Furthermore, I enjoy the arts through craftsmanship in woodworking and music. One of my favorite hobbies is drawing, which even allowed me to illustrate a children's book I wrote in high school titled <em>Alphie the Amphicar</em>. Above all, I love spending time with my friends and sharing my interests and adventures with them at every chance I get.
+        </p>
       </div>
 
-      <div class="exp-grid">
-        <div class="exp-text">
-          <p>
-            Collaborated with senior engineers on mechanical assembly designs, rapid prototyping, and tolerance stackup analyses. Conducted structural testing and finite element analysis (FEA) to validate component performance against design specifications.
-          </p>
-          <p>
-            Assisted in creating engineering drawings compliant with ASME Y14.5 standards and worked closely with machine shop technicians to iterate on prototype hardware.
-          </p>
-        </div>
-
-        <div class="exp-media-stack">
-          <img src="internship1.jpg" alt="Internship Work" class="exp-img" onerror="this.src='https://via.placeholder.com/400x250/1e293b/38bdf8?text=Internship+Project+Photo';">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ENGINEERING SKILLS (Moved here) -->
-  <section id="skills" class="skills-section">
-    <h2>Engineering Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3>Software & Programming</h3>
-        <ul class="skill-list">
-          <li><strong>CAD/Modeling:</strong> SolidWorks, Fusion 360, OnShape</li>
-          <li><strong>Simulation:</strong> ANSYS Workbench (FEA), MATLAB/Simulink</li>
-          <li><strong>Programming:</strong> Python, C/C++, Embedded C, MATLAB</li>
-          <li><strong>Tools:</strong> Git, ROS2, KiCAD (PCB Design)</li>
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>Manufacturing & Prototyping</h3>
-        <ul class="skill-list">
-          <li>GD&T ASME Y14.5, Tolerance Stackup Analysis</li>
-          <li>3D Printing (FDM, SLA), Rapid Prototyping</li>
-          <li>CNC Machining (Lathe & Mill), Manual Machining</li>
-          <li>PCB Assembly (SMD Soldering), Wiring Harness Design</li>
-          <li>Design for Manufacturability (DFM)</li>
-        </ul>
-      </div>
-
-      <div class="skill-category">
-        <h3>Personal & Professional Skills</h3>
-        <ul class="skill-list">
-          <li>Technical Documentation & Reporting</li>
-          <li>Cross-functional Team Leadership</li>
-          <li>Project Management (Agile/Scrum)</li>
-          <li>Supplier/Vendor Relations</li>
-          <li>Patent Analysis Support</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION (Moved here) -->
-  <section id="education" class="education-section">
-    <h2>Education</h2>
-    <div class="edu-container">
-      <div class="edu-entry">
-        <div class="edu-main">
-          <h3>New York University (NYU Tandon)</h3>
-          <p>B.S. Mechanical Engineering / M.S. Robotics & Mechatronics</p>
-          <p class="edu-meta">Brooklyn, NY</p>
-        </div>
-        <div class="edu-details">
-          <strong>Relevant Courses:</strong> Dynamic Systems & Control, Actuator Design, Embedded Robotics, Optimal Estimation, Machine Learning for Robotics.
-        </div>
-      </div>
-
-      <div class="edu-entry">
-        <div class="edu-main">
-          <h3>Oxford Hills Comprehensive High School</h3>
-          <p>Diploma with STEM Concentration</p>
-          <p class="edu-meta">South Paris, ME</p>
-        </div>
-        <div class="edu-details">
-          <strong>Relevant Courses:</strong> AP Physics, AP Calculus BC, Pre-Engineering Design, Robotics Club Lead.
-        </div>
-      </div>
-
-      <div class="edu-entry">
-        <div class="edu-main">
-          <h3>Oxford Hills Technical School</h3>
-          <p>Pre-Engineering & Manufacturing Program</p>
-          <p class="edu-meta">South Paris, ME</p>
-        </div>
-        <div class="edu-details">
-          <strong>Relevant Courses:</strong> CAD Drafting (SolidWorks), CNC Machining Fundamentals, Precision Measurement (GD&T), Electromechanical Systems, Pneumatics & Hydraulics.
-        </div>
-      </div>
     </div>
   </section>
 
