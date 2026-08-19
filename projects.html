@@ -121,7 +121,7 @@
       gap: 0.4rem;
     }
 
-    /* Modal / Pop-up Window Styling */
+    /* Modal Window Styling */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -151,7 +151,7 @@
       border-radius: 16px;
       width: 100%;
       max-width: 1050px;
-      max-height: 88vh;
+      max-height: 90vh;
       overflow-y: auto;
       position: relative;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
@@ -180,6 +180,7 @@
       align-items: center;
       justify-content: center;
       transition: all 0.2s;
+      z-index: 10;
     }
 
     .close-btn:hover {
@@ -188,77 +189,114 @@
       border-color: #38bdf8;
     }
 
-    /* Modal Detail Layout */
+    /* Modal Layout Grid */
     .project-detail-layout {
       display: grid;
       grid-template-columns: 300px 1fr;
-      gap: 3rem;
-      margin-top: 1rem;
+      gap: 2.5rem;
+      margin-top: 0.5rem;
     }
 
     /* Left Sidebar Metadata Styling */
     .detail-sidebar h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       color: #38bdf8;
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
       font-weight: 800;
       line-height: 1.1;
     }
 
     .meta-group {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
     .meta-label {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: #38bdf8;
       font-weight: 700;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.3rem;
     }
 
     .meta-value {
       color: #cbd5e1;
-      font-size: 0.95rem;
+      font-size: 0.93rem;
       line-height: 1.4;
     }
 
-    /* Expanded Modal Skill Tags */
     .modal-skill-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-top: 0.5rem;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
     }
 
     .modal-skill-tag {
       background: #1e293b;
       color: #e2e8f0;
-      font-size: 0.82rem;
-      padding: 0.35rem 0.65rem;
+      font-size: 0.8rem;
+      padding: 0.3rem 0.6rem;
       border-radius: 6px;
       border: 1px solid #334155;
     }
 
-    /* Right Content Body Styling */
+    /* Right Main Content Block */
+    .detail-main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Featured Large Image Above Description */
+    .modal-hero-img {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid #2a2f3a;
+      margin-bottom: 1.75rem;
+      background-color: #0b0f17;
+    }
+
     .detail-body p {
       color: #cbd5e1;
       font-size: 0.98rem;
       line-height: 1.75;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Lower Full Gallery Section */
+    .project-gallery-section {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #2a2f3a;
+    }
+
+    .project-gallery-section h3 {
+      font-size: 1.3rem;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .detail-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.25rem;
     }
 
     .detail-gallery img {
       width: 100%;
+      height: 160px;
       border-radius: 8px;
       border: 1px solid #2a2f3a;
       object-fit: cover;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .detail-gallery img:hover {
+      transform: scale(1.02);
+      border-color: #38bdf8;
     }
 
     @media (max-width: 850px) {
@@ -271,7 +309,10 @@
       }
       .detail-sidebar h1 {
         font-size: 2rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
+      }
+      .modal-hero-img {
+        max-height: 250px;
       }
     }
   </style>
@@ -311,7 +352,6 @@
           <h3 class="card-title">Solarbrella</h3>
           <p class="card-desc">An automated solar-tracking sunshade system featuring quad-photoresistor alignment and active battery management.</p>
 
-          <!-- 3 Skill Blocks on Preview Card -->
           <div class="card-skill-tags">
             <span class="card-skill-tag">SolidWorks CAD</span>
             <span class="card-skill-tag">C++ / Arduino</span>
@@ -332,7 +372,6 @@
           <h3 class="card-title">Baja SAE Custom Gearbox</h3>
           <p class="card-desc">Complete redesign and structural overhaul of a custom off-road vehicle transmission and electronic CVT integration.</p>
 
-          <!-- 3 Skill Blocks on Preview Card -->
           <div class="card-skill-tags">
             <span class="card-skill-tag">KISSsoft</span>
             <span class="card-skill-tag">SolidWorks FEA</span>
@@ -353,7 +392,6 @@
           <h3 class="card-title">7600 Seawater Chlorinator</h3>
           <p class="card-desc">Manufacturing redesign and 3D modeling effort to replace legacy obsolete components for Navy marine systems.</p>
 
-          <!-- 3 Skill Blocks on Preview Card -->
           <div class="card-skill-tags">
             <span class="card-skill-tag">Autodesk Inventor</span>
             <span class="card-skill-tag">Epicor ERP</span>
@@ -377,7 +415,7 @@
       
       <div class="project-detail-layout">
         
-        <!-- Left Sidebar Metadata -->
+        <!-- Left Sidebar Metadata & Expanded Skills -->
         <div class="detail-sidebar">
           <h1>Solarbrella</h1>
 
@@ -411,7 +449,6 @@
             <div class="meta-value">Walter Kimball, Justin Oh, and Tony Guan</div>
           </div>
 
-          <!-- Expanded Skill / Tech Blocks in Sidebar -->
           <div class="meta-group">
             <div class="meta-label">Skills &amp; Technologies</div>
             <div class="modal-skill-tags">
@@ -426,26 +463,37 @@
           </div>
         </div>
 
-        <!-- Right Detailed Story Text -->
-        <div class="detail-body">
-          <p>This device resulted from my NYU Tandon EG-1004 class's semester-long design project where we were tasked with creating a device for solving a specific problem. My group consisted of two other members one being another mechanic engineer and the other a computer engineer. I took a team lead type position and did lots of the communicating for the group with our professors and group mentor. I was also the head of design for the team making a large majority of the drawings and CAD for the project. The computer engineer was the head of programming and did lots of the wiring and coding for the project. Lastly, the other mechanical engineer did lots of the logistics for the presentations and also was the head of production which included presentation, appearance, and the construction of parts that were not directly tied to the design.</p>
+        <!-- Right Main Section: Large Card Picture + Paragraphs -->
+        <div class="detail-main">
+          <!-- Large Title Picture from Card -->
+          <img src="solarbrella-thumb.jpg" alt="Solarbrella Feature Image" class="modal-hero-img" onerror="this.style.display='none';">
 
-          <p>This was a mock industry project which required progress with three main milestones. For our first milestone, we had agreed on the first real design for the Solarbrella, had done preliminary research on similar products on the market, and researched materials that we would most likely need. This presentation also had cost predictions, and a teamwork agreement outlining our group's functionality and responsibilities. We had also decided on our company name being WitTech Junction and the product name being the Solarbrella. At this point, we were still in a very conceptual phase of the design process and were on budget and schedule.</p>
+          <div class="detail-body">
+            <p>This device resulted from my NYU Tandon EG-1004 class's semester-long design project where we were tasked with creating a device for solving a specific problem. My group consisted of two other members one being another mechanic engineer and the other a computer engineer. I took a team lead type position and did lots of the communicating for the group with our professors and group mentor. I was also the head of design for the team making a large majority of the drawings and CAD for the project. The computer engineer was the head of programming and did lots of the wiring and coding for the project. Lastly, the other mechanical engineer did lots of the logistics for the presentations and also was the head of production which included presentation, appearance, and the construction of parts that were not directly tied to the design.</p>
 
-          <p>By milestone two we had gone through two more additional iterations of the Solarbrella design. I had changes made to how the solar panel arrays would actuate to help optimize their rotation for the touch of our servo motors. There were also discussions on what items we would need to purchase for the device which included a solar controller for regulating the energy that would be used to charge the lead-acid battery, along with missions on what solar panels and batteries to buy. For this benchmark, we are still on a budget but were falling behind on the physical development of not only the device but the specialized sunshade that was needed for mounting the panels.</p>
+            <p>This was a mock industry project which required progress with three main milestones. For our first milestone, we had agreed on the first real design for the Solarbrella, had done preliminary research on similar products on the market, and researched materials that we would most likely need. This presentation also had cost predictions, and a teamwork agreement outlining our group's functionality and responsibilities. We had also decided on our company name being WitTech Junction and the product name being the Solarbrella. At this point, we were still in a very conceptual phase of the design process and were on budget and schedule.</p>
 
-          <p>By milestone three we were back on schedule with a finished design for the Solarbrella (V6) and a constructed umbrella ready for the device to be mounted. budget was still met and we were within all of the project's specifications.</p>
+            <p>By milestone two we had gone through two more additional iterations of the Solarbrella design. I had changes made to how the solar panel arrays would actuate to help optimize their rotation for the touch of our servo motors. There were also discussions on what items we would need to purchase for the device which included a solar controller for regulating the energy that would be used to charge the lead-acid battery, along with missions on what solar panels and batteries to buy. For this benchmark, we are still on a budget but were falling behind on the physical development of not only the device but the specialized sunshade that was needed for mounting the panels.</p>
 
-          <p>V6 had little changes from V5 but there were lots of changes over V1. The solar tracking system was now regulated by four photoresistors in a box formation separated by walls. The photo resistors would sense for light and if there was no light sensed then the device would either rotate or raise or lower the panels to be in direct sunlight.</p>
+            <p>By milestone three we were back on schedule with a finished design for the Solarbrella (V6) and a constructed umbrella ready for the device to be mounted. budget was still met and we were within all of the project's specifications.</p>
 
-          <!-- Gallery Images inside Modal -->
-          <div class="detail-gallery">
-            <img src="solarbrella-1.jpg" alt="Solarbrella CAD" onerror="this.style.display='none';">
-            <img src="solarbrella-2.jpg" alt="Solarbrella Prototype" onerror="this.style.display='none';">
+            <p>V6 had little changes from V5 but there were lots of changes over V1. The solar tracking system was now regulated by four photoresistors in a box formation separated by walls. The photo resistors would sense for light and if there was no light sensed then the device would either rotate or raise or lower the panels to be in direct sunlight.</p>
           </div>
         </div>
 
       </div>
+
+      <!-- Image Gallery Section (Spans below Info Bar and Description) -->
+      <div class="project-gallery-section">
+        <h3>Project Gallery</h3>
+        <div class="detail-gallery">
+          <img src="solarbrella-1.jpg" alt="Solarbrella CAD Model" onerror="this.style.display='none';">
+          <img src="solarbrella-2.jpg" alt="Solarbrella Physical Build" onerror="this.style.display='none';">
+          <img src="solarbrella-3.jpg" alt="Solarbrella Electronics Setup" onerror="this.style.display='none';">
+          <img src="solarbrella-4.jpg" alt="Solarbrella Testing Phase" onerror="this.style.display='none';">
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -453,6 +501,7 @@
   <div class="modal-overlay" id="baja-modal">
     <div class="modal-container">
       <button class="close-btn" onclick="closeModal('baja-modal')">&times;</button>
+      
       <div class="project-detail-layout">
         <div class="detail-sidebar">
           <h1>Baja SAE Drivetrain</h1>
@@ -461,7 +510,6 @@
           <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">2023 - Present</div></div>
           <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Drivetrain Lead &amp; Head Design Director</div></div>
 
-          <!-- Expanded Skill / Tech Blocks in Sidebar -->
           <div class="meta-group">
             <div class="meta-label">Skills &amp; Technologies</div>
             <div class="modal-skill-tags">
@@ -471,15 +519,29 @@
               <span class="modal-skill-tag">Gearbox Design</span>
               <span class="modal-skill-tag">eCVT Integration</span>
               <span class="modal-skill-tag">Engine Dyno</span>
-              <span class="modal-skill-tag">AGMA Standards</span>
-              <span class="modal-skill-tag">Manual Lathe</span>
             </div>
           </div>
         </div>
-        <div class="detail-body">
-          <p>Detailed breakdown for the Baja SAE custom gearbox and eCVT development. Includes finite element analysis (FEA), stress testing, and gear calculation details using KISSsoft software.</p>
+
+        <div class="detail-main">
+          <!-- Main Hero Image -->
+          <img src="baja-cad1.jpg" alt="Baja Gearbox CAD" class="modal-hero-img" onerror="this.style.display='none';">
+
+          <div class="detail-body">
+            <p>Detailed breakdown for the Baja SAE custom gearbox and eCVT development. Includes finite element analysis (FEA), stress testing, and gear calculation details using KISSsoft software.</p>
+          </div>
         </div>
       </div>
+
+      <div class="project-gallery-section">
+        <h3>Project Gallery</h3>
+        <div class="detail-gallery">
+          <img src="baja-cad2.jpg" alt="Baja CAD Render 2" onerror="this.style.display='none';">
+          <img src="baja-machining.jpg" alt="Baja CNC Machining" onerror="this.style.display='none';">
+          <img src="baja-assembly.jpg" alt="Gearbox Assembly" onerror="this.style.display='none';">
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -487,6 +549,7 @@
   <div class="modal-overlay" id="howell-modal">
     <div class="modal-container">
       <button class="close-btn" onclick="closeModal('howell-modal')">&times;</button>
+      
       <div class="project-detail-layout">
         <div class="detail-sidebar">
           <h1>Seawater Chlorinator</h1>
@@ -495,7 +558,6 @@
           <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">Summer 2024</div></div>
           <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Mechanical Engineering Intern</div></div>
 
-          <!-- Expanded Skill / Tech Blocks in Sidebar -->
           <div class="meta-group">
             <div class="meta-label">Skills &amp; Technologies</div>
             <div class="modal-skill-tags">
@@ -503,15 +565,28 @@
               <span class="modal-skill-tag">Autodesk Vault</span>
               <span class="modal-skill-tag">Epicor ERP</span>
               <span class="modal-skill-tag">GD&amp;T Drafting</span>
-              <span class="modal-skill-tag">Defense Specifications</span>
-              <span class="modal-skill-tag">Inventory Auditing</span>
             </div>
           </div>
         </div>
-        <div class="detail-body">
-          <p>Full manufacturing documentation redesign for naval defense systems. Created over 50 production drawings and managed part metadata within Epicor ERP.</p>
+
+        <div class="detail-main">
+          <!-- Main Hero Image -->
+          <img src="howell-chlorinator.jpg" alt="Seawater Chlorinator" class="modal-hero-img" onerror="this.style.display='none';">
+
+          <div class="detail-body">
+            <p>Full manufacturing documentation redesign for naval defense systems. Created over 50 production drawings and managed part metadata within Epicor ERP.</p>
+          </div>
         </div>
       </div>
+
+      <div class="project-gallery-section">
+        <h3>Project Gallery</h3>
+        <div class="detail-gallery">
+          <img src="howell-drawing1.jpg" alt="Production Drawing" onerror="this.style.display='none';">
+          <img src="howell-assembly.jpg" alt="System Assembly" onerror="this.style.display='none';">
+        </div>
+      </div>
+
     </div>
   </div>
 
