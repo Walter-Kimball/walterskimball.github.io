@@ -90,8 +90,25 @@
       color: #94a3b8;
       font-size: 0.93rem;
       line-height: 1.5;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
       flex-grow: 1;
+    }
+
+    /* Small Card Skill Tags */
+    .card-skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-skill-tag {
+      background: #1e293b;
+      color: #e2e8f0;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.55rem;
+      border-radius: 5px;
+      border: 1px solid #334155;
     }
 
     .btn-view-project {
@@ -171,7 +188,7 @@
       border-color: #38bdf8;
     }
 
-    /* Layout from Screenshot: Left Meta Sidebar, Right Paragraphs */
+    /* Modal Detail Layout */
     .project-detail-layout {
       display: grid;
       grid-template-columns: 300px 1fr;
@@ -179,7 +196,7 @@
       margin-top: 1rem;
     }
 
-    /* Left Metadata Styling */
+    /* Left Sidebar Metadata Styling */
     .detail-sidebar h1 {
       font-size: 2.5rem;
       color: #38bdf8;
@@ -193,7 +210,7 @@
     }
 
     .meta-label {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: #38bdf8;
       font-weight: 700;
       margin-bottom: 0.35rem;
@@ -203,6 +220,23 @@
       color: #cbd5e1;
       font-size: 0.95rem;
       line-height: 1.4;
+    }
+
+    /* Expanded Modal Skill Tags */
+    .modal-skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.5rem;
+    }
+
+    .modal-skill-tag {
+      background: #1e293b;
+      color: #e2e8f0;
+      font-size: 0.82rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid #334155;
     }
 
     /* Right Content Body Styling */
@@ -276,11 +310,19 @@
           <span class="card-tag">College Project</span>
           <h3 class="card-title">Solarbrella</h3>
           <p class="card-desc">An automated solar-tracking sunshade system featuring quad-photoresistor alignment and active battery management.</p>
+
+          <!-- 3 Skill Blocks on Preview Card -->
+          <div class="card-skill-tags">
+            <span class="card-skill-tag">SolidWorks CAD</span>
+            <span class="card-skill-tag">C++ / Arduino</span>
+            <span class="card-skill-tag">Solar Tracking</span>
+          </div>
+
           <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
-      <!-- Card 2: Baja SAE Custom Drivetrain (Placeholder Card) -->
+      <!-- Card 2: Baja SAE Custom Drivetrain -->
       <div class="project-card" onclick="openModal('baja-modal')">
         <div class="card-img-box">
           <img src="baja-cad1.jpg" alt="Baja SAE Drivetrain" onerror="this.style.display='none';">
@@ -289,11 +331,19 @@
           <span class="card-tag">NYU Motorsports</span>
           <h3 class="card-title">Baja SAE Custom Gearbox</h3>
           <p class="card-desc">Complete redesign and structural overhaul of a custom off-road vehicle transmission and electronic CVT integration.</p>
+
+          <!-- 3 Skill Blocks on Preview Card -->
+          <div class="card-skill-tags">
+            <span class="card-skill-tag">KISSsoft</span>
+            <span class="card-skill-tag">SolidWorks FEA</span>
+            <span class="card-skill-tag">Gearbox Design</span>
+          </div>
+
           <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
-      <!-- Card 3: Howell Labs Chlorinator Redesign (Placeholder Card) -->
+      <!-- Card 3: Howell Labs Chlorinator Redesign -->
       <div class="project-card" onclick="openModal('howell-modal')">
         <div class="card-img-box">
           <img src="howell-chlorinator.jpg" alt="Seawater Chlorinator" onerror="this.style.display='none';">
@@ -302,6 +352,14 @@
           <span class="card-tag">Defense Contracting</span>
           <h3 class="card-title">7600 Seawater Chlorinator</h3>
           <p class="card-desc">Manufacturing redesign and 3D modeling effort to replace legacy obsolete components for Navy marine systems.</p>
+
+          <!-- 3 Skill Blocks on Preview Card -->
+          <div class="card-skill-tags">
+            <span class="card-skill-tag">Autodesk Inventor</span>
+            <span class="card-skill-tag">Epicor ERP</span>
+            <span class="card-skill-tag">GD&amp;T Drafting</span>
+          </div>
+
           <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
@@ -352,6 +410,20 @@
             <div class="meta-label">Members</div>
             <div class="meta-value">Walter Kimball, Justin Oh, and Tony Guan</div>
           </div>
+
+          <!-- Expanded Skill / Tech Blocks in Sidebar -->
+          <div class="meta-group">
+            <div class="meta-label">Skills &amp; Technologies</div>
+            <div class="modal-skill-tags">
+              <span class="modal-skill-tag">SolidWorks CAD</span>
+              <span class="modal-skill-tag">C++ / Arduino</span>
+              <span class="modal-skill-tag">Photoresistor Sensing</span>
+              <span class="modal-skill-tag">Servo Actuation</span>
+              <span class="modal-skill-tag">Solar Energy Regulation</span>
+              <span class="modal-skill-tag">Team Leadership</span>
+              <span class="modal-skill-tag">Project Management</span>
+            </div>
+          </div>
         </div>
 
         <!-- Right Detailed Story Text -->
@@ -377,7 +449,7 @@
     </div>
   </div>
 
-  <!-- Modal 2: Baja SAE Gearbox (Template Modal) -->
+  <!-- Modal 2: Baja SAE Gearbox -->
   <div class="modal-overlay" id="baja-modal">
     <div class="modal-container">
       <button class="close-btn" onclick="closeModal('baja-modal')">&times;</button>
@@ -387,7 +459,22 @@
           <div class="meta-group"><div class="meta-label">Project Group</div><div class="meta-value">NYU Motorsports VIP</div></div>
           <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">NYU Tandon School of Engineering</div></div>
           <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">2023 - Present</div></div>
-          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Drivetrain Lead & Head Design Director</div></div>
+          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Drivetrain Lead &amp; Head Design Director</div></div>
+
+          <!-- Expanded Skill / Tech Blocks in Sidebar -->
+          <div class="meta-group">
+            <div class="meta-label">Skills &amp; Technologies</div>
+            <div class="modal-skill-tags">
+              <span class="modal-skill-tag">KISSsoft</span>
+              <span class="modal-skill-tag">SolidWorks (PDM)</span>
+              <span class="modal-skill-tag">Ansys FEA</span>
+              <span class="modal-skill-tag">Gearbox Design</span>
+              <span class="modal-skill-tag">eCVT Integration</span>
+              <span class="modal-skill-tag">Engine Dyno</span>
+              <span class="modal-skill-tag">AGMA Standards</span>
+              <span class="modal-skill-tag">Manual Lathe</span>
+            </div>
+          </div>
         </div>
         <div class="detail-body">
           <p>Detailed breakdown for the Baja SAE custom gearbox and eCVT development. Includes finite element analysis (FEA), stress testing, and gear calculation details using KISSsoft software.</p>
@@ -396,7 +483,7 @@
     </div>
   </div>
 
-  <!-- Modal 3: Howell Labs (Template Modal) -->
+  <!-- Modal 3: Howell Labs -->
   <div class="modal-overlay" id="howell-modal">
     <div class="modal-container">
       <button class="close-btn" onclick="closeModal('howell-modal')">&times;</button>
@@ -407,6 +494,19 @@
           <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">Bridgton, Maine</div></div>
           <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">Summer 2024</div></div>
           <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Mechanical Engineering Intern</div></div>
+
+          <!-- Expanded Skill / Tech Blocks in Sidebar -->
+          <div class="meta-group">
+            <div class="meta-label">Skills &amp; Technologies</div>
+            <div class="modal-skill-tags">
+              <span class="modal-skill-tag">Autodesk Inventor</span>
+              <span class="modal-skill-tag">Autodesk Vault</span>
+              <span class="modal-skill-tag">Epicor ERP</span>
+              <span class="modal-skill-tag">GD&amp;T Drafting</span>
+              <span class="modal-skill-tag">Defense Specifications</span>
+              <span class="modal-skill-tag">Inventory Auditing</span>
+            </div>
+          </div>
         </div>
         <div class="detail-body">
           <p>Full manufacturing documentation redesign for naval defense systems. Created over 50 production drawings and managed part metadata within Epicor ERP.</p>
