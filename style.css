@@ -49,7 +49,7 @@ body {
 .nav-links a {
   color: var(--text-secondary);
   text-decoration: none;
-  margin-left: 1rem; /* Adjusted from 1.5rem to fit both buttons cleanly */
+  margin-left: 1rem;
   font-size: 0.95rem;
   transition: color 0.2s;
 }
@@ -140,6 +140,9 @@ h2 {
   flex-shrink: 0;
   width: 220px;
   height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .headshot-img {
@@ -147,7 +150,14 @@ h2 {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.headshot-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
 }
 
 .headshot-placeholder {
@@ -156,7 +166,7 @@ h2 {
   border-radius: 12px;
   border: 2px dashed var(--accent);
   background-color: var(--card-bg);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   color: var(--text-secondary);
@@ -184,7 +194,7 @@ h2 {
   line-height: 1.7;
 }
 
-/* EXPERIENCE SECTION (Screenshot Matching Layout) */
+/* EXPERIENCE SECTION */
 .exp-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
