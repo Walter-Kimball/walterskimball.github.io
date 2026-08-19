@@ -5,6 +5,242 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Walter Kimball | Projects</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Projects Page Specific Styling */
+    .projects-header {
+      padding: 3rem 0 1.5rem 0;
+      border-bottom: 1px solid var(--border-color, #2a2f3a);
+      margin-bottom: 2.5rem;
+    }
+
+    .projects-header h1 {
+      font-size: 2.5rem;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .projects-header p {
+      color: #94a3b8;
+      font-size: 1.05rem;
+    }
+
+    /* Projects Cards Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      padding-bottom: 4rem;
+    }
+
+    .project-card {
+      background: #121824;
+      border: 1px solid #2a2f3a;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
+      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.15);
+    }
+
+    .card-img-box {
+      width: 100%;
+      height: 200px;
+      background-color: #0b0f17;
+      border-bottom: 1px solid #2a2f3a;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-tag {
+      font-size: 0.8rem;
+      color: #38bdf8;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-desc {
+      color: #94a3b8;
+      font-size: 0.93rem;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .btn-view-project {
+      align-self: flex-start;
+      color: #38bdf8;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Modal / Pop-up Window Styling */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 8, 15, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      padding: 1.5rem;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-container {
+      background: #121824;
+      border: 1px solid #2a2f3a;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 1050px;
+      max-height: 88vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      padding: 2.5rem;
+      transform: scale(0.95);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-container {
+      transform: scale(1);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #cbd5e1;
+      font-size: 1.5rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .close-btn:hover {
+      background: #38bdf8;
+      color: #0b0f17;
+      border-color: #38bdf8;
+    }
+
+    /* Layout from Screenshot: Left Meta Sidebar, Right Paragraphs */
+    .project-detail-layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 3rem;
+      margin-top: 1rem;
+    }
+
+    /* Left Metadata Styling */
+    .detail-sidebar h1 {
+      font-size: 2.5rem;
+      color: #38bdf8;
+      margin-bottom: 2rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .meta-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .meta-label {
+      font-size: 1.1rem;
+      color: #38bdf8;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .meta-value {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    /* Right Content Body Styling */
+    .detail-body p {
+      color: #cbd5e1;
+      font-size: 0.98rem;
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+
+    .detail-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .detail-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #2a2f3a;
+      object-fit: cover;
+    }
+
+    @media (max-width: 850px) {
+      .project-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .modal-container {
+        padding: 1.5rem;
+      }
+      .detail-sidebar h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -14,73 +250,206 @@
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="profile.html">Profile</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="contact.html">Contact</a>
       <a href="resume.pdf" target="_blank" class="btn-resume">Resume</a>
       <a href="portfolio.pdf" target="_blank" class="btn-resume">Portfolio PDF</a>
     </div>
   </nav>
 
-  <!-- Projects Page Header -->
-  <section class="projects-page-header">
-    <h1>Engineering Projects</h1>
-    <p class="subtitle">A selection of hardware, robotics, and mechatronics design work.</p>
-  </section>
+  <div class="container">
 
-  <!-- Projects Grid -->
-  <section class="featured-projects" style="border-bottom: none; padding-top: 0;">
+    <div class="projects-header">
+      <h1>Featured Projects</h1>
+      <p>Explore engineering design work, academic builds, and technical innovations. Click any card for detailed breakdowns.</p>
+    </div>
+
+    <!-- Projects Grid View -->
     <div class="projects-grid">
 
-      <!-- Project Card 1 -->
-      <div class="project-card">
-        <div class="card-image" style="background-image: url('project1.jpg');"></div>
+      <!-- Card 1: Solarbrella -->
+      <div class="project-card" onclick="openModal('solarbrella-modal')">
+        <div class="card-img-box">
+          <img src="solarbrella-thumb.jpg" alt="Solarbrella" onerror="this.style.display='none';">
+        </div>
         <div class="card-content">
-          <h3>Autonomous Robotic Chassis</h3>
-          <div class="tags">
-            <span class="tag">SolidWorks</span>
-            <span class="tag">ROS2</span>
-            <span class="tag">Mechatronics</span>
-            <span class="tag">C++</span>
-          </div>
-          <p>Designed a custom drive assembly, suspension geometry, and motor gearing for precise trajectory tracking over rough terrain.</p>
+          <span class="card-tag">College Project</span>
+          <h3 class="card-title">Solarbrella</h3>
+          <p class="card-desc">An automated solar-tracking sunshade system featuring quad-photoresistor alignment and active battery management.</p>
+          <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
-      <!-- Project Card 2 -->
-      <div class="project-card">
-        <div class="card-image" style="background-image: url('project2.jpg');"></div>
+      <!-- Card 2: Baja SAE Custom Drivetrain (Placeholder Card) -->
+      <div class="project-card" onclick="openModal('baja-modal')">
+        <div class="card-img-box">
+          <img src="baja-cad1.jpg" alt="Baja SAE Drivetrain" onerror="this.style.display='none';">
+        </div>
         <div class="card-content">
-          <h3>Custom Motor Controller PCB</h3>
-          <div class="tags">
-            <span class="tag">KiCAD</span>
-            <span class="tag">Embedded C</span>
-            <span class="tag">Power Electronics</span>
-          </div>
-          <p>Developed a 4-layer PCB integrating an STM32 MCU, high-current MOSFET drivers, and CAN bus communication for robotic actuators.</p>
+          <span class="card-tag">NYU Motorsports</span>
+          <h3 class="card-title">Baja SAE Custom Gearbox</h3>
+          <p class="card-desc">Complete redesign and structural overhaul of a custom off-road vehicle transmission and electronic CVT integration.</p>
+          <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
-      <!-- Project Card 3 -->
-      <div class="project-card">
-        <div class="card-image" style="background-image: url('project3.jpg');"></div>
+      <!-- Card 3: Howell Labs Chlorinator Redesign (Placeholder Card) -->
+      <div class="project-card" onclick="openModal('howell-modal')">
+        <div class="card-img-box">
+          <img src="howell-chlorinator.jpg" alt="Seawater Chlorinator" onerror="this.style.display='none';">
+        </div>
         <div class="card-content">
-          <h3>Precision Linear Actuator Assembly</h3>
-          <div class="tags">
-            <span class="tag">FEA</span>
-            <span class="tag">Machining</span>
-            <span class="tag">CAD Modeling</span>
-          </div>
-          <p>Engineered a compact lead-screw actuator test fixture featuring optical encoder positioning and stress analysis verification.</p>
+          <span class="card-tag">Defense Contracting</span>
+          <h3 class="card-title">7600 Seawater Chlorinator</h3>
+          <p class="card-desc">Manufacturing redesign and 3D modeling effort to replace legacy obsolete components for Navy marine systems.</p>
+          <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
     </div>
-  </section>
+
+  </div>
+
+  <!-- ==================== MODAL OVERLAYS ==================== -->
+
+  <!-- Modal 1: Solarbrella -->
+  <div class="modal-overlay" id="solarbrella-modal">
+    <div class="modal-container">
+      <button class="close-btn" onclick="closeModal('solarbrella-modal')">&times;</button>
+      
+      <div class="project-detail-layout">
+        
+        <!-- Left Sidebar Metadata -->
+        <div class="detail-sidebar">
+          <h1>Solarbrella</h1>
+
+          <div class="meta-group">
+            <div class="meta-label">Project Group</div>
+            <div class="meta-value">College Project</div>
+          </div>
+
+          <div class="meta-group">
+            <div class="meta-label">Location</div>
+            <div class="meta-value">NYU Tandon School of Engineering EG-1004</div>
+          </div>
+
+          <div class="meta-group">
+            <div class="meta-label">Date</div>
+            <div class="meta-value">Sep 2023 - Dec 2023</div>
+          </div>
+
+          <div class="meta-group">
+            <div class="meta-label">Role</div>
+            <div class="meta-value">Team Lead and Head of Design</div>
+          </div>
+
+          <div class="meta-group">
+            <div class="meta-label">Project type</div>
+            <div class="meta-value">Semester Long Design Project (SLDP)</div>
+          </div>
+
+          <div class="meta-group">
+            <div class="meta-label">Members</div>
+            <div class="meta-value">Walter Kimball, Justin Oh, and Tony Guan</div>
+          </div>
+        </div>
+
+        <!-- Right Detailed Story Text -->
+        <div class="detail-body">
+          <p>This device resulted from my NYU Tandon EG-1004 class's semester-long design project where we were tasked with creating a device for solving a specific problem. My group consisted of two other members one being another mechanic engineer and the other a computer engineer. I took a team lead type position and did lots of the communicating for the group with our professors and group mentor. I was also the head of design for the team making a large majority of the drawings and CAD for the project. The computer engineer was the head of programming and did lots of the wiring and coding for the project. Lastly, the other mechanical engineer did lots of the logistics for the presentations and also was the head of production which included presentation, appearance, and the construction of parts that were not directly tied to the design.</p>
+
+          <p>This was a mock industry project which required progress with three main milestones. For our first milestone, we had agreed on the first real design for the Solarbrella, had done preliminary research on similar products on the market, and researched materials that we would most likely need. This presentation also had cost predictions, and a teamwork agreement outlining our group's functionality and responsibilities. We had also decided on our company name being WitTech Junction and the product name being the Solarbrella. At this point, we were still in a very conceptual phase of the design process and were on budget and schedule.</p>
+
+          <p>By milestone two we had gone through two more additional iterations of the Solarbrella design. I had changes made to how the solar panel arrays would actuate to help optimize their rotation for the touch of our servo motors. There were also discussions on what items we would need to purchase for the device which included a solar controller for regulating the energy that would be used to charge the lead-acid battery, along with missions on what solar panels and batteries to buy. For this benchmark, we are still on a budget but were falling behind on the physical development of not only the device but the specialized sunshade that was needed for mounting the panels.</p>
+
+          <p>By milestone three we were back on schedule with a finished design for the Solarbrella (V6) and a constructed umbrella ready for the device to be mounted. budget was still met and we were within all of the project's specifications.</p>
+
+          <p>V6 had little changes from V5 but there were lots of changes over V1. The solar tracking system was now regulated by four photoresistors in a box formation separated by walls. The photo resistors would sense for light and if there was no light sensed then the device would either rotate or raise or lower the panels to be in direct sunlight.</p>
+
+          <!-- Gallery Images inside Modal -->
+          <div class="detail-gallery">
+            <img src="solarbrella-1.jpg" alt="Solarbrella CAD" onerror="this.style.display='none';">
+            <img src="solarbrella-2.jpg" alt="Solarbrella Prototype" onerror="this.style.display='none';">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Baja SAE Gearbox (Template Modal) -->
+  <div class="modal-overlay" id="baja-modal">
+    <div class="modal-container">
+      <button class="close-btn" onclick="closeModal('baja-modal')">&times;</button>
+      <div class="project-detail-layout">
+        <div class="detail-sidebar">
+          <h1>Baja SAE Drivetrain</h1>
+          <div class="meta-group"><div class="meta-label">Project Group</div><div class="meta-value">NYU Motorsports VIP</div></div>
+          <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">NYU Tandon School of Engineering</div></div>
+          <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">2023 - Present</div></div>
+          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Drivetrain Lead & Head Design Director</div></div>
+        </div>
+        <div class="detail-body">
+          <p>Detailed breakdown for the Baja SAE custom gearbox and eCVT development. Includes finite element analysis (FEA), stress testing, and gear calculation details using KISSsoft software.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Howell Labs (Template Modal) -->
+  <div class="modal-overlay" id="howell-modal">
+    <div class="modal-container">
+      <button class="close-btn" onclick="closeModal('howell-modal')">&times;</button>
+      <div class="project-detail-layout">
+        <div class="detail-sidebar">
+          <h1>Seawater Chlorinator</h1>
+          <div class="meta-group"><div class="meta-label">Project Group</div><div class="meta-value">Howell Laboratories, Inc.</div></div>
+          <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">Bridgton, Maine</div></div>
+          <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">Summer 2024</div></div>
+          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Mechanical Engineering Intern</div></div>
+        </div>
+        <div class="detail-body">
+          <p>Full manufacturing documentation redesign for naval defense systems. Created over 50 production drawings and managed part metadata within Epicor ERP.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
     <p>&copy; Walter Kimball. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript for Modal Interactivity -->
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside content box or pressing Escape
+    window.addEventListener('click', function(e) {
+      if (e.target.classList.contains('modal-overlay')) {
+        e.target.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const activeModal = document.querySelector('.modal-overlay.active');
+        if (activeModal) {
+          activeModal.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
