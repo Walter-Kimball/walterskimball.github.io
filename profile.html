@@ -36,11 +36,17 @@
       object-fit: cover;
     }
 
-    .img-placeholder-text {
-      color: #94a3b8;
-      font-size: 0.9rem;
-      text-align: center;
-      padding: 1rem;
+    .header-badges {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .header-badge-img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
     }
 
     /* Section Styling */
@@ -53,6 +59,14 @@
       font-size: 2.2rem;
       color: #ffffff;
       margin-bottom: 1.5rem;
+    }
+
+    .company-title-banner {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      margin-bottom: 1.5rem;
+      display: block;
     }
 
     .story-text p {
@@ -194,6 +208,9 @@
       font-size: 1.8rem;
       color: #ffffff;
       margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
 
     .exp-title .exp-role {
@@ -201,6 +218,12 @@
       font-weight: 600;
       font-size: 1.05rem;
       margin-top: 0.25rem;
+    }
+
+    .exp-inline-logo {
+      height: 32px;
+      width: auto;
+      object-fit: contain;
     }
 
     .exp-meta {
@@ -263,16 +286,6 @@
       object-fit: cover;
     }
 
-    .exp-img-placeholder {
-      padding: 3rem 1rem;
-      text-align: center;
-      color: #64748b;
-      font-size: 0.85rem;
-      border: 1px dashed #334155;
-      border-radius: 8px;
-      background: #0f172a;
-    }
-
     @media (max-width: 900px) {
       .profile-hero {
         grid-template-columns: 1fr;
@@ -312,18 +325,19 @@
       
       <!-- Headshot Frame -->
       <div class="profile-img-frame">
-        <img src="profile1.jpg" alt="Walter Kimball" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <div class="img-placeholder-text" style="display:none;">
-          <strong>Main Headshot</strong><br><small>(profile1.jpg)</small>
-        </div>
+        <img src="profile_headshot.jpg" alt="Walter Kimball Headshot" />
       </div>
 
       <!-- Header & Short Bio -->
       <div class="profile-header-text">
-        <h1 style="font-size: 2.8rem; margin-bottom: 1rem; color: #ffffff;">Hi, I'm Walter Kimball</h1>
+        <h1 style="font-size: 2.8rem; margin-bottom: 0.5rem; color: #ffffff;">Hi, I'm Walter Kimball</h1>
         <p style="font-size: 1.05rem; line-height: 1.7; color: #cbd5e1;">
           I am a Maine native and Class of 2023 graduate of Oxford Hills Comprehensive High School and Tech School. Currently, I am completing my B.S. in Mechanical Engineering at the NYU Tandon School of Engineering (Class of 2027), while concurrently pursuing NYU’s accelerated 4+1 Master's program in Robotics & Mechatronics.
         </p>
+        <div class="header-badges">
+          <img src="NYU_Torch.webp" alt="NYU Torch" class="header-badge-img">
+          <img src="NYU_Motot_logo.jpeg" alt="NYU Motorsport Logo" class="header-badge-img">
+        </div>
       </div>
 
     </section>
@@ -606,19 +620,11 @@
           <!-- Right Column: Gallery -->
           <div class="exp-gallery">
             <div class="exp-img-box">
-              <img src="baja-car1.jpg" alt="NYU Baja SAE Vehicle" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-              <div class="exp-img-placeholder" style="display:none;">
-                <strong>Baja SAE Car Photo</strong><br>
-                <small>(Place `baja-car1.jpg` in folder)</small>
-              </div>
+              <img src="Baja_car_2024.jpg" alt="NYU Baja SAE Vehicle 2024" />
             </div>
 
             <div class="exp-img-box">
-              <img src="baja-cad1.jpg" alt="Baja Drivetrain CAD Model" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-              <div class="exp-img-placeholder" style="display:none;">
-                <strong>Drivetrain CAD Model Photo</strong><br>
-                <small>(Place `baja-cad1.jpg` in folder)</small>
-              </div>
+              <img src="Walter_Grinding.jpg" alt="Walter Grinding Chassis Tube" />
             </div>
           </div>
 
@@ -631,7 +637,10 @@
         
         <div class="exp-header">
           <div class="exp-title">
-            <h3>Howell Laboratories, Inc.</h3>
+            <h3>
+              Howell Laboratories, Inc.
+              <img src="Howell_logo.png" alt="Howell Logo" class="exp-inline-logo">
+            </h3>
             <div class="exp-role">Mechanical Engineering Intern</div>
           </div>
           <div class="exp-meta">
@@ -640,24 +649,18 @@
           </div>
         </div>
 
+        <img src="Howell_Title.png" alt="Howell Laboratories Title Banner" class="company-title-banner">
+
         <div class="exp-body-reverse">
           
           <!-- Left Column: Gallery -->
           <div class="exp-gallery">
             <div class="exp-img-box">
-              <img src="howell-chlorinator.jpg" alt="7600 Seawater Chlorinator Drawing" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-              <div class="exp-img-placeholder" style="display:none;">
-                <strong>7600 Chlorinator CAD / Drawing</strong><br>
-                <small>(Place `howell-chlorinator.jpg` in folder)</small>
-              </div>
+              <img src="Howell_Building.jpg" alt="Howell Laboratories Building Facility" />
             </div>
 
             <div class="exp-img-box">
-              <img src="howell-panel.jpg" alt="4870 Air Control Panel Model" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-              <div class="exp-img-placeholder" style="display:none;">
-                <strong>4870 Control Panel CAD Model</strong><br>
-                <small>(Place `howell-panel.jpg` in folder)</small>
-              </div>
+              <img src="Howell_7600.jpg" alt="Howell 7600 Series Unit" />
             </div>
           </div>
 
@@ -696,7 +699,7 @@
 
       </div>
 
-      <!-- Entry 3: Teaching Assistant - ME-UY 3253 (Text Left, Gallery Right -> Standard Layout) -->
+      <!-- Entry 3: Teaching Assistant & Vehicle Design (Text Left, Gallery Right -> Standard Layout) -->
       <div class="experience-entry">
         
         <div class="exp-header">
@@ -742,19 +745,7 @@
           <!-- Right Column: Gallery -->
           <div class="exp-gallery">
             <div class="exp-img-box">
-              <img src="ta-automotive1.jpg" alt="Automotive Engineering Coursework" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-              <div class="exp-img-placeholder" style="display:none;">
-                <strong>Course Design Review Photo</strong><br>
-                <small>(Place `ta-automotive1.jpg` in folder)</small>
-              </div>
-            </div>
-
-            <div class="exp-img-box">
-              <img src="ta-automotive2.jpg" alt="Vehicle Dynamics Analysis Diagram" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-              <div class="exp-img-placeholder" style="display:none;">
-                <strong>Vehicle Dynamics / Packaging Diagram</strong><br>
-                <small>(Place `ta-automotive2.jpg` in folder)</small>
-              </div>
+              <img src="Mud_Bug.jpg" alt="Mud Bug / Kaza Turbo Design Concept" />
             </div>
           </div>
 
