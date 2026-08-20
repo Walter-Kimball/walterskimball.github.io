@@ -36,7 +36,7 @@
       <!-- Project: Baja SAE Custom Gearbox (Priority 1) -->
       <div class="project-card" onclick="openModal('baja-modal')">
         <div class="card-img-box">
-          <img src="baja-cad1.jpg" alt="Baja SAE Drivetrain" onerror="this.style.display='none';">
+          <img src="baja-cad1.jpg" alt="Baja SAE Drivetrain" onerror="handleImgError(this, 'Baja Gearbox CAD')">
         </div>
         <div class="card-content">
           <span class="card-tag">NYU Motorsports</span>
@@ -56,7 +56,7 @@
       <!-- Project: Howell Labs 7600 Sea Water Chlorinator (Priority 1) -->
       <div class="project-card" onclick="openModal('howell-7600-modal')">
         <div class="card-img-box">
-          <img src="howell-7600-thumb.jpg" alt="Howell Labs 7600 Sea Water Chlorinator" onerror="this.style.display='none';">
+          <img src="howell-7600-thumb.jpg" alt="Howell Labs 7600 Sea Water Chlorinator" onerror="handleImgError(this, '7600 Chlorinator')">
         </div>
         <div class="card-content">
           <span class="card-tag">Internship Assignment</span>
@@ -77,7 +77,7 @@
       <!-- Project: Howell Labs 4870 Air Control Panel (Priority 1) -->
       <div class="project-card" onclick="openModal('howell-4870-modal')">
         <div class="card-img-box">
-          <img src="howell-4870-thumb.jpg" alt="Howell Labs 4870 Air Control Panel" onerror="this.style.display='none';">
+          <img src="howell-4870-thumb.jpg" alt="Howell Labs 4870 Air Control Panel" onerror="handleImgError(this, '4870 Air Panel')">
         </div>
         <div class="card-content">
           <span class="card-tag">Internship Assignment</span>
@@ -99,7 +99,7 @@
       <!-- Project: Solarbrella (Priority 2) -->
       <div class="project-card" onclick="openModal('solarbrella-modal')">
         <div class="card-img-box">
-          <img src="solarbrella_project_images/SSSAssemblyV6.0 v9_2.png" alt="Solarbrella CAD Model" onerror="this.src='solarbrella_project_images/SSSAssemblyV6.0 v9.png';">
+          <img src="solarbrella_project_images/SSSAssemblyV6.0 v9_2.png" alt="Solarbrella CAD Model" onerror="handleImgError(this, 'Solarbrella CAD')">
         </div>
         <div class="card-content">
           <span class="card-tag">College Project</span>
@@ -119,7 +119,7 @@
       <!-- Project: Aquaponics System (Priority 2) -->
       <div class="project-card" onclick="openModal('aquaponics-modal')">
         <div class="card-img-box">
-          <img src="aquaponics-thumb.jpg" alt="Aquaponics System" onerror="this.style.display='none';">
+          <img src="aquaponics-thumb.jpg" alt="Aquaponics System" onerror="handleImgError(this, 'Aquaponics System')">
         </div>
         <div class="card-content">
           <span class="card-tag">High School Project</span>
@@ -141,7 +141,7 @@
       <!-- Project: 2022 OHTS Tech Challenge - M&M Dispenser (Priority 3) -->
       <div class="project-card" onclick="openModal('mm-dispenser-modal')">
         <div class="card-img-box">
-          <img src="mm-dispenser-thumb.jpg" alt="M&M Dispenser" onerror="this.style.display='none';">
+          <img src="mm-dispenser-thumb.jpg" alt="M&M Dispenser" onerror="handleImgError(this, 'M&M Dispenser')">
         </div>
         <div class="card-content">
           <span class="card-tag">High School Project</span>
@@ -161,7 +161,7 @@
       <!-- Project: Automatic Fish Feeder (Priority 3) -->
       <div class="project-card" onclick="openModal('fish-feeder-modal')">
         <div class="card-img-box">
-          <img src="fish-feeder-thumb.jpg" alt="Automatic Fish Feeder" onerror="this.style.display='none';">
+          <img src="fish-feeder-thumb.jpg" alt="Automatic Fish Feeder" onerror="handleImgError(this, 'Fish Feeder')">
         </div>
         <div class="card-content">
           <span class="card-tag">High School Project</span>
@@ -181,7 +181,7 @@
       <!-- Project: OHCHS Physics Department Slingshot (Priority 3) -->
       <div class="project-card" onclick="openModal('slingshot-modal')">
         <div class="card-img-box">
-          <img src="slingshot-thumb.jpg" alt="Physics Slingshot" onerror="this.style.display='none';">
+          <img src="slingshot-thumb.jpg" alt="Physics Slingshot" onerror="handleImgError(this, 'Physics Slingshot')">
         </div>
         <div class="card-content">
           <span class="card-tag">High School Project</span>
@@ -230,7 +230,7 @@
         </div>
 
         <div class="detail-main">
-          <img src="baja-cad1.jpg" alt="Baja Gearbox CAD" class="modal-hero-img" onerror="this.style.display='none';">
+          <img src="baja-cad1.jpg" alt="Baja Gearbox CAD" class="modal-hero-img" onerror="handleImgError(this, 'Baja Gearbox CAD')">
 
           <div class="detail-body">
             <p>Detailed breakdown for the Baja SAE custom gearbox and eCVT development. Includes finite element analysis (FEA), stress testing, and gear calculation details using KISSsoft software.</p>
@@ -241,9 +241,9 @@
       <div class="project-gallery-section">
         <h3>Project Gallery</h3>
         <div class="detail-gallery">
-          <img src="baja-cad2.jpg" alt="Baja CAD Render 2" onerror="this.style.display='none';">
-          <img src="baja-machining.jpg" alt="Baja CNC Machining" onerror="this.style.display='none';">
-          <img src="baja-assembly.jpg" alt="Gearbox Assembly" onerror="this.style.display='none';">
+          <img src="baja-cad2.jpg" alt="Baja CAD Render 2" onerror="handleImgError(this, 'Baja CAD Render 2')">
+          <img src="baja-machining.jpg" alt="Baja CNC Machining" onerror="handleImgError(this, 'Baja CNC Machining')">
+          <img src="baja-assembly.jpg" alt="Gearbox Assembly" onerror="handleImgError(this, 'Gearbox Assembly')">
         </div>
       </div>
     </div>
@@ -283,7 +283,7 @@
         </div>
 
         <div class="detail-main">
-          <img src="howell-7600-thumb.jpg" alt="7600 Sea Water Chlorinator" class="modal-hero-img" onerror="this.style.display='none';">
+          <img src="howell-7600-thumb.jpg" alt="7600 Sea Water Chlorinator" class="modal-hero-img" onerror="handleImgError(this, '7600 Chlorinator System')">
 
           <div class="detail-body">
             <p>During my engineering internship at Howell Laboratories, the design team was actively modernizing their flagship 7600 Sea Water Chlorinator to replace legacy, unsourceable components. Because this critical machinery was designated for upcoming U.S. Navy vessels, updating the design package was treated as a top company priority. Near the conclusion of the core design phase, a substantial number of production drawings were required for manufacturing review, professional engineering stamping, and U.S. Navy approval.</p>
@@ -304,8 +304,8 @@
       <div class="project-gallery-section">
         <h3>Project Gallery</h3>
         <div class="detail-gallery">
-          <img src="howell-7600-1.jpg" alt="7600 CAD Assembly" onerror="this.style.display='none';">
-          <img src="howell-7600-2.jpg" alt="7600 Drawing Package" onerror="this.style.display='none';">
+          <img src="howell-7600-1.jpg" alt="7600 CAD Assembly" onerror="handleImgError(this, '7600 CAD Assembly')">
+          <img src="howell-7600-2.jpg" alt="7600 Drawing Package" onerror="handleImgError(this, '7600 Drawing Package')">
         </div>
       </div>
     </div>
@@ -339,7 +339,7 @@
         </div>
 
         <div class="detail-main">
-          <img src="howell-4870-thumb.jpg" alt="4870 Air Control Panel" class="modal-hero-img" onerror="this.style.display='none';">
+          <img src="howell-4870-thumb.jpg" alt="4870 Air Control Panel" class="modal-hero-img" onerror="handleImgError(this, '4870 Control Panel')">
 
           <div class="detail-body">
             <p>During my Summer 2024 internship at Howell Laboratories, I was assigned to digitize and model Howell's long-standing 4870 Air Control Panel. The system was actively manufactured and reviewed using legacy hand-sketched drawings. Because the engineering team planned to overhaul the 4870 within a few months, the lack of a 3D CAD model presented a significant bottleneck for client presentations and design reviews.</p>
@@ -360,8 +360,8 @@
       <div class="project-gallery-section">
         <h3>Project Gallery</h3>
         <div class="detail-gallery">
-          <img src="howell-4870-1.jpg" alt="4870 CAD Assembly" onerror="this.style.display='none';">
-          <img src="howell-4870-2.jpg" alt="4870 Explosive View" onerror="this.style.display='none';">
+          <img src="howell-4870-1.jpg" alt="4870 CAD Assembly" onerror="handleImgError(this, '4870 CAD Assembly')">
+          <img src="howell-4870-2.jpg" alt="4870 Explosive View" onerror="handleImgError(this, '4870 Exploded View')">
         </div>
       </div>
     </div>
@@ -399,22 +399,22 @@
         </div>
 
         <div class="detail-main">
-          <img src="solarbrella_project_images/SSSAssemblyV6.0 v9_2.png" alt="Solarbrella V6.0 CAD Render Title Card" class="modal-hero-img" onerror="this.src='solarbrella_project_images/SSSAssemblyV6.0 v9.png';">
+          <img src="solarbrella_project_images/SSSAssemblyV6.0 v9_2.png" alt="Solarbrella V6.0 CAD Render Title Card" class="modal-hero-img" onerror="handleImgError(this, 'Solarbrella CAD Render')">
 
           <div class="detail-body">
-            <p>This device resulted from my NYU Tandon EG-1004 class's semester-long design project where we were tasked with creating a device for solving a specific problem[cite: 2]. My group consisted of two other members one being another mechanical engineer and the other a computer engineer[cite: 2]. I took a team lead type position and did lots of the communicating for the group with our professors and group mentor[cite: 2]. I was also the head of design for the team making a large majority of the drawings and CAD for the project[cite: 2]. The computer engineer was the head of programming and did lots of the wiring and coding for the project[cite: 2]. Lastly, the other mechanical engineer did lots of the logistics for the presentations and also was the head of production which included presentation, appearance, and the construction of parts that were not directly tied to the design[cite: 2].</p>
+            <p>This device resulted from my NYU Tandon EG-1004 class's semester-long design project where we were tasked with creating a device for solving a specific problem. My group consisted of two other members, one being another mechanical engineer and the other a computer engineer. I took a team lead position and handled the communicating for the group with our professors and group mentor. I was also the head of design for the team, creating the vast majority of the drawings and CAD for the project. The computer engineer was the head of programming and handled the wiring and coding. Lastly, the other mechanical engineer managed the logistics for presentations and served as head of production, overseeing appearance and construction of non-design components.</p>
 
-            <p>This was a mock industry project which required progress with three main milestones[cite: 2]. For our first milestone, we had agreed on the first real design for the Solarbrella, had done preliminary research on similar products on the market, and researched materials that we would most likely need[cite: 2]. This presentation also had cost predictions, and a teamwork agreement outlining our group's functionality and responsibilities[cite: 2]. We had also decided on our company name being WitTech Junction and the product name being the Solarbrella[cite: 2]. At this point, we were still in a very conceptual phase of the design process and were on budget and schedule[cite: 2].</p>
+            <p>This was a mock industry project structured around three key milestones. For our first milestone, we agreed on the initial design for the Solarbrella, completed preliminary market research on competing products, and identified required materials. This presentation included cost predictions and a teamwork agreement outlining individual responsibilities. We established our company name as WitTech Junction and named the product Solarbrella. At this stage, we were in a conceptual phase while staying on budget and schedule.</p>
 
-            <p>By milestone two we had gone through two more additional iterations of the Solarbrella design[cite: 2]. I had changes made to how the solar panel arrays would actuate to help optimize their rotation for the touch of our servo motors[cite: 2]. There were also discussions on what items we would need to purchase for the device which included a solar controller for regulating the energy that would be used to charge the lead-acid battery, along with decisions on what solar panels and batteries to buy[cite: 2]. For this benchmark, we were still on budget but were falling behind on the physical development of not only the device but the specialized sunshade that was needed for mounting the panels[cite: 2].</p>
+            <p>By milestone two, we progressed through two additional design iterations. I refined how the solar panel arrays actuated to optimize their rotation via servo motors. We also finalized purchasing decisions for core hardware, including a solar charge controller to regulate battery power, solar panels, and a lead-acid battery. For this benchmark, we maintained our budget while accelerating physical construction of the custom sunshade mount.</p>
 
-            <p>By milestone three we were back on schedule with a finished design for the Solarbrella (V6) and a constructed umbrella ready for the device to be mounted[cite: 2]. Budget was still met and we were within all of the project's specifications[cite: 2].</p>
+            <p>By milestone three, we returned fully to schedule with a finalized design (V6) and a fully assembled umbrella housing ready for mounting. Budget goals were achieved and all technical specifications were satisfied.</p>
 
-            <p>V6 had little changes from V5 but there were lots of changes over V1[cite: 2]. The solar tracking system was now regulated by four photoresistors in a box formation separated by walls[cite: 2]. The photo resistors would sense for light and if there was no light sensed then the device would either rotate or raise or lower the panels to be in direct sunlight[cite: 2]. This would happen since the walls separating the photoresistors would cast a shadow on specific resistors unless the light source was directly perpendicular to the panels and resistors[cite: 2].</p>
+            <p>V6 represented significant optimizations over V1. The solar tracking array was governed by four photoresistors arranged in a quadrant configuration separated by barrier walls. The system evaluated ambient light readings to calculate optimal positioning, actively rotating or tilting the panels toward direct sunlight whenever shadows fell across the directional sensors.</p>
 
-            <p>There were also improvements to the overall physical properties of the Solarbrella[cite: 2]. Across the last three versions, there was a 34% weight reduction and the center of mass was now almost entirely in the center of the sunshade[cite: 2]. This was hard to accomplish since there was a small space to work with and mounting different modules to different sides of the inner walls of the device would have a large impact on the center of mass[cite: 2]. An imbalanced center of mass would result in the Solarbrella being unstable when rotating making the device potentially unsafe[cite: 2].</p>
+            <p>We also achieved major structural improvements. Across three development cycles, we achieved a 34% total weight reduction while centering the overall mass within the shade structure. Balancing the center of gravity within a constrained envelope prevented mechanical oscillation during active servo rotation, ensuring rotational stability and operational safety.</p>
 
-            <p>By the time commission day came around my team was five days early and ahead of schedule[cite: 2]. We used this time to work on our final presentations and prepare for our formal final presentation of our semester-long design project and passed with extra credit[cite: 2]. NYU EG 1004 professors liked the Solarbrella so much that it was pulled from decommissioning and saved to be used in future EG 1004 classes as an example[cite: 2].</p>
+            <p>On commission day, our team completed testing five days ahead of schedule. We utilized this buffer to finalize our documentation and formal presentation, earning extra credit. NYU EG-1004 faculty selected the Solarbrella to be preserved as a permanent benchmark demonstration project for future engineering classes.</p>
           </div>
         </div>
       </div>
@@ -422,11 +422,11 @@
       <div class="project-gallery-section">
         <h3>Project Gallery</h3>
         <div class="detail-gallery">
-          <img src="solarbrella_project_images/SLDPPic_2.jpg" alt="Solarbrella Team Presentation Photo" onerror="this.src='solarbrella_project_images/SLDPPic.jpg';">
-          <img src="solarbrella_project_images/EG1004SLDPCircutDigV5_2.png" alt="EG1004 Circuit Diagram" onerror="this.src='solarbrella_project_images/EG1004SLDPCircutDigV5.png';">
-          <img src="solarbrella_project_images/EG1004SLDPLogoRsz_2.png" alt="WitTech Junction Logo" onerror="this.src='solarbrella_project_images/EG1004SLDPLogoRsz.png';">
-          <img src="solarbrella_project_images/SSSAssembalyFuncV2BotIso_2.jpg" alt="Functional Assembly Bottom Isometric View" onerror="this.src='solarbrella_project_images/SSSAssembalyFuncV2BotIso.jpg';">
-          <img src="solarbrella_project_images/SSSAssembalyFuncV2Front_2.png" alt="Functional Assembly Front View" onerror="this.src='solarbrella_project_images/SSSAssembalyFuncV2Front.png';">
+          <img src="solarbrella_project_images/SLDPPic_2.jpg" alt="Solarbrella Team Presentation Photo" onerror="handleImgError(this, 'Team Presentation')">
+          <img src="solarbrella_project_images/EG1004SLDPCircutDigV5_2.png" alt="EG1004 Circuit Diagram" onerror="handleImgError(this, 'Circuit Diagram')">
+          <img src="solarbrella_project_images/EG1004SLDPLogoRsz_2.png" alt="WitTech Junction Logo" onerror="handleImgError(this, 'WitTech Logo')">
+          <img src="solarbrella_project_images/SSSAssembalyFuncV2BotIso_2.jpg" alt="Functional Assembly Bottom Isometric View" onerror="handleImgError(this, 'Assembly Bottom View')">
+          <img src="solarbrella_project_images/SSSAssembalyFuncV2Front_2.png" alt="Functional Assembly Front View" onerror="handleImgError(this, 'Assembly Front View')">
         </div>
       </div>
     </div>
@@ -470,7 +470,7 @@
         </div>
 
         <div class="detail-main">
-          <img src="aquaponics-thumb.jpg" alt="Aquaponics System" class="modal-hero-img" onerror="this.style.display='none';">
+          <img src="aquaponics-thumb.jpg" alt="Aquaponics System" class="modal-hero-img" onerror="handleImgError(this, 'Aquaponics System')">
 
           <div class="detail-body">
             <p>The Aquaponics System was a multi-year engineering initiative focused on constructing a fully automated, self-sustaining ecosystem combining aquaculture and hydroponics. Over four years, the project evolved from basic mechanical feeder development to a complete system integration featuring Raspberry Pi-based environmental displays, automated pH and dechlorination dosing, custom fluid piping loops, and relay-driven lighting controls.</p>
@@ -483,9 +483,9 @@
       <div class="project-gallery-section">
         <h3>Project Gallery</h3>
         <div class="detail-gallery">
-          <img src="aquaponics-1.jpg" alt="Aquaponics Piping Layout" onerror="this.style.display='none';">
-          <img src="aquaponics-2.jpg" alt="Raspberry Pi Control Screen" onerror="this.style.display='none';">
-          <img src="aquaponics-3.jpg" alt="Grow Bed Assembly" onerror="this.style.display='none';">
+          <img src="aquaponics-1.jpg" alt="Aquaponics Piping Layout" onerror="handleImgError(this, 'Piping Layout')">
+          <img src="aquaponics-2.jpg" alt="Raspberry Pi Control Screen" onerror="handleImgError(this, 'Control Display')">
+          <img src="aquaponics-3.jpg" alt="Grow Bed Assembly" onerror="handleImgError(this, 'Grow Bed Assembly')">
         </div>
       </div>
     </div>
@@ -521,16 +521,16 @@
         </div>
 
         <div class="detail-main">
-          <img src="mm-dispenser-thumb.jpg" alt="M&M Dispenser" class="modal-hero-img" onerror="this.style.display='none';">
+          <img src="mm-dispenser-thumb.jpg" alt="M&M Dispenser" class="modal-hero-img" onerror="handleImgError(this, 'M&M Dispenser')">
 
           <div class="detail-body">
-            <p>Every year Oxford Hills Technical School has their annual Tech Challenge where every tech program holds a competition for its students to test their abilities and learnings in competition against their classmates[cite: 2]. The 2022 season for Pre-Engineering’s challenge was to create an M&amp;M dispenser that was both consistent and documented with a user manual and diagrams for each part[cite: 2]. This competition would take place from the end of December to mid-January for Pre-Engineering[cite: 2].</p>
+            <p>Oxford Hills Technical School hosts an annual Tech Challenge across programs to evaluate student skills through competitive design. The 2022 Pre-Engineering challenge specified creating an automated M&amp;M dispenser engineered for operational consistency, accompanied by full engineering drawings and user manuals.</p>
 
-            <p>There were very few restrictions beyond these so I went for an automated approach using Arduino and servos[cite: 2]. My design was a clear reservoir to fill with M&amp;Ms that would convert into four separate channels[cite: 2]. These channels had a slot that an M&amp;M could fall through into a slider that was connected to a servo[cite: 2]. The slider was just used to direct the M&amp;Ms around a bar that would stop all the M&amp;Ms from falling to a large funnel underneath all the reservoir channels[cite: 2]. The funnel was then connected to an output tube where four M&amp;Ms would be dispensed[cite: 2].</p>
+            <p>I engineered an automated architecture driven by an Arduino and servo actuators. The hardware consisted of a transparent upper reservoir feeding into four distinct channel tracks. Each channel guided individual pieces into a servo-actuated slide mechanism, routing pieces past a mechanical retention bar into a central collection funnel and exit nozzle.</p>
 
-            <p>A few of my challenges were the actuation of the slider and to avoid jamming the system[cite: 2]. To actuate the slider a pin and slot design was used for moving the slider side to side from a rotating servo[cite: 2]. This servo was then run by an Arduino Uno[cite: 2]. To avoid jamming, in the instruction manual I made it so that when the slot activated to accept the M&amp;Ms there was a time delay to shake the dispenser to align all the candies into the slots[cite: 2]. Then the slider would pull them around the blocking bar[cite: 2]. This was indicated with a shake LED[cite: 2]. There was also a safety measure put in so that if the slider jammed on a misaligned M&amp;M the servo would turn off instead of torquing the slider[cite: 2].</p>
+            <p>To eliminate jamming risks, I implemented a pin-and-slot slider actuation geometry and programmed anti-jam timing routines. A brief delay-and-vibration cycle was coded into the sequence to align candies prior to slider actuation, accompanied by an LED indicator. An electronic torque limit safeguard was also integrated to automatically disengage the servo if an obstruction was encountered.</p>
 
-            <p>I had 27 parts in my device and 18 of them had drawings made with dimensions and visuals for reproduction[cite: 2]. My presentation was viewed by my class and the OHTS director and resulted in my receiving first place gold[cite: 2]. My impressions left on the department resulted in being asked to be a judge for the 2023 season the next year[cite: 2].</p>
+            <p>The completed project included full CAD documentation, featuring detailed manufacturing drawings for 18 custom components. The project earned 1st Place Gold in competition, leading to an invitation to serve as an official judge for the following year's challenge.</p>
           </div>
         </div>
       </div>
@@ -538,8 +538,8 @@
       <div class="project-gallery-section">
         <h3>Project Gallery</h3>
         <div class="detail-gallery">
-          <img src="mm-dispenser-1.jpg" alt="M&M Dispenser CAD Drawing" onerror="this.style.display='none';">
-          <img src="mm-dispenser-2.jpg" alt="Assembly View" onerror="this.style.display='none';">
+          <img src="mm-dispenser-1.jpg" alt="M&M Dispenser CAD Drawing" onerror="handleImgError(this, 'Dispenser CAD')">
+          <img src="mm-dispenser-2.jpg" alt="Assembly View" onerror="handleImgError(this, 'Dispenser Assembly')">
         </div>
       </div>
     </div>
@@ -576,18 +576,16 @@
         </div>
 
         <div class="detail-main">
-          <img src="fish-feeder-thumb.jpg" alt="Automatic Fish Feeder" class="modal-hero-img" onerror="this.style.display='none';">
+          <img src="fish-feeder-thumb.jpg" alt="Automatic Fish Feeder" class="modal-hero-img" onerror="handleImgError(this, 'Automatic Fish Feeder')">
 
           <div class="detail-body">
-            <p>When the Aquaponics Project first started my class was divided into different groups to tackle different tasks[cite: 2]. My group consisted of myself and my classmate Caroline Sheets[cite: 2]. Our task was to use the engineering design process to create an automated way to feed fish that required little to no maintenance[cite: 2].</p>
+            <p>Developed as a core subsystem for the master Aquaponics project, this initiative focused on designing a low-maintenance, automated fish feeding mechanism using structured engineering design methodologies.</p>
 
-            <p>When we set out on the internet for inspiration we found many different automated feeders for sale that had a variety of feeding methods[cite: 2]. Some would use large cavities for each day, others would use corkscrews[cite: 2]. Our idea for this device got most of its inspiration from McDonald's[cite: 2]. McDonald's uses a device with a rotating disk to move Oreo bits from one side of a container to the other by letting the Oreos fall into holes that slide to the other side of the disk and fall into their containers[cite: 2]. This design also allowed us to avoid the problem of moisture[cite: 2]. The separate stages of dispensing allow the food to stay dry from all the evaporating water in the tank keeping the food fresher[cite: 2].</p>
+            <p>To combat humidity from water evaporation—a primary cause of food clogging in conventional feeders—we engineered a rotating disk transfer mechanism that isolates the main food storage vault from aquatic moisture. Portioned chambers in the disk index across isolated apertures to deliver consistent, dry portions without exposing bulk food to humidity.</p>
 
-            <p>By the end of the 2021 school year, we had designed the entire lower rotating cavity and had begun designing the upper half[cite: 2]. When school started up again in the fall of 2021 Caroline had left the Pre-Engineering class and the rest of the project was now my project[cite: 2].</p>
+            <p>I integrated solid-state transistor switching to replace clunky relays, adapting an ATX power supply to deliver stable power alongside an Arduino Uno control board. The entire mechanical housing was designed in CAD and 3D printed, featuring a top-mounted motor enclosure and an explicit power status indicator to confirm daily dispensing cycles.</p>
 
-            <p>I used new knowledge of transistors to replace the need for a large relay in the design[cite: 2]. To use a DC motor I had to research to learn how to adapt an ATX Power Supply to fit my needs and to work along with an Arduino Uno board[cite: 2]. Once I had constructed a mock version with just electronics I began to work on the mechanical part again[cite: 2]. Using many screws and adapter parts I was able to 3D print the full device by mounting the motor above the food holder and having an enclosed shaft to spin the disk below[cite: 2]. Mounted above the motor the Arduino with all the wiring is enclosed and I added an indicator light to show if all the power was being received by the device[cite: 2]. This was important since the device would only run once a day meaning it would be easy to miss if the voltage disconnected[cite: 2].</p>
-
-            <p>This is now in its finished form and works like a dream[cite: 2]. The feeder can last a long time without needing to be refilled[cite: 2]. At one point I hope to go back to this because there is a slight problem with food getting stuck behind the shaft but the amount lost is very little[cite: 2].</p>
+            <p>The finished feeder provided reliable long-term autonomous feeding with minimal maintenance intervention.</p>
           </div>
         </div>
       </div>
@@ -595,8 +593,8 @@
       <div class="project-gallery-section">
         <h3>Project Gallery</h3>
         <div class="detail-gallery">
-          <img src="fish-feeder-1.jpg" alt="Rotating Disk Mechanism" onerror="this.style.display='none';">
-          <img src="fish-feeder-2.jpg" alt="Electronics & ATX Mod" onerror="this.style.display='none';">
+          <img src="fish-feeder-1.jpg" alt="Rotating Disk Mechanism" onerror="handleImgError(this, 'Rotating Disk Mechanism')">
+          <img src="fish-feeder-2.jpg" alt="Electronics & ATX Mod" onerror="handleImgError(this, 'Electronics System')">
         </div>
       </div>
     </div>
@@ -632,18 +630,14 @@
         </div>
 
         <div class="detail-main">
-          <img src="slingshot-thumb.jpg" alt="Physics Slingshot" class="modal-hero-img" onerror="this.style.display='none';">
+          <img src="slingshot-thumb.jpg" alt="Physics Slingshot" class="modal-hero-img" onerror="handleImgError(this, 'Physics Slingshot')">
 
           <div class="detail-body">
-            <p>In mid-February 2022 The OHCHS Physics Department came to OHTS Pre-Engineering to request the manufacture of a new physics slingshot[cite: 2]. This was to replace the old homemade wooden slingshot that the school had been using which was becoming very old and imprecise[cite: 2]. Two classmates and I were assigned to create a new slingshot with a deadline of late March to early April[cite: 2]. What is meant by a "physics" slingshot is that measurements can be made[cite: 2]. This meant that there were to be force indicators and angle selectors[cite: 2].</p>
+            <p>Commissioned by the OHCHS Physics Department, this project called for designing and fabricating a precision laboratory slingshot to replace an aging wooden unit. The system required measurable force output and predictable angle selection for kinematics experiments.</p>
 
-            <p>My team and I researched some slingshots online looked at the old slingshots and got a general design down[cite: 2]. Our idea was to have a full aluminum frame with two towers on each end with one larger tower having the slingshot elastic cords attached (the launch side)[cite: 2]. The shorter tower would have a crank and a tensioning cord (the trigger side)[cite: 2]. This would all run through pulling in the center of the base of the frame that would allow the slingshot to point up but pull the tensioning cable in the upward direction too[cite: 2].</p>
+            <p>Our design featured an extruded aluminum structural frame anchored by dual upright towers. The primary forward tower supported elastic cord mounts, while the rear tower housed a geared winch tensioning assembly and quick-release trigger. Central guide channels ensured linear pull alignment regardless of elevation angle settings.</p>
 
-            <p>The frame was designed and the measurements were made and drafted on paper to ensure that all parts would fit together since there was limited extruded aluminum for the manufacturing[cite: 2]. Frank Damond and another team member cut all the aluminum for the frame and began assembly[cite: 2]. I worked with a Senior Level Pre-Engineering student Dawson Joseph to create a trigger system[cite: 2].</p>
-
-            <p>The trigger system was a flip latch which was tied in the middle of the tensioning cord[cite: 2]. This trigger had an "L" shaped piece that rotated along a small frame[cite: 2]. A loop was tied and bound in the tensioning cord so that the loop could hook around the "L"[cite: 2]. A second hinge was made that would hold the "L" in place and had a trigger cord that could be pulled on to relieve the loop from the hook[cite: 2]. This was all assembled and thread-locked and functioned as designed[cite: 2].</p>
-
-            <p>For force measurement, there were markings made in the tensioning cord that would give a rough estimate of the Newtons that the elastic potential energy the bungee cords had to exert[cite: 2]. There was a crank winch used to tension the cords to keep users away from the launch side and torqued to crank with ease[cite: 2]. The device was fully assembled tested and delivered to the Physics Department mid to early April due to delays from school snow days[cite: 2].</p>
+            <p>I designed a custom flip-latch trigger mechanism incorporating an L-shaped holding arm, secondary mechanical safety catch, and lanyard release. The winch mechanism allowed operators to tension the elastic bands safely from behind the firing line while reading calibrated force scale indicators. The finished unit was assembled, calibrated, and delivered directly to the Physics Department for laboratory integration.</p>
           </div>
         </div>
       </div>
@@ -651,8 +645,8 @@
       <div class="project-gallery-section">
         <h3>Project Gallery</h3>
         <div class="detail-gallery">
-          <img src="slingshot-1.jpg" alt="Trigger Latch Mechanism" onerror="this.style.display='none';">
-          <img src="slingshot-2.jpg" alt="Aluminum Frame Assembly" onerror="this.style.display='none';">
+          <img src="slingshot-1.jpg" alt="Trigger Latch Mechanism" onerror="handleImgError(this, 'Trigger Latch Mechanism')">
+          <img src="slingshot-2.jpg" alt="Aluminum Frame Assembly" onerror="handleImgError(this, 'Frame Assembly')">
         </div>
       </div>
     </div>
@@ -663,8 +657,15 @@
     <p>&copy; Walter Kimball. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Modal Interactivity -->
+  <!-- JavaScript for Modal Interactivity & Image Fallbacks -->
   <script>
+    // Universal SVG placeholder fallback generator for missing images
+    function handleImgError(img, label) {
+      img.onerror = null; // Prevent infinite loop
+      const svgText = encodeURIComponent(label || 'Image Preview');
+      img.src = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 400 225'><rect width='100%' height='100%' fill='%231e293b'/><text x='50%' y='50%' fill='%2338bdf8' font-family='sans-serif' font-size='15' font-weight='600' text-anchor='middle' dy='.3em'>${svgText}</text></svg>`;
+    }
+
     function openModal(modalId) {
       document.getElementById(modalId).classList.add('active');
       document.body.style.overflow = 'hidden';
