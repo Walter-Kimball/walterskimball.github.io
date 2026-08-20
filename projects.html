@@ -302,6 +302,7 @@
       border-radius: 8px;
       border: 1px solid #2a2f3a;
       object-fit: cover;
+      background-color: #0b0f17;
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
@@ -350,7 +351,7 @@
       <p>Explore engineering design work, academic builds, and technical innovations. Click any card for detailed breakdowns.</p>
     </div>
 
-    <!-- Projects Grid View (Ordered by Priority: Priority 1 -> Priority 2 -> Priority 3) -->
+    <!-- Projects Grid View -->
     <div class="projects-grid">
 
       <!-- ================= PRIORITY 1 PROJECTS ================= -->
@@ -421,7 +422,7 @@
       <!-- Project: Solarbrella (Priority 2) -->
       <div class="project-card" onclick="openModal('solarbrella-modal')">
         <div class="card-img-box">
-          <img src="solarbrella-thumb.jpg" alt="Solarbrella" onerror="this.style.display='none';">
+          <img src="solarbrella_project_images/SSSAssemblyV6.0 v9_2.png" alt="Solarbrella CAD Model" onerror="this.src='solarbrella_project_images/SSSAssemblyV6.0 v9.png';">
         </div>
         <div class="card-content">
           <span class="card-tag">College Project</span>
@@ -695,6 +696,7 @@
       <button class="close-btn" onclick="closeModal('solarbrella-modal')">&times;</button>
       
       <div class="project-detail-layout">
+        <!-- Left Sidebar Metadata / Info Bar -->
         <div class="detail-sidebar">
           <h1>Solarbrella</h1>
 
@@ -720,8 +722,10 @@
           </div>
         </div>
 
+        <!-- Right Main Content Area -->
         <div class="detail-main">
-          <img src="solarbrella-thumb.jpg" alt="Solarbrella Feature Image" class="modal-hero-img" onerror="this.style.display='none';">
+          <!-- Title Card Image: Placed above extended description & right of info bar -->
+          <img src="solarbrella_project_images/SSSAssemblyV6.0 v9_2.png" alt="Solarbrella V6.0 CAD Render Title Card" class="modal-hero-img" onerror="this.src='solarbrella_project_images/SSSAssemblyV6.0 v9.png';">
 
           <div class="detail-body">
             <p>This device resulted from my NYU Tandon EG-1004 class's semester-long design project where we were tasked with creating a device for solving a specific problem[cite: 2]. My group consisted of two other members one being another mechanical engineer and the other a computer engineer[cite: 2]. I took a team lead type position and did lots of the communicating for the group with our professors and group mentor[cite: 2]. I was also the head of design for the team making a large majority of the drawings and CAD for the project[cite: 2]. The computer engineer was the head of programming and did lots of the wiring and coding for the project[cite: 2]. Lastly, the other mechanical engineer did lots of the logistics for the presentations and also was the head of production which included presentation, appearance, and the construction of parts that were not directly tied to the design[cite: 2].</p>
@@ -741,13 +745,15 @@
         </div>
       </div>
 
+      <!-- Bottom Photo Gallery Section -->
       <div class="project-gallery-section">
         <h3>Project Gallery</h3>
         <div class="detail-gallery">
-          <img src="solarbrella-1.jpg" alt="Solarbrella CAD Model" onerror="this.style.display='none';">
-          <img src="solarbrella-2.jpg" alt="Solarbrella Physical Build" onerror="this.style.display='none';">
-          <img src="solarbrella-3.jpg" alt="Solarbrella Electronics Setup" onerror="this.style.display='none';">
-          <img src="solarbrella-4.jpg" alt="Solarbrella Testing Phase" onerror="this.style.display='none';">
+          <img src="solarbrella_project_images/SLDPPic_2.jpg" alt="Solarbrella Team Presentation Photo" onerror="this.src='solarbrella_project_images/SLDPPic.jpg';">
+          <img src="solarbrella_project_images/EG1004SLDPCircutDigV5_2.png" alt="EG1004 Circuit Diagram" onerror="this.src='solarbrella_project_images/EG1004SLDPCircutDigV5.png';">
+          <img src="solarbrella_project_images/EG1004SLDPLogoRsz_2.png" alt="WitTech Junction Logo" onerror="this.src='solarbrella_project_images/EG1004SLDPLogoRsz.png';">
+          <img src="solarbrella_project_images/SSSAssembalyFuncV2BotIso_2.jpg" alt="Functional Assembly Bottom Isometric View" onerror="this.src='solarbrella_project_images/SSSAssembalyFuncV2BotIso.jpg';">
+          <img src="solarbrella_project_images/SSSAssembalyFuncV2Front_2.png" alt="Functional Assembly Front View" onerror="this.src='solarbrella_project_images/SSSAssembalyFuncV2Front.png';">
         </div>
       </div>
     </div>
