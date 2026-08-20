@@ -5,6 +5,292 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Walter Kimball | Contact</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Contact Specific Styling */
+    .contact-hero {
+      text-align: center;
+      padding: 3rem 0 2rem 0;
+      border-bottom: 1px solid var(--border-color, #2a2f3a);
+    }
+
+    .contact-hero h1 {
+      font-size: 2.8rem;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-subtitle {
+      color: #94a3b8;
+      font-size: 1.05rem;
+      max-width: 650px;
+      margin: 0 auto 1.5rem auto;
+      line-height: 1.6;
+    }
+
+    /* Employment Status Banner */
+    .status-card {
+      background: #121824;
+      border: 1px solid #38bdf8;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2.5rem 0;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+    }
+
+    .status-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .status-title {
+      font-size: 1.5rem;
+      color: #ffffff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .status-pill {
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+      border: 1px solid #22c55e;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #22c55e;
+    }
+
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .degree-box {
+      background: #0b0f17;
+      border: 1px solid #2a2f3a;
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .degree-box h4 {
+      color: #38bdf8;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.3rem;
+    }
+
+    .degree-box h3 {
+      color: #ffffff;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .degree-box .completion-date {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .status-note {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Main Contact Grid */
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      padding-bottom: 3rem;
+    }
+
+    .contact-card {
+      background: #121824;
+      border: 1px solid #2a2f3a;
+      border-radius: 12px;
+      padding: 2rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact-card:hover {
+      border-color: #38bdf8;
+    }
+
+    .contact-card h2 {
+      color: #ffffff;
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 0.75rem;
+    }
+
+    .info-link-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      text-decoration: none;
+      color: #cbd5e1;
+      padding: 1rem;
+      background: #0b0f17;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .info-link-item:hover {
+      color: #38bdf8;
+      border-color: #38bdf8;
+      transform: translateY(-2px);
+    }
+
+    .info-link-icon {
+      font-size: 1.25rem;
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    .info-link-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-link-label {
+      font-size: 0.75rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-link-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+      word-break: break-all;
+    }
+
+    /* Form Layout */
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background: #0b0f17;
+      border: 1px solid #2a2f3a;
+      border-radius: 6px;
+      color: #ffffff;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      border-color: #38bdf8;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: #38bdf8;
+      color: #0b0f17;
+      font-weight: 600;
+      padding: 0.85rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+
+    .submit-btn:hover {
+      background: #0284c7;
+      color: #ffffff;
+    }
+
+    /* Quick Downloads Box */
+    .doc-download-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .doc-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem 1rem;
+      background: #0b0f17;
+      border: 1px solid #2a2f3a;
+      border-radius: 8px;
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .doc-btn:hover {
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+
+    .doc-btn strong {
+      font-size: 0.95rem;
+    }
+
+    .doc-btn span {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 800px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+      .doc-download-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -15,39 +301,130 @@
       <a href="index.html">Home</a>
       <a href="profile.html">Profile</a>
       <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
       <a href="WalterKimballResume.pdf" target="_blank" class="btn-resume">Resume</a>
       <a href="Walter_Kimball_Protfolio_Master.pdf" target="_blank" class="btn-resume">Portfolio PDF</a>
     </div>
   </nav>
 
-  <!-- Contact Section -->
-  <section class="contact-section" style="border-bottom: none;">
-    <h1>Contact Information</h1>
-    <p class="subtitle">Feel free to reach out regarding engineering opportunities or project collaborations.</p>
+  <div class="container">
 
-    <div class="contact-card">
-      <div class="contact-item">
-        <h3>Email</h3>
-        <p><a href="mailto:your.email@nyu.edu">your.email@nyu.edu</a></p>
+    <!-- Contact Header -->
+    <section class="contact-hero">
+      <h1>Contact Information</h1>
+      <p class="contact-subtitle">
+        Feel free to reach out regarding engineering opportunities, design inquiries, or project collaborations.
+      </p>
+    </section>
+
+    <!-- Employment & Graduation Status Card -->
+    <div class="status-card">
+      <div class="status-header">
+        <div class="status-title">
+          Employment &amp; Availability Status
+        </div>
+        <div class="status-pill">
+          <span class="status-dot"></span> Open to Work Right Now
+        </div>
       </div>
 
-      <div class="contact-item">
-        <h3>LinkedIn</h3>
-        <p><a href="https://linkedin.com/" target="_blank">linkedin.com/in/walter-kimball</a></p>
+      <div class="timeline-grid">
+        <div class="degree-box">
+          <h4>Undergraduate Degree</h4>
+          <h3>B.S. Mechanical Engineering</h3>
+          <div class="completion-date">Expected Completion: May 2027</div>
+        </div>
+
+        <div class="degree-box">
+          <h4>Graduate Degree (Accelerated 4+1)</h4>
+          <h3>M.S. Robotics &amp; Mechatronics</h3>
+          <div class="completion-date">Expected Completion: May 2028</div>
+        </div>
       </div>
 
-      <div class="contact-item">
-        <h3>GitHub</h3>
-        <p><a href="https://github.com/" target="_blank">github.com/walter-kimball</a></p>
-      </div>
-
-      <div class="contact-item">
-        <h3>Location</h3>
-        <p style="color: var(--text-primary); font-weight: 600;">Brooklyn, NY &bull; Maine</p>
-      </div>
+      <p class="status-note">
+        I am currently seeking active engineering roles, internships, co-ops, and project collaborations in mechanical design, mechatronics, and automotive systems.
+      </p>
     </div>
-  </section>
+
+    <!-- Main Contact Grid -->
+    <div class="contact-container">
+
+      <!-- Left Column: Direct Info & Documentation Downloads -->
+      <div class="contact-card">
+        <h2>Direct Contact</h2>
+
+        <!-- Email -->
+        <a href="mailto:walterkimball56@gmail.com" class="info-link-item">
+          <div class="info-link-icon">✉</div>
+          <div class="info-link-text">
+            <span class="info-link-label">Email</span>
+            <span class="info-link-value">walterkimball56@gmail.com</span>
+          </div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/walter-kimball-82a658294" target="_blank" class="info-link-item">
+          <div class="info-link-icon">in</div>
+          <div class="info-link-text">
+            <span class="info-link-label">LinkedIn</span>
+            <span class="info-link-value">linkedin.com/in/walter-kimball-82a658294</span>
+          </div>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/walterskimball" target="_blank" class="info-link-item">
+          <div class="info-link-icon">&lt;/&gt;</div>
+          <div class="info-link-text">
+            <span class="info-link-label">GitHub</span>
+            <span class="info-link-value">github.com/walterskimball</span>
+          </div>
+        </a>
+
+        <h2 style="margin-top: 2rem;">Documentation</h2>
+        <div class="doc-download-grid">
+          <a href="WalterKimballResume.pdf" target="_blank" class="doc-btn">
+            <strong>View Resume</strong>
+            <span>PDF Document</span>
+          </a>
+          <a href="Walter_Kimball_Protfolio_Master.pdf" target="_blank" class="doc-btn">
+            <strong>View Portfolio</strong>
+            <span>Portfolio Master PDF</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Quick Contact Form -->
+      <div class="contact-card">
+        <h2>Send a Message</h2>
+        <form action="mailto:walterkimball56@gmail.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="Name" class="form-control" placeholder="e.g. Jane Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email Address</label>
+            <input type="email" id="email" name="Email" class="form-control" placeholder="e.g. jdoe@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="Subject" class="form-control" placeholder="Inquiry regarding..." required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" class="form-control" placeholder="Write your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
 
   <!-- Footer -->
   <footer>
