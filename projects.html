@@ -44,8 +44,8 @@
       margin-top: 15px;
       color: #e2e8f0;
       font-size: 1rem;
-      text-align: center;
       font-family: sans-serif;
+      text-align: center;
     }
     .lightbox-close {
       position: absolute;
@@ -87,169 +87,147 @@
     <!-- Projects Grid View -->
     <div class="projects-grid">
 
-      <!-- ================= PRIORITY 1 PROJECTS ================= -->
-
-      <!-- Project: Baja SAE Custom Gearbox (Priority 1) -->
-      <div class="project-card" onclick="openModal('baja-modal')">
+      <!-- Baja SAE Custom Gearbox -->
+      <div class="project-card" onclick="loadProject('baja-gearbox')">
         <div class="card-img-box">
-          <img src="baja-cad1.jpg" alt="Baja SAE Drivetrain" onerror="handleImgError(this, 'Baja Gearbox CAD')">
+          <img src="baja-gearbox/baja-cad1.jpg" alt="Baja SAE Drivetrain" onerror="handleImgError(this, 'Baja Gearbox CAD')">
         </div>
         <div class="card-content">
           <span class="card-tag">NYU Motorsports</span>
           <h3 class="card-title">Baja SAE Custom Gearbox</h3>
           <p class="card-desc">Complete redesign and structural overhaul of a custom off-road vehicle transmission and electronic CVT integration.</p>
-
           <div class="card-skill-tags">
             <span class="card-skill-tag">KISSsoft</span>
             <span class="card-skill-tag">SolidWorks FEA</span>
             <span class="card-skill-tag">Gearbox Design</span>
           </div>
-
           <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
-      <!-- Project: Howell Labs 7600 Sea Water Chlorinator (Priority 1) -->
-      <div class="project-card" onclick="openModal('howell-7600-modal')">
+      <!-- Howell Labs 7600 Sea Water Chlorinator -->
+      <div class="project-card" onclick="loadProject('howell-7600')">
         <div class="card-img-box">
-          <img src="howell-7600-thumb.jpg" alt="Howell Labs 7600 Sea Water Chlorinator" onerror="handleImgError(this, '7600 Chlorinator')">
+          <img src="howell-7600/howell-7600-thumb.jpg" alt="Howell Labs 7600 Sea Water Chlorinator" onerror="handleImgError(this, '7600 Chlorinator')">
         </div>
         <div class="card-content">
           <span class="card-tag">Internship Assignment</span>
           <h3 class="card-title">Howell Labs 7600 Sea Water Chlorinator</h3>
           <p class="card-desc">Complete CAD modeling, manufacturing drawing release, and ERP integration for a U.S. Navy sea water chlorination system.</p>
-
           <div class="card-skill-tags">
             <span class="card-skill-tag">Autodesk Inventor</span>
             <span class="card-skill-tag">Autodesk Vault</span>
             <span class="card-skill-tag">GD&amp;T</span>
             <span class="card-skill-tag">Epicor ERP</span>
           </div>
-
           <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
-      <!-- Project: Howell Labs 4870 Air Control Panel (Priority 1) -->
-      <div class="project-card" onclick="openModal('howell-4870-modal')">
+      <!-- Howell Labs 4870 Air Control Panel -->
+      <div class="project-card" onclick="loadProject('howell-4870')">
         <div class="card-img-box">
-          <img src="howell-4870-thumb.jpg" alt="Howell Labs 4870 Air Control Panel" onerror="handleImgError(this, '4870 Air Panel')">
+          <img src="howell-4870/howell-4870-thumb.jpg" alt="Howell Labs 4870 Air Control Panel" onerror="handleImgError(this, '4870 Air Panel')">
         </div>
         <div class="card-content">
           <span class="card-tag">Internship Assignment</span>
           <h3 class="card-title">Howell Labs 4870 Air Control Panel</h3>
           <p class="card-desc">Legacy reverse-engineering, component modeling, and full assembly drawing release for naval air control system modernization.</p>
-
           <div class="card-skill-tags">
             <span class="card-skill-tag">Autodesk Inventor</span>
             <span class="card-skill-tag">Autodesk Vault</span>
             <span class="card-skill-tag">Assembly Drawings</span>
           </div>
-
           <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
-      <!-- ================= PRIORITY 2 PROJECTS ================= -->
-
-      <!-- Project: Solarbrella (Priority 2) -->
-      <div class="project-card" onclick="openModal('solarbrella-modal')">
+      <!-- Solarbrella -->
+      <div class="project-card" onclick="loadProject('solarbrella')">
         <div class="card-img-box">
-          <img src="solarbrella_project_images/SSSAssembalyV6.0 v9.png" alt="Solarbrella CAD Model" onerror="handleImgError(this, 'Solarbrella CAD')">
+          <img src="solarbrella/SSSAssembalyV6.0 v9.png" alt="Solarbrella CAD Model" onerror="handleImgError(this, 'Solarbrella CAD')">
         </div>
         <div class="card-content">
           <span class="card-tag">College Project</span>
           <h3 class="card-title">Solarbrella</h3>
           <p class="card-desc">An automated solar-tracking sunshade system featuring quad-photoresistor alignment, active servo actuation, and integrated battery energy storage.</p>
-
           <div class="card-skill-tags">
             <span class="card-skill-tag">Fusion 360</span>
             <span class="card-skill-tag">Arduino</span>
             <span class="card-skill-tag">Solar Tracking</span>
           </div>
-
           <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
-      <!-- Project: Aquaponics System (Priority 2) -->
-      <div class="project-card" onclick="openModal('aquaponics-modal')">
+      <!-- Aquaponics System -->
+      <div class="project-card" onclick="loadProject('aquaponics')">
         <div class="card-img-box">
-          <img src="aquaponics-thumb.jpg" alt="Aquaponics System" onerror="handleImgError(this, 'Aquaponics System')">
+          <img src="aquaponics/aquaponics-thumb.jpg" alt="Aquaponics System" onerror="handleImgError(this, 'Aquaponics System')">
         </div>
         <div class="card-content">
           <span class="card-tag">High School Project</span>
           <h3 class="card-title">Aquaponics System</h3>
           <p class="card-desc">A multi-year automated ecosystem integrating Raspberry Pi monitoring, custom fluid piping loops, and automated pH and dechlorination controls.</p>
-
           <div class="card-skill-tags">
             <span class="card-skill-tag">Raspberry Pi</span>
             <span class="card-skill-tag">System Display</span>
             <span class="card-skill-tag">AutoCAD</span>
           </div>
-
           <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
-      <!-- ================= PRIORITY 3 PROJECTS ================= -->
-
-      <!-- Project: 2022 OHTS Tech Challenge - M&M Dispenser (Priority 3) -->
-      <div class="project-card" onclick="openModal('mm-dispenser-modal')">
+      <!-- M&M Dispenser -->
+      <div class="project-card" onclick="loadProject('mm-dispenser')">
         <div class="card-img-box">
-          <img src="mm-dispenser-thumb.jpg" alt="M&M Dispenser" onerror="handleImgError(this, 'M&M Dispenser')">
+          <img src="mm-dispenser/mm-dispenser-thumb.jpg" alt="M&M Dispenser" onerror="handleImgError(this, 'M&M Dispenser')">
         </div>
         <div class="card-content">
           <span class="card-tag">High School Project</span>
           <h3 class="card-title">2022 OHTS Tech Challenge - M&amp;M Dispenser</h3>
           <p class="card-desc">A gold-medal-winning automated multi-channel candy dispenser featuring Arduino servo control, anti-jamming logic, and complete GD&amp;T drawing sets.</p>
-
           <div class="card-skill-tags">
             <span class="card-skill-tag">Engineering Drawings</span>
             <span class="card-skill-tag">Arduino</span>
             <span class="card-skill-tag">AutoCAD</span>
           </div>
-
           <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
-      <!-- Project: Automatic Fish Feeder (Priority 3) -->
-      <div class="project-card" onclick="openModal('fish-feeder-modal')">
+      <!-- Automatic Fish Feeder -->
+      <div class="project-card" onclick="loadProject('fish-feeder')">
         <div class="card-img-box">
-          <img src="fish-feeder-thumb.jpg" alt="Automatic Fish Feeder" onerror="handleImgError(this, 'Fish Feeder')">
+          <img src="fish-feeder/fish-feeder-thumb.jpg" alt="Automatic Fish Feeder" onerror="handleImgError(this, 'Fish Feeder')">
         </div>
         <div class="card-content">
           <span class="card-tag">High School Project</span>
           <h3 class="card-title">Automatic Fish Feeder</h3>
           <p class="card-desc">A moisture-isolated, rotating disk fish feeder powered by an adapted ATX power supply and Arduino motor control logic.</p>
-
           <div class="card-skill-tags">
             <span class="card-skill-tag">Motor Control</span>
             <span class="card-skill-tag">Arduino</span>
             <span class="card-skill-tag">AutoCAD</span>
           </div>
-
           <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
 
-      <!-- Project: OHCHS Physics Department Slingshot (Priority 3) -->
-      <div class="project-card" onclick="openModal('slingshot-modal')">
+      <!-- Physics Slingshot -->
+      <div class="project-card" onclick="loadProject('slingshot')">
         <div class="card-img-box">
-          <img src="slingshot-thumb.jpg" alt="Physics Slingshot" onerror="handleImgError(this, 'Physics Slingshot')">
+          <img src="slingshot/slingshot-thumb.jpg" alt="Physics Slingshot" onerror="handleImgError(this, 'Physics Slingshot')">
         </div>
         <div class="card-content">
           <span class="card-tag">High School Project</span>
           <h3 class="card-title">OHCHS Physics Department Slingshot</h3>
           <p class="card-desc">An aluminum-frame physics laboratory slingshot built with winch tensioning, force measurement indicators, and a flip-latch trigger release.</p>
-
           <div class="card-skill-tags">
             <span class="card-skill-tag">Hand Fabrication</span>
             <span class="card-skill-tag">Manual Machining</span>
             <span class="card-skill-tag">Layout &amp; Drawings</span>
           </div>
-
           <span class="btn-view-project">View Details &rarr;</span>
         </div>
       </div>
@@ -258,454 +236,10 @@
 
   </div>
 
-  <!-- ==================== MODAL OVERLAYS ==================== -->
-
-  <!-- Modal: Baja SAE Custom Gearbox (Priority 1) -->
-  <div class="modal-overlay" id="baja-modal">
-    <div class="modal-container">
-      <button class="close-btn" onclick="closeModal('baja-modal')">&times;</button>
-      
-      <div class="project-detail-layout">
-        <div class="detail-sidebar">
-          <h1>Baja SAE Custom Gearbox</h1>
-          <div class="meta-group"><div class="meta-label">Project Group</div><div class="meta-value">NYU Motorsports VIP</div></div>
-          <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">NYU Tandon School of Engineering</div></div>
-          <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">2023 - Present</div></div>
-          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Drivetrain Lead &amp; Head Design Director</div></div>
-
-          <div class="meta-group">
-            <div class="meta-label">Skills &amp; Technologies</div>
-            <div class="modal-skill-tags">
-              <span class="modal-skill-tag">KISSsoft</span>
-              <span class="modal-skill-tag">SolidWorks FEA</span>
-              <span class="modal-skill-tag">Gearbox Design</span>
-              <span class="modal-skill-tag">eCVT Integration</span>
-              <span class="modal-skill-tag">Engine Dyno</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-main">
-          <img src="baja-cad1.jpg" alt="Baja Gearbox CAD" class="modal-hero-img" onerror="handleImgError(this, 'Baja Gearbox CAD')">
-
-          <div class="detail-body">
-            <p>Detailed breakdown for the Baja SAE custom gearbox and eCVT development. Includes finite element analysis (FEA), stress testing, and gear calculation details using KISSsoft software.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-gallery-section">
-        <h3>Project Gallery</h3>
-        <div class="detail-gallery">
-          <img src="baja-cad2.jpg" alt="Baja CAD Render 2" onerror="handleImgError(this, 'Baja CAD Render 2')">
-          <img src="baja-machining.jpg" alt="Baja CNC Machining" onerror="handleImgError(this, 'Baja CNC Machining')">
-          <img src="baja-assembly.jpg" alt="Gearbox Assembly" onerror="handleImgError(this, 'Gearbox Assembly')">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal: Howell Labs 7600 Sea Water Chlorinator (Priority 1) -->
-  <div class="modal-overlay" id="howell-7600-modal">
-    <div class="modal-container">
-      <button class="close-btn" onclick="closeModal('howell-7600-modal')">&times;</button>
-      
-      <div class="project-detail-layout">
-        <div class="detail-sidebar">
-          <h1>Howell Labs 7600 Sea Water Chlorinator</h1>
-
-          <div class="meta-group"><div class="meta-label">Project Group</div><div class="meta-value">Internship Assignment</div></div>
-          <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">Howell Laboratories</div></div>
-          <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">Jul 2024 - Aug 2024</div></div>
-          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Engineering Drawing Drafter</div></div>
-          <div class="meta-group"><div class="meta-label">Project Type</div><div class="meta-value">Assigned Project</div></div>
-          <div class="meta-group"><div class="meta-label">Members</div><div class="meta-value">Walter Kimball and Gavin Pardon</div></div>
-
-          <div class="meta-group">
-            <div class="meta-label">Skills &amp; Technologies</div>
-            <div class="modal-skill-tags">
-              <span class="modal-skill-tag">Autodesk Inventor</span>
-              <span class="modal-skill-tag">Autodesk Vault</span>
-              <span class="modal-skill-tag">Engineering Drawings</span>
-              <span class="modal-skill-tag">BOM</span>
-              <span class="modal-skill-tag">Epicor ERP</span>
-              <span class="modal-skill-tag">GD&amp;T</span>
-              <span class="modal-skill-tag">Weldments</span>
-              <span class="modal-skill-tag">Weld Callouts</span>
-              <span class="modal-skill-tag">Sheet Metal Drawings</span>
-              <span class="modal-skill-tag">Smartsheet</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-main">
-          <img src="howell-7600-thumb.jpg" alt="7600 Sea Water Chlorinator" class="modal-hero-img" onerror="handleImgError(this, '7600 Chlorinator System')">
-
-          <div class="detail-body">
-            <p>During my engineering internship at Howell Laboratories, the design team was actively modernizing their flagship 7600 Sea Water Chlorinator to replace legacy, unsourceable components. Because this critical machinery was designated for upcoming U.S. Navy vessels, updating the design package was treated as a top company priority. Near the conclusion of the core design phase, a substantial number of production drawings were required for manufacturing review, professional engineering stamping, and U.S. Navy approval.</p>
-
-            <p>Fellow intern Gavin Pardon and I were tasked with drafting component, sheet metal, and assembly drawings for the updated 7600 system, assigning new part numbers and logging all files into Autodesk Vault. This work strictly adhered to formal ASME Y14.5 GD&amp;T standards, internal Howell drawing conventions, and military manufacturing notes. My responsibilities focused on weldments, sheet metal bending, sub-assemblies, and surface finishing/powder coating drawing packages. Each drawing underwent a rigorous redline revision process—first passing review by licensed professional engineers, followed by manufacturing shop floor feedback, before final stamping and Navy authorization.</p>
-
-            <p>Once approved, we entered each component into Epicor ERP to establish manufacturing routings. This involved defining part entries and building operational steps—such as material cutting, machining, welding, and assembly—along with estimated work center hours. By handling this comprehensive drafting and ERP release process, our assistance reduced project lead time by approximately 30%, saving nearly a full month on a 2 to 3-month schedule.</p>
-
-            <p>This success prompted Howell Laboratories to create a permanent full-time drafting role to maintain the accelerated workflow established during our internship. Returning to Howell in December 2024, I had the opportunity to see the 7600 enter physical production and ship for official U.S. Navy qualification testing. The project provided deep practical insight into naval equipment requirements, class-based specifications, and formal drawing release workflows.</p>
-
-            <div class="nda-notice">
-              Notice: These drawings and models are the intellectual property of Howell Laboratories and are under Non-Disclosure Agreement (NDA).
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-gallery-section">
-        <h3>Project Gallery</h3>
-        <div class="detail-gallery">
-          <img src="howell-7600-1.jpg" alt="7600 CAD Assembly" onerror="handleImgError(this, '7600 CAD Assembly')">
-          <img src="howell-7600-2.jpg" alt="7600 Drawing Package" onerror="handleImgError(this, '7600 Drawing Package')">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal: Howell Labs 4870 Air Control Panel (Priority 1) -->
-  <div class="modal-overlay" id="howell-4870-modal">
-    <div class="modal-container">
-      <button class="close-btn" onclick="closeModal('howell-4870-modal')">&times;</button>
-      
-      <div class="project-detail-layout">
-        <div class="detail-sidebar">
-          <h1>Howell Labs 4870 Air Control Panel</h1>
-
-          <div class="meta-group"><div class="meta-label">Project Group</div><div class="meta-value">Internship Assignment</div></div>
-          <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">Howell Laboratories</div></div>
-          <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">Jun 2024 - Jul 2024</div></div>
-          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">CAD Modeler</div></div>
-          <div class="meta-group"><div class="meta-label">Project Type</div><div class="meta-value">Assigned Project</div></div>
-          <div class="meta-group"><div class="meta-label">Members</div><div class="meta-value">Walter Kimball</div></div>
-
-          <div class="meta-group">
-            <div class="meta-label">Skills &amp; Technologies</div>
-            <div class="modal-skill-tags">
-              <span class="modal-skill-tag">Autodesk Inventor</span>
-              <span class="modal-skill-tag">Autodesk Vault</span>
-              <span class="modal-skill-tag">Assembly Drawings</span>
-              <span class="modal-skill-tag">BOM</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-main">
-          <img src="howell-4870-thumb.jpg" alt="4870 Air Control Panel" class="modal-hero-img" onerror="handleImgError(this, '4870 Control Panel')">
-
-          <div class="detail-body">
-            <p>During my Summer 2024 internship at Howell Laboratories, I was assigned to digitize and model Howell's long-standing 4870 Air Control Panel. The system was actively manufactured and reviewed using legacy hand-sketched drawings. Because the engineering team planned to overhaul the 4870 within a few months, the lack of a 3D CAD model presented a significant bottleneck for client presentations and design reviews.</p>
-
-            <p>My objective was to audit the entire Bill of Materials (BOM), model every individual component, and construct a complete top-level assembly along with production drawing documentation. Early in the process, I researched supplier databases for commercial off-the-shelf (COTS) CAD models and discovered that several key components—including custom pneumatic fittings, pressure gauges, and regulators—were going out of production and predated 3D digital records. To resolve this, I measured physical stock in the warehouse by hand to reverse-engineer exact 3D models, while concurrently building in-house part CAD from legacy 2D drawings.</p>
-
-            <p>Once all constituent models were finalized, I constructed the top-level 4870 assembly in Autodesk Inventor. Custom metadata was assigned to every part file so that importing the assembly into Autodesk Vault generated a fully formatted, automated BOM structure. I then authored the final production drawing set containing complete weld callouts, BOM tables, quality control dimensions, and shop manufacturing notes.</p>
-
-            <p>Delivering this digital CAD package and identifying obsolete legacy components eliminated half of the preliminary legwork required for the upcoming 4870 overhaul, while allowing Howell to initiate early supplier outreach for drop-in replacement hardware.</p>
-
-            <div class="nda-notice">
-              Notice: These drawings and models are the intellectual property of Howell Laboratories and are under Non-Disclosure Agreement (NDA).
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-gallery-section">
-        <h3>Project Gallery</h3>
-        <div class="detail-gallery">
-          <img src="howell-4870-1.jpg" alt="4870 CAD Assembly" onerror="handleImgError(this, '4870 CAD Assembly')">
-          <img src="howell-4870-2.jpg" alt="4870 Explosive View" onerror="handleImgError(this, '4870 Exploded View')">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal: Solarbrella (Priority 2) -->
-  <div class="modal-overlay" id="solarbrella-modal">
-    <div class="modal-container">
-      <button class="close-btn" onclick="closeModal('solarbrella-modal')">&times;</button>
-      
-      <div class="project-detail-layout">
-        <div class="detail-sidebar">
-          <h1>Solarbrella</h1>
-
-          <div class="meta-group"><div class="meta-label">Project Group</div><div class="meta-value">College Project</div></div>
-          <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">NYU Tandon School of Engineering - EG 1004</div></div>
-          <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">Sep 2023 - Dec 2023</div></div>
-          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Team Lead and Head of Design</div></div>
-          <div class="meta-group"><div class="meta-label">Project Type</div><div class="meta-value">Semester Long Design Project</div></div>
-          <div class="meta-group"><div class="meta-label">Members</div><div class="meta-value">Walter Kimball, Justin Oh, and Tony Guan</div></div>
-
-          <div class="meta-group">
-            <div class="meta-label">Skills &amp; Technologies</div>
-            <div class="modal-skill-tags">
-              <span class="modal-skill-tag">Fusion 360</span>
-              <span class="modal-skill-tag">Arduino</span>
-              <span class="modal-skill-tag">Solar Tracking</span>
-              <span class="modal-skill-tag">3D Printing</span>
-              <span class="modal-skill-tag">Ultimaker Cura</span>
-              <span class="modal-skill-tag">Laser Cutting</span>
-              <span class="modal-skill-tag">Solar Panels</span>
-              <span class="modal-skill-tag">Energy Storage</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-main">
-          <img src="solarbrella_project_images/SSSAssembalyV6.0 v9.png" alt="Solarbrella V6.0 CAD Render Title Card" class="modal-hero-img" onerror="handleImgError(this, 'Solarbrella CAD Render')">
-
-          <div class="detail-body">
-            <p>This device resulted from my NYU Tandon EG-1004 class's semester-long design project where we were tasked with creating a device for solving a specific problem. My group consisted of two other members, one being another mechanical engineer and the other a computer engineer. I took a team lead position and handled the communicating for the group with our professors and group mentor. I was also the head of design for the team, creating the vast majority of the drawings and CAD for the project. The computer engineer was the head of programming and handled the wiring and coding. Lastly, the other mechanical engineer managed the logistics for presentations and served as head of production, overseeing appearance and construction of non-design components.</p>
-
-            <p>This was a mock industry project structured around three key milestones. For our first milestone, we agreed on the initial design for the Solarbrella, completed preliminary market research on competing products, and identified required materials. This presentation included cost predictions and a teamwork agreement outlining individual responsibilities. We established our company name as WitTech Junction and named the product Solarbrella. At this stage, we were in a conceptual phase while staying on budget and schedule.</p>
-
-            <p>By milestone two, we progressed through two additional design iterations. I refined how the solar panel arrays actuated to optimize their rotation via servo motors. We also finalized purchasing decisions for core hardware, including a solar charge controller to regulate battery power, solar panels, and a lead-acid battery. For this benchmark, we maintained our budget while accelerating physical construction of the custom sunshade mount.</p>
-
-            <p>By milestone three, we returned fully to schedule with a finalized design (V6) and a fully assembled umbrella housing ready for mounting. Budget goals were achieved and all technical specifications were satisfied.</p>
-
-            <p>V6 represented significant optimizations over V1. The solar tracking array was governed by four photoresistors arranged in a quadrant configuration separated by barrier walls. The system evaluated ambient light readings to calculate optimal positioning, actively rotating or tilting the panels toward direct sunlight whenever shadows fell across the directional sensors.</p>
-
-            <p>We also achieved major structural improvements. Across three development cycles, we achieved a 34% total weight reduction while centering the overall mass within the shade structure. Balancing the center of gravity within a constrained envelope prevented mechanical oscillation during active servo rotation, ensuring rotational stability and operational safety.</p>
-
-            <p>On commission day, our team completed testing five days ahead of schedule. We utilized this buffer to finalize our documentation and formal presentation, earning extra credit. NYU EG-1004 faculty selected the Solarbrella to be preserved as a permanent benchmark demonstration project for future engineering classes.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-gallery-section">
-        <h3>Project Gallery</h3>
-        <div class="detail-gallery">
-          <img src="solarbrella_project_images/SSSAssembalyV6.0 v9.png" alt="Solarbrella V6.0 CAD Render" onerror="handleImgError(this, 'Solarbrella CAD Render')">
-          <img src="solarbrella_project_images/SLDPPic.jpg" alt="Solarbrella Team Presentation Photo" onerror="handleImgError(this, 'Team Presentation')">
-          <img src="solarbrella_project_images/EG1004SLDPCircutDigV5.png" alt="EG1004 Circuit Diagram" onerror="handleImgError(this, 'Circuit Diagram')">
-          <img src="solarbrella_project_images/EG1004SLDPLogoRsz.png" alt="WitTech Junction Logo" onerror="handleImgError(this, 'WitTech Logo')">
-          <img src="solarbrella_project_images/SSSAssembalyFuncV2BotIso.png" alt="Functional Assembly Bottom Isometric View" onerror="handleImgError(this, 'Assembly Bottom View')">
-          <img src="solarbrella_project_images/SSSAssembalyFuncV2Front.png" alt="Functional Assembly Front View" onerror="handleImgError(this, 'Assembly Front View')">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal: Aquaponics System (Priority 2) -->
-  <div class="modal-overlay" id="aquaponics-modal">
-    <div class="modal-container">
-      <button class="close-btn" onclick="closeModal('aquaponics-modal')">&times;</button>
-      
-      <div class="project-detail-layout">
-        <div class="detail-sidebar">
-          <h1>Aquaponics System</h1>
-
-          <div class="meta-group"><div class="meta-label">Project Group</div><div class="meta-value">High School Project</div></div>
-          <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">Oxford Hills Technical School - Pre Engineering</div></div>
-          <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">May 2020 - Jun 2023</div></div>
-          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">2020 - Automated Feeder Partner
-2021 - Automated Feeder Lead
-2022 - Project Team Lead
-2023 - Independent Project</div></div>
-          <div class="meta-group"><div class="meta-label">Project Type</div><div class="meta-value">Assigned Project</div></div>
-          <div class="meta-group"><div class="meta-label">Members</div><div class="meta-value">2020 - Pre Engineering I Class
-2021 - Pre Engineering II Class
-2022 - Walter Kimball, Donovan Sanborn, Camden Colby
-2023 - Walter Kimball</div></div>
-
-          <div class="meta-group">
-            <div class="meta-label">Skills &amp; Technologies</div>
-            <div class="modal-skill-tags">
-              <span class="modal-skill-tag">Raspberry Pi</span>
-              <span class="modal-skill-tag">System Display</span>
-              <span class="modal-skill-tag">AutoCAD</span>
-              <span class="modal-skill-tag">Grow Beds</span>
-              <span class="modal-skill-tag">Fluid Piping</span>
-              <span class="modal-skill-tag">pH Balancing</span>
-              <span class="modal-skill-tag">Relays</span>
-              <span class="modal-skill-tag">Dechlorination</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-main">
-          <img src="aquaponics-thumb.jpg" alt="Aquaponics System" class="modal-hero-img" onerror="handleImgError(this, 'Aquaponics System')">
-
-          <div class="detail-body">
-            <p>The Aquaponics System was a multi-year engineering initiative focused on constructing a fully automated, self-sustaining ecosystem combining aquaculture and hydroponics. Over four years, the project evolved from basic mechanical feeder development to a complete system integration featuring Raspberry Pi-based environmental displays, automated pH and dechlorination dosing, custom fluid piping loops, and relay-driven lighting controls.</p>
-
-            <p>As team lead and independent developer in the final phases, I managed system architecture, physical piping layout, and sensor calibration to maintain optimal growing conditions for fish and plant life while minimizing routine maintenance.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-gallery-section">
-        <h3>Project Gallery</h3>
-        <div class="detail-gallery">
-          <img src="aquaponics-1.jpg" alt="Aquaponics Piping Layout" onerror="handleImgError(this, 'Piping Layout')">
-          <img src="aquaponics-2.jpg" alt="Raspberry Pi Control Screen" onerror="handleImgError(this, 'Control Display')">
-          <img src="aquaponics-3.jpg" alt="Grow Bed Assembly" onerror="handleImgError(this, 'Grow Bed Assembly')">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal: 2022 OHTS Tech Challenge - M&M Dispenser (Priority 3) -->
-  <div class="modal-overlay" id="mm-dispenser-modal">
-    <div class="modal-container">
-      <button class="close-btn" onclick="closeModal('mm-dispenser-modal')">&times;</button>
-      
-      <div class="project-detail-layout">
-        <div class="detail-sidebar">
-          <h1>2022 OHTS Tech Challenge - M&amp;M Dispenser</h1>
-
-          <div class="meta-group"><div class="meta-label">Project Group</div><div class="meta-value">High School Project</div></div>
-          <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">Oxford Hills Technical School - Pre Engineering</div></div>
-          <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">Dec 2021 - Jan 2022</div></div>
-          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Competitor</div></div>
-          <div class="meta-group"><div class="meta-label">Project Type</div><div class="meta-value">Competition</div></div>
-          <div class="meta-group"><div class="meta-label">Members</div><div class="meta-value">Walter Kimball</div></div>
-
-          <div class="meta-group">
-            <div class="meta-label">Skills &amp; Technologies</div>
-            <div class="modal-skill-tags">
-              <span class="modal-skill-tag">Engineering Drawings</span>
-              <span class="modal-skill-tag">Arduino</span>
-              <span class="modal-skill-tag">AutoCAD</span>
-              <span class="modal-skill-tag">Food Safety</span>
-              <span class="modal-skill-tag">Reliability</span>
-              <span class="modal-skill-tag">Servo Control</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-main">
-          <img src="mm-dispenser-thumb.jpg" alt="M&M Dispenser" class="modal-hero-img" onerror="handleImgError(this, 'M&M Dispenser')">
-
-          <div class="detail-body">
-            <p>Oxford Hills Technical School hosts an annual Tech Challenge across programs to evaluate student skills through competitive design. The 2022 Pre-Engineering challenge specified creating an automated M&amp;M dispenser engineered for operational consistency, accompanied by full engineering drawings and user manuals.</p>
-
-            <p>I engineered an automated architecture driven by an Arduino and servo actuators. The hardware consisted of a transparent upper reservoir feeding into four distinct channel tracks. Each channel guided individual pieces into a servo-actuated slide mechanism, routing pieces past a mechanical retention bar into a central collection funnel and exit nozzle.</p>
-
-            <p>To eliminate jamming risks, I implemented a pin-and-slot slider actuation geometry and programmed anti-jam timing routines. A brief delay-and-vibration cycle was coded into the sequence to align candies prior to slider actuation, accompanied by an LED indicator. An electronic torque limit safeguard was also integrated to automatically disengage the servo if an obstruction was encountered.</p>
-
-            <p>The completed project included full CAD documentation, featuring detailed manufacturing drawings for 18 custom components. The project earned 1st Place Gold in competition, leading to an invitation to serve as an official judge for the following year's challenge.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-gallery-section">
-        <h3>Project Gallery</h3>
-        <div class="detail-gallery">
-          <img src="mm-dispenser-1.jpg" alt="M&M Dispenser CAD Drawing" onerror="handleImgError(this, 'Dispenser CAD')">
-          <img src="mm-dispenser-2.jpg" alt="Assembly View" onerror="handleImgError(this, 'Dispenser Assembly')">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal: Automatic Fish Feeder (Priority 3) -->
-  <div class="modal-overlay" id="fish-feeder-modal">
-    <div class="modal-container">
-      <button class="close-btn" onclick="closeModal('fish-feeder-modal')">&times;</button>
-      
-      <div class="project-detail-layout">
-        <div class="detail-sidebar">
-          <h1>Automatic Fish Feeder</h1>
-
-          <div class="meta-group"><div class="meta-label">Project Group</div><div class="meta-value">High School Project</div></div>
-          <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">Oxford Hills Technical School - Pre Engineering</div></div>
-          <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">Nov 2021 - Mar 2022</div></div>
-          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Designer and Manufacturer</div></div>
-          <div class="meta-group"><div class="meta-label">Project Type</div><div class="meta-value">Assigned Project</div></div>
-          <div class="meta-group"><div class="meta-label">Members</div><div class="meta-value">Walter Kimball and Caroline Sheets</div></div>
-
-          <div class="meta-group">
-            <div class="meta-label">Skills &amp; Technologies</div>
-            <div class="modal-skill-tags">
-              <span class="modal-skill-tag">Motor Control</span>
-              <span class="modal-skill-tag">Arduino</span>
-              <span class="modal-skill-tag">AutoCAD</span>
-              <span class="modal-skill-tag">Debug System</span>
-              <span class="modal-skill-tag">Tunable</span>
-              <span class="modal-skill-tag">Standalone UPS</span>
-              <span class="modal-skill-tag">Real Time Clock</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-main">
-          <img src="fish-feeder-thumb.jpg" alt="Automatic Fish Feeder" class="modal-hero-img" onerror="handleImgError(this, 'Automatic Fish Feeder')">
-
-          <div class="detail-body">
-            <p>Developed as a core subsystem for the master Aquaponics project, this initiative focused on designing a low-maintenance, automated fish feeding mechanism using structured engineering design methodologies.</p>
-
-            <p>To combat humidity from water evaporation—a primary cause of food clogging in conventional feeders—we engineered a rotating disk transfer mechanism that isolates the main food storage vault from aquatic moisture. Portioned chambers in the disk index across isolated apertures to deliver consistent, dry portions without exposing bulk food to humidity.</p>
-
-            <p>I integrated solid-state transistor switching to replace clunky relays, adapting an ATX power supply to deliver stable power alongside an Arduino Uno control board. The entire mechanical housing was designed in CAD and 3D printed, featuring a top-mounted motor enclosure and an explicit power status indicator to confirm daily dispensing cycles.</p>
-
-            <p>The finished feeder provided reliable long-term autonomous feeding with minimal maintenance intervention.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-gallery-section">
-        <h3>Project Gallery</h3>
-        <div class="detail-gallery">
-          <img src="fish-feeder-1.jpg" alt="Rotating Disk Mechanism" onerror="handleImgError(this, 'Rotating Disk Mechanism')">
-          <img src="fish-feeder-2.jpg" alt="Electronics & ATX Mod" onerror="handleImgError(this, 'Electronics System')">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal: OHCHS Physics Department Slingshot (Priority 3) -->
-  <div class="modal-overlay" id="slingshot-modal">
-    <div class="modal-container">
-      <button class="close-btn" onclick="closeModal('slingshot-modal')">&times;</button>
-      
-      <div class="project-detail-layout">
-        <div class="detail-sidebar">
-          <h1>OHCHS Physics Department Slingshot</h1>
-
-          <div class="meta-group"><div class="meta-label">Project Group</div><div class="meta-value">High School Project</div></div>
-          <div class="meta-group"><div class="meta-label">Location</div><div class="meta-value">Oxford Hills Technical School - Pre Engineering</div></div>
-          <div class="meta-group"><div class="meta-label">Date</div><div class="meta-value">Feb 2022 - Apr 2022</div></div>
-          <div class="meta-group"><div class="meta-label">Role</div><div class="meta-value">Design Lead and Manufacturer</div></div>
-          <div class="meta-group"><div class="meta-label">Project Type</div><div class="meta-value">Assigned Project</div></div>
-          <div class="meta-group"><div class="meta-label">Members</div><div class="meta-value">Walter Kimball and Frank Damond</div></div>
-
-          <div class="meta-group">
-            <div class="meta-label">Skills &amp; Technologies</div>
-            <div class="modal-skill-tags">
-              <span class="modal-skill-tag">Hand Fabrication</span>
-              <span class="modal-skill-tag">Manual Machining</span>
-              <span class="modal-skill-tag">Layout &amp; Drawings</span>
-              <span class="modal-skill-tag">Safety Mechanisms</span>
-              <span class="modal-skill-tag">Repeatability</span>
-              <span class="modal-skill-tag">Trajectory Calculations</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="detail-main">
-          <img src="slingshot-thumb.jpg" alt="Physics Slingshot" class="modal-hero-img" onerror="handleImgError(this, 'Physics Slingshot')">
-
-          <div class="detail-body">
-            <p>Commissioned by the OHCHS Physics Department, this project called for designing and fabricating a precision laboratory slingshot to replace an aging wooden unit. The system required measurable force output and predictable angle selection for kinematics experiments.</p>
-
-            <p>Our design featured an extruded aluminum structural frame anchored by dual upright towers. The primary forward tower supported elastic cord mounts, while the rear tower housed a geared winch tensioning assembly and quick-release trigger. Central guide channels ensured linear pull alignment regardless of elevation angle settings.</p>
-
-            <p>I designed a custom flip-latch trigger mechanism incorporating an L-shaped holding arm, secondary mechanical safety catch, and lanyard release. The winch mechanism allowed operators to tension the elastic bands safely from behind the firing line while reading calibrated force scale indicators. The finished unit was assembled, calibrated, and delivered directly to the Physics Department for laboratory integration.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-gallery-section">
-        <h3>Project Gallery</h3>
-        <div class="detail-gallery">
-          <img src="slingshot-1.jpg" alt="Trigger Latch Mechanism" onerror="handleImgError(this, 'Trigger Latch Mechanism')">
-          <img src="slingshot-2.jpg" alt="Aluminum Frame Assembly" onerror="handleImgError(this, 'Frame Assembly')">
-        </div>
-      </div>
+  <!-- Reusable Dynamic Modal Wrapper -->
+  <div class="modal-overlay" id="global-modal">
+    <div class="modal-container" id="modal-content-target">
+      <!-- Dynamic content from [projectId]/index.html loaded here -->
     </div>
   </div>
 
@@ -716,12 +250,10 @@
     <div class="lightbox-caption" id="lightbox-caption"></div>
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; Walter Kimball. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Modal & Lightbox Interactivity -->
   <script>
     function handleImgError(img, label) {
       img.onerror = null;
@@ -729,14 +261,45 @@
       img.src = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 400 225'><rect width='100%' height='100%' fill='%231e293b'/><text x='50%' y='50%' fill='%2338bdf8' font-family='sans-serif' font-size='15' font-weight='600' text-anchor='middle' dy='.3em'>${svgText}</text></svg>`;
     }
 
-    function openModal(modalId) {
-      document.getElementById(modalId).classList.add('active');
+    // Dynamic Fetch Logic loading index.html directly from [projectId]/
+    async function loadProject(projectId) {
+      const target = document.getElementById('modal-content-target');
+      target.innerHTML = '<p style="color:#fff; padding:40px; text-align:center;">Loading project details...</p>';
+      
+      const modal = document.getElementById('global-modal');
+      modal.classList.add('active');
       document.body.style.overflow = 'hidden';
+
+      try {
+        const response = await fetch(`${projectId}/index.html`);
+        if (!response.ok) throw new Error('Project file not found');
+        const html = await response.text();
+        target.innerHTML = html;
+        bindGalleryEvents();
+      } catch (err) {
+        target.innerHTML = `
+          <button class="close-btn" onclick="closeModal()">&times;</button>
+          <div style="padding:40px; text-align:center; color:#e2e8f0;">
+            <h2>Project Details Unavailable</h2>
+            <p>Could not fetch file: <code>${projectId}/index.html</code></p>
+          </div>
+        `;
+      }
     }
 
-    function closeModal(modalId) {
-      document.getElementById(modalId).classList.remove('active');
+    function closeModal() {
+      document.getElementById('global-modal').classList.remove('active');
       document.body.style.overflow = 'auto';
+    }
+
+    function bindGalleryEvents() {
+      const galleryImages = document.querySelectorAll('#modal-content-target .detail-gallery img');
+      galleryImages.forEach(img => {
+        img.addEventListener('click', function(e) {
+          e.stopPropagation();
+          openLightbox(this.src, this.alt);
+        });
+      });
     }
 
     function openLightbox(src, alt) {
@@ -753,28 +316,15 @@
       document.getElementById('lightbox-modal').classList.remove('active');
     }
 
-    // Attach click handlers to all project gallery images automatically
-    document.addEventListener('DOMContentLoaded', function() {
-      const galleryImages = document.querySelectorAll('.detail-gallery img');
-      galleryImages.forEach(img => {
-        img.addEventListener('click', function(e) {
-          e.stopPropagation();
-          openLightbox(this.src, this.alt);
-        });
-      });
-
-      // Close lightbox when clicking background overlay
-      document.getElementById('lightbox-modal').addEventListener('click', function(e) {
-        if (e.target.id === 'lightbox-modal' || e.target.classList.contains('lightbox-close')) {
-          closeLightbox();
-        }
-      });
+    document.getElementById('lightbox-modal').addEventListener('click', function(e) {
+      if (e.target.id === 'lightbox-modal' || e.target.classList.contains('lightbox-close')) {
+        closeLightbox();
+      }
     });
 
     window.addEventListener('click', function(e) {
       if (e.target.classList.contains('modal-overlay')) {
-        e.target.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        closeModal();
       }
     });
 
@@ -785,11 +335,7 @@
           closeLightbox();
           return;
         }
-        const activeModal = document.querySelector('.modal-overlay.active');
-        if (activeModal) {
-          activeModal.classList.remove('active');
-          document.body.style.overflow = 'auto';
-        }
+        closeModal();
       }
     });
   </script>
