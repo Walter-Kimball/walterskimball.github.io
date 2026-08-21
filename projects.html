@@ -5,6 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Walter Kimball | Projects</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Lightbox Styles for Gallery Expansion */
+    .detail-gallery img {
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .detail-gallery img:hover {
+      transform: scale(1.02);
+      opacity: 0.9;
+    }
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.92);
+      z-index: 3000;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .lightbox-overlay.active {
+      display: flex;
+    }
+    .lightbox-img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+    .lightbox-caption {
+      margin-top: 15px;
+      color: #e2e8f0;
+      font-size: 1rem;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #ffffff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+    .lightbox-close:hover {
+      color: #38bdf8;
+    }
+  </style>
 </head>
 <body>
 
@@ -653,12 +709,19 @@
     </div>
   </div>
 
+  <!-- Global Image Lightbox Modal -->
+  <div class="lightbox-overlay" id="lightbox-modal">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Enlarged Project Image">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
   <!-- Footer -->
   <footer>
     <p>&copy; Walter Kimball. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Modal Interactivity & SVG Fallback -->
+  <!-- JavaScript for Modal & Lightbox Interactivity -->
   <script>
     function handleImgError(img, label) {
       img.onerror = null;
@@ -676,6 +739,38 @@
       document.body.style.overflow = 'auto';
     }
 
+    function openLightbox(src, alt) {
+      const lightbox = document.getElementById('lightbox-modal');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+
+      lightboxImg.src = src;
+      lightboxCaption.textContent = alt || '';
+      lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.remove('active');
+    }
+
+    // Attach click handlers to all project gallery images automatically
+    document.addEventListener('DOMContentLoaded', function() {
+      const galleryImages = document.querySelectorAll('.detail-gallery img');
+      galleryImages.forEach(img => {
+        img.addEventListener('click', function(e) {
+          e.stopPropagation();
+          openLightbox(this.src, this.alt);
+        });
+      });
+
+      // Close lightbox when clicking background overlay
+      document.getElementById('lightbox-modal').addEventListener('click', function(e) {
+        if (e.target.id === 'lightbox-modal' || e.target.classList.contains('lightbox-close')) {
+          closeLightbox();
+        }
+      });
+    });
+
     window.addEventListener('click', function(e) {
       if (e.target.classList.contains('modal-overlay')) {
         e.target.classList.remove('active');
@@ -685,6 +780,11 @@
 
     window.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
+        const lightbox = document.getElementById('lightbox-modal');
+        if (lightbox && lightbox.classList.contains('active')) {
+          closeLightbox();
+          return;
+        }
         const activeModal = document.querySelector('.modal-overlay.active');
         if (activeModal) {
           activeModal.classList.remove('active');
